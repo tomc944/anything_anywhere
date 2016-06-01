@@ -1,5 +1,5 @@
 var React = require('react'),
-    Header = require('./header'),
+    Header = require('./header/header'),
     Footer = require('./footer');
 
 var HighLevelAppComponent = React.createClass({
