@@ -4,7 +4,14 @@ var Footer = React.createClass({
 
   render: function() {
     return (
-      <div>Footer</div>
+      <div>
+        <div>FAQ link</div>
+        <div>Contact</div>
+        <div>How We Operate</div>
+        <div>Etc.</div>
+
+        <div>Scroll to Top</div>
+      </div>
     );
   }
 
