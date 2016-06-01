@@ -1,7 +1,8 @@
 class Api::ItemsController < ApplicationController
 
-  def index
-    render :index
+  def index(filter = nil)
+    @items = Item.filter_search(filter)
+    render json: @items
   end
 
   def create
