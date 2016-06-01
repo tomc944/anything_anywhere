@@ -1,4 +1,4 @@
 class User < ActiveRecord::based
-  validates :email, 
+  validates :email,
 
 end
