@@ -3,10 +3,12 @@ var React = require('react'),
     Router = require('react-router').Router,
     Route = require('react-router').Route,
     IndexRoute = require('react-router').IndexRoute,
-    HighLevelAppComponent = require('./components/high_level_app_components/high_level_app_component');
+    HighLevelContainer = require('./components/high_level_container/high_level_container'),
+    LandingPage = require('./components/landing_page/landing_page');
 
 var routes = (
-  <Route path="/" component={HighLevelAppComponent}>
+  <Route path="/" component={HighLevelContainer}>
+    <IndexRoute component={LandingPage}/>
   </Route>
 );
 
