@@ -4,7 +4,7 @@ var Footer = React.createClass({
 
   render: function() {
     return (
-      <div>Anything Anywhere</div>
+      <div>Footer</div>
     );
   }
 
