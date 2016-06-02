@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
 
   before_action :require_no_user!, only: [:new, :create]
 
@@ -12,6 +12,8 @@ class SessionsController < ApplicationController
       params[:user][:password]
     )
 
+    session[:cart] = []
+
     if user
       login_user!(user)
       redirect_to root_url
@@ -24,5 +26,9 @@ class SessionsController < ApplicationController
   def destroy
     logout_user!
     render json: { wahooo: 'wahoooo!' }
+  end
+
+  def update(item)
+    session[:cart].push(item)
   end
 end

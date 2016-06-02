@@ -7,6 +7,7 @@ var HighLevelAppComponent = React.createClass({
     return (
       <div>
         <Header/>
+        {this.props.children}
         <Footer/>
       </div>
     );
