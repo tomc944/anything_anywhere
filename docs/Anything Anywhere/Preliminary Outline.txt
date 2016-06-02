@@ -1,0 +1,48 @@
+Building Architecture
+	- User authentication, admin user has CRUD functionality for coins and auctions
+	- Clients can browse coins, search coins, add coins to cart, and purchase coins
+
+Payments
+	Options:
+		- Automated with Stripe: there is no price negotiation
+		- Email payments: price negotiable
+
+Design
+	- High res photos of current coins
+	- Any desired high resolution images (optional)
+	- Logos (optional)
+	- http://www.knyew.com/ Obviously too urban, but I like the design of just the header (brand, nav bar, etc.)
+	Keeping NY Everywhere —> Anything Anywhere?
+
+Automated auction
+	- Users can view current auctions (tab in nav bar)
+
+	- Workflow:
+		- Admin sends out mass email to all users, which includes link to current auctions page and can also include a closing auction time or leave that to be decided in the future. 
+
+		- #can make bids only when bid > current_max_bid && bid_time < auction_end_time
+
+		- Admin can send out mass email to notify if the auction close time is adjusted or to set an auction close time if the auction was created without a closing time.
+
+		- Issue: How do they pay after auction ends (workflow)
+			- somehow added to each user’s cart? (how)
+
+Facebook Integration
+	- TBD
+
+Timeline
+	application design process - wireframes, schema, general application design, workflow - 8 hours
+	architecture of CRUD features - 10 hours
+	searching and browsing features - 5 hours
+	user interface architecture - 6 hours
+	stripe integration and shopping cart - 5 - 10 hours
+	UI & UX - 15 hours
+
+	MORE
+	auction platform - 8 hours
+	Facebook integration - 8 hours
+	UI & UX - 10 hours
+
+	overhead - 10 hours
+
+	TOTAL - 90 hours, up to 100 hours to improve site design, and user experience
