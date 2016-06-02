@@ -16,7 +16,7 @@ var ItemIndex = React.createClass({
   },
 
   handleChange: function() {
-    ItemStore.
+    this.setState({ products: ItemStore.getItems() });
   },
 
   render: function() {

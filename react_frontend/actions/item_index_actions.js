@@ -1,8 +1,8 @@
-var ApiUtil = require('../utilities/api_utilities');
+var ApiUtilities = require('../utilities/api_utilities');
 
 var ItemIndexActions = {
   fetchAllProducts: function() {
-    ApiUtil
+    ApiUtilities.fetchAllProducts();
   }
 };
 
