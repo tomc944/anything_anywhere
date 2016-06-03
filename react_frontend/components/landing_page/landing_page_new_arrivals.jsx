@@ -7,7 +7,7 @@ var LandingPageNewArrivals = React.createClass({
 
   render: function() {
     return (
-      <ul>
+      <ul className="landing-page-new-arrival-item col-xs-2">
         {this.state.name}
       </ul>
     );
