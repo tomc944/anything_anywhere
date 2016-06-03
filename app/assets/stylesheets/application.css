@@ -55,9 +55,13 @@
   right: 30px;*/
 }
 
-.header-categories {
+#header-categories-accordion{
   padding-top: 100px;
   border: 1px solid orange;
+}
+
+#header-categories-accordion .panel {
+  margin-bottom: 0px;
 }
 
 .category-titles {
