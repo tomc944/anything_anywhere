@@ -3,7 +3,7 @@ var React = require('react'),
 
     var sample = [];
 
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 20; i++) {
       sample.push({name: "i am a test arrival"});
     }
 
@@ -18,7 +18,7 @@ var LandingPage = React.createClass({
 
   render: function() {
     var newArrivals = this.state.newArrivals.map(function(product, index) {
-      return <LandingPageNewArrivals landing_page_info={product} key={index}/>;
+      return <LandingPageNewArrivals landing_page_info={product}/>;
     });
 
     console.log(newArrivals);
@@ -55,11 +55,9 @@ var LandingPage = React.createClass({
 
         <h3>NEW ARRIVALS</h3>
 
-        <div className="landing-page-new-arrivals container">
+        <div className="landing-page-new-arrivals container-fluid">
           <div className="row">
-            <ul>
-              {newArrivals}
-            </ul>
+            {newArrivals}
           </div>
         </div>
 

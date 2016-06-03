@@ -5,7 +5,7 @@ var HeaderCart = React.createClass({
   render: function() {
     return (
       <div className="header-cart col-xs-3">
-        Cart Button
+        Cart Button <span className="badge">#</span>
       </div>
     );
   }
