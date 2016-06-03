@@ -9,7 +9,7 @@ var Header = React.createClass({
     return (
       <div>
         <HeaderSearchBar/>
-        <div>Anything Anywhere</div>
+        <div id="test">Anything Anywhere</div>
         <HeaderCategories/>
         <div>
           Cart Button
