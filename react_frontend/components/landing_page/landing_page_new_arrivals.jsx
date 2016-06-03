@@ -7,9 +7,16 @@ var LandingPageNewArrivals = React.createClass({
 
   render: function() {
     return (
-      <ul>
-        {this.state.name}
-      </ul>
+      <div className="col-xs-3 col-md-2">
+        <div className="thumbnail">
+          <img src="..." alt="..."/>
+          <div className="caption">
+            <h4>{this.state.name}</h4>
+            <p>...</p>
+            <p><a href="#" className="btn btn-primary" role="button">Button</a> <a href="#" className="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
     );
   }
 });
