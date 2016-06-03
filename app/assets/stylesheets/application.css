@@ -14,12 +14,45 @@
  *= require_self
  */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Sans', sans-serif;
+ /*
+
+
+ */
+
+ * {
+   font-family: 'Lato', sans-serif;
+ }
+
+/* HEADER */
+
+.header {
+  border: 1px solid black;
+  height: 250px;
 }
 
-#test {
-  font-family: 'Noto Sans';
+.header-top-bar {
+  padding-top: 50px;
+  border: 1px solid green;
+}
+
+.header-search-bar {
+  border: 1px solid pink;
+  vertical-align: text-bottom;
+}
+
+.header-title {
+  font-weight: 300;
+  font-size: 30px;
+  margin: auto;
+  width: 60%;
+  letter-spacing: 1vh;
+  /*padding: 10px;*/
   border: 1px solid black;
-  font-size: 50px;
+  text-align: center;
+}
+
+.header-cart {
+  border: 1px solid red;
+  /*position: relative;
+  right: 30px;*/
 }
