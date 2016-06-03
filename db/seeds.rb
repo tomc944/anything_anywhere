@@ -5,6 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Item.create!(description: 'small turkish coin', name: "Turkish 1432", category: 'small')
-Item.create!(description: 'small native american coin', name: 'Native American 1500' , category:'large')
