@@ -9,6 +9,7 @@ var Header = React.createClass({
   render: function() {
     return (
       <div className="header">
+
         <div className="header-top-bar container-fluid">
           <HeaderSearchBar/>
           <div className="header-title col-xs-6">
@@ -17,9 +18,8 @@ var Header = React.createClass({
           <HeaderCart/>
         </div>
 
-
         <HeaderCategories/>
-        <LoginDropdown/>
+
       </div>
     );
   }

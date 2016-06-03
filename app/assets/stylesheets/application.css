@@ -27,7 +27,6 @@
 
 .header {
   border: 1px solid black;
-  height: 250px;
 }
 
 .header-top-bar {
@@ -55,4 +54,13 @@
   border: 1px solid red;
   /*position: relative;
   right: 30px;*/
+}
+
+.header-categories {
+  padding-top: 100px;
+  border: 1px solid orange;
+}
+
+.test {
+  border: 3px solid black;
 }

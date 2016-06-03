@@ -1,10 +1,16 @@
-var React = require('react');
+var React = require('react'),
+    LoginDropdown = require('./login_dropdown');
 
 var HeaderCategories = React.createClass({
   render: function() {
     return (
-      <div>
-        I am the dropdown categories. click me and i will drop down.
+      <div className="header-categories container">
+        <div className="col-sm-2 test">Category</div>
+        <div className="col-sm-2 test">Category</div>
+        <div className="col-sm-2 test">Category</div>
+        <div className="col-sm-2 test">Category</div>
+        <div className="col-sm-2 test">Category</div>
+        <LoginDropdown/>
       </div>
     );
   }
