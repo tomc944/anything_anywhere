@@ -15,7 +15,7 @@ var ApiUtilities = {
     $.ajax({
       method: "GET",
       url: "api/items",
-      data: { params: { categories: constraints } },
+      data: { categories: categories, constraints: constraints },
       dataType: 'json',
       success: function(resp) {
         ItemIndexActions.receiveFilteredItems();

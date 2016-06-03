@@ -14,6 +14,7 @@ node_modules
 /tmp
 bundle.js
 
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
