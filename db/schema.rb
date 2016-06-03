@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601234358) do
+ActiveRecord::Schema.define(version: 20160603193807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,15 +23,41 @@ ActiveRecord::Schema.define(version: 20160601234358) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "description"
-    t.string "name"
-    t.string "category"
-    t.float  "weight"
-    t.float  "dimension"
+    t.float   "weight"
+    t.integer "list"
+    t.integer "number"
+    t.string  "country"
+    t.string  "reg"
+    t.string  "dynasty"
+    t.string  "DENC"
+    t.string  "DAT"
+    t.string  "mintno"
+    t.string  "mint"
+    t.string  "obv"
+    t.string  "rev"
+    t.string  "edge"
+    t.string  "material"
+    t.string  "diameter"
+    t.string  "amw"
+    t.string  "com"
+    t.string  "CAT"
+    t.string  "con"
+    t.string  "Grade"
+    t.string  "wh"
+    t.string  "price"
+    t.integer "quanity"
+    t.string  "unit_cost"
+    t.string  "cost"
+    t.boolean "sold"
+    t.string  "hold1"
+    t.string  "hold2"
+    t.string  "source"
+    t.string  "date_acquired"
+    t.string  "picture"
+    t.string  "date_sold"
+    t.string  "comment3"
+    t.string  "comment4"
   end
-
-  add_index "items", ["category"], name: "index_items_on_category", using: :btree
-  add_index "items", ["name"], name: "index_items_on_name", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string "email"
