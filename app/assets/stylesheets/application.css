@@ -29,17 +29,11 @@
   cursor: pointer;
 }
 
-.header {
-  border: 1px solid black;
-}
-
 .header-top-bar {
   padding-top: 50px;
-  border: 1px solid green;
 }
 
 .header-search-bar {
-  border: 1px solid pink;
   vertical-align: text-bottom;
 }
 
@@ -48,20 +42,11 @@
   margin: auto;
   width: 60%;
   letter-spacing: 1vh;
-  /*padding: 10px;*/
-  border: 1px solid black;
   text-align: center;
 }
 
-.header-cart {
-  border: 1px solid red;
-  /*position: relative;
-  right: 30px;*/
-}
-
 #header-categories-accordion{
-  padding-top: 100px;
-  border: 1px solid orange;
+  padding-top: 50px;
 }
 
 #header-categories-accordion .panel {
@@ -71,7 +56,6 @@
 #header-categories-accordion .panel-title {
   text-align: center;
   line-height: 10px;
-  /*border: 1px solid black;*/
 }
 
 #header-categories-accordion .panel-title:hover {
@@ -82,8 +66,15 @@
   cursor:pointer;
 }
 
+#header-categories-accordion .category-divider {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 95%;
+  height: 10px;
+  margin: auto;
+}
+
 .header-dropdown {
-  border: 1px solid black;
   margin: 0;
 }
 
@@ -98,7 +89,21 @@
   width: 90%;
 }
 
-.landing-page h3 {
+.landing-page-info {
+  background-color: #fefefb;
+  padding: 50px 0;
+}
+
+.landing-page-info h3 {
+  letter-spacing: .5vh;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding: 30px 0 30px 0;
+}
+
+
+#new-arrivals {
   letter-spacing: 1vh;
   text-align: center;
   width: 60%;
@@ -112,7 +117,6 @@
 
 .footer {
   height: 400px;
-  margin-top: 30px;
   border: 1px solid black;
 }
 
@@ -131,4 +135,17 @@
   position: fixed;
   bottom: 10px;
   right: 30px;
+}
+
+/* CONTACT */
+
+.contact-container {
+  background-color: #fefefb;
+}
+
+.contact {
+  padding: 100px 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }

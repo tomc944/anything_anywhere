@@ -17,9 +17,11 @@ var Header = React.createClass({
           <HeaderSearchBar/>
           <div className="header-title col-xs-6">
             <h3 id="logo" onClick={this.goToLandingPage}>ANYTHING ANYWHERE</h3>
+            <p>since 1978</p>
           </div>
           <HeaderCart/>
         </div>
+        <LoginDropdown/>
 
         <HeaderCategories history={this.props.history}/>
 

@@ -8,7 +8,7 @@ var HighLevelAppComponent = React.createClass({
       <div>
         <Header history={this.props.history}/>
         {this.props.children}
-        <Footer/>
+        <Footer history={this.props.history}/>
       </div>
     );
   }

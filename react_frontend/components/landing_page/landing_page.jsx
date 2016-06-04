@@ -53,7 +53,17 @@ var LandingPage = React.createClass({
           </a>
         </div>
 
-        <h3>NEW ARRIVALS</h3>
+        <div className="landing-page-info">
+          <h3>Trading in numismatics, etc. and dribbles of discourse.</h3>
+          <h3><b>No cookies set. No data copied.</b> All business by email: <a href="mailto:reisbiz@earthlink.net"><b>reisbiz@earthlink.net.</b></a></h3>
+          <h3>Everything in this business is done by <b>humans.</b></h3>
+          <h3><b>Satisfaction guaranteed.</b></h3>
+          <h3>I can read your emails in French, Spanish, Italian, etc. & German.</h3>
+          <h3>I won&#39;t take advantage of your ignorance.</h3>
+          <h3>We&#39;ll keep working on it until everyone is <b>happy</b> (or, more exactly, given the general situation, not unhappy).</h3>
+        </div>
+
+        <h3 id="new-arrivals">NEW ARRIVALS</h3>
 
         <div className="landing-page-new-arrivals container-fluid">
           <div className="row">
