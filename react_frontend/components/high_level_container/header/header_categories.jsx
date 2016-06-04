@@ -4,6 +4,8 @@ var React = require('react'),
 var HeaderCategories = React.createClass({
   render: function() {
     return (
+      <div>
+
       <div id="header-categories-accordion" role="tablist" aria-multiselectable="true">
         <div className="panel panel-default">
           <div className="panel-heading" role="tab" id="heading">
@@ -60,6 +62,9 @@ var HeaderCategories = React.createClass({
           </div>
         </div>
       </div>
+
+      <LoginDropdown/>
+    </div>
 
 
 

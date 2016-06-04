@@ -14,7 +14,7 @@ ItemStore.__onDispatch = function(payload) {
     case ItemConstants.RECEIVE_ALL_PRODUCTS:
       resetAllItems(payload.items)
       break;
-    case ItemConstants.RECEIVE_FILTERED_ITEMS
+    case ItemConstants.RECEIVE_FILTERED_ITEMS:
       resetAllItems(payload.items)
       break;
   }
