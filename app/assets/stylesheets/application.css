@@ -117,7 +117,6 @@
 
 .footer {
   height: 400px;
-  margin-top: 30px;
   border: 1px solid black;
 }
 
@@ -136,4 +135,17 @@
   position: fixed;
   bottom: 10px;
   right: 30px;
+}
+
+/* CONTACT */
+
+.contact-container {
+  background-color: #fefefb;
+}
+
+.contact {
+  padding: 100px 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
