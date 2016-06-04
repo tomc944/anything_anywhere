@@ -18,26 +18,26 @@ var HeaderCategories = React.createClass({
           <div className="panel-heading" role="tab" id="heading">
 
             <div className="row">
-              <h4 className="panel-title col-xs-3">
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseCoins" aria-controls="collapseCoins">
                   COINS
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapsePaperMoney" aria-controls="collapsePaperMoney">
                   PAPER MONEY
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseOtherFiscal" aria-controls="collapseOtherFiscal">
                   OTHER FISCAL
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseTokensMedals" aria-controls="collapseTokensMedals">
                   TOKENS & MEDALS
                 </a>
-              </h4>
+              </p>
             </div>
 
             <div className="row">
@@ -47,26 +47,26 @@ var HeaderCategories = React.createClass({
             </div>
 
             <div className="row">
-              <h4 className="panel-title col-xs-3">
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseMilitaryCivic" aria-controls="collapseMilitaryCivic">
                   MILITARY & CIVIC
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseDocuments" aria-controls="collapseDocuments">
                   DOCUMENTS
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseAdvertisingPropaganda" aria-controls="collapseAdvertisingPropaganda">
                   ADS & PROPAGANDA
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseWholesale" aria-controls="collapseWholesale">
                   WHOLESALE
                 </a>
-              </h4>
+              </p>
             </div>
 
             <div className="row">
@@ -76,26 +76,26 @@ var HeaderCategories = React.createClass({
             </div>
 
             <div className="row">
-              <h4 className="panel-title col-xs-3">
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseJewelry" aria-controls="collapseJewelry">
                   JEWELRY
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseBooks" aria-controls="collapseBooks">
                   BOOKS
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseNaturalObjects" aria-controls="collapseNaturalObjects">
                   NATURAL OBJECTS
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseRelics" aria-controls="collapseRelics">
                   RELICS & ANTIQUITIES
                 </a>
-              </h4>
+              </p>
             </div>
 
             <div className="row">
@@ -105,16 +105,16 @@ var HeaderCategories = React.createClass({
             </div>
 
             <div className="row">
-              <h4 className="panel-title col-xs-offset-3 col-xs-3">
+              <p className="panel-title col-xs-offset-3 col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseMiscellaneous" aria-controls="collapseMiscellaneous">
                   MISCELLANEOUS
                 </a>
-              </h4>
-              <h4 className="panel-title col-xs-3">
+              </p>
+              <p className="panel-title col-xs-3">
                 <a data-toggle="collapse" data-parent="#header-categories-accordion" aria-expanded="false" href="#collapseWhatAreThese" aria-controls="collapseWhatAreThese">
                   WHAT ARE THESE?
                 </a>
-              </h4>
+              </p>
             </div>
 
           </div>

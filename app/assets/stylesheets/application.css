@@ -53,6 +53,12 @@
   margin-bottom: 0px;
 }
 
+#header-categories-accordion .panel-heading {
+  font-weight: 100;
+  background-color: #3f3f3f;
+  color: white;
+}
+
 #header-categories-accordion .panel-title {
   text-align: center;
   line-height: 10px;
@@ -90,7 +96,7 @@
 }
 
 .landing-page-info {
-  background-color: #fefefb;
+  background-color: #fafaed;
   padding: 50px 0;
 }
 
@@ -140,7 +146,7 @@
 /* CONTACT */
 
 .contact-container {
-  background-color: #fefefb;
+  background-color: #fafaed;
 }
 
 .contact {
@@ -148,4 +154,22 @@
   width: 90%;
   margin: auto;
   text-align: center;
+}
+
+/* INFO */
+
+.info-container {
+  background-color: #fafaed;
+}
+
+.info {
+  padding: 50px 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.info h1, .info h3 {
+  text-decoration: underline;
 }
