@@ -11,6 +11,7 @@ var routes = (
   <Route path="/" component={HighLevelContainer}>
     <IndexRoute component={LandingPage}/>
     <Route path="/products" component={ItemIndex}/>
+    <Route path="/info" component={Info}/>
   </Route>
 );
 
