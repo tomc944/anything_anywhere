@@ -53,7 +53,8 @@
 	    LandingPage = __webpack_require__(242),
 	    ItemIndex = __webpack_require__(244),
 	    Info = __webpack_require__(267),
-	    Contact = __webpack_require__(268);
+	    Contact = __webpack_require__(268),
+	    HowWeOperate = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/info/how_we_operate\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var routes = React.createElement(
 	  Route,
@@ -61,7 +62,8 @@
 	  React.createElement(IndexRoute, { component: LandingPage }),
 	  React.createElement(Route, { path: '/products', component: ItemIndex }),
 	  React.createElement(Route, { path: '/info', component: Info }),
-	  React.createElement(Route, { path: '/contact', component: Contact })
+	  React.createElement(Route, { path: '/contact', component: Contact }),
+	  React.createElement(Route, { path: '/operate', component: HowWeOperate })
 	);
 	
 	$(function () {
@@ -25919,7 +25921,20 @@
 	        ),
 	        React.createElement(HeaderCart, null)
 	      ),
-	      React.createElement(LoginDropdown, null),
+	      React.createElement(
+	        'div',
+	        { className: 'row header-login' },
+	        React.createElement(
+	          'div',
+	          { className: 'col-xs-offset-8 col-xs-2' },
+	          'ABOUT A/A'
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-xs-2' },
+	          React.createElement(LoginDropdown, null)
+	        )
+	      ),
 	      React.createElement(HeaderCategories, { history: this.props.history })
 	    );
 	  }
@@ -26597,7 +26612,7 @@
 	  render: function () {
 	    return React.createElement(
 	      "div",
-	      { className: "header-dropdown col-xs-2" },
+	      { className: "header-dropdown" },
 	      React.createElement(
 	        "button",
 	        { className: "btn btn-default dropdown-toggle", type: "button", id: "dropdownMenu1", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "true" },
@@ -33697,9 +33712,19 @@
 	        React.createElement(
 	          "h1",
 	          null,
-	          "Contact Bob Reis."
+	          "Have any questions or concerns?"
+	        ),
+	        React.createElement(
+	          "h1",
+	          null,
+	          "Feel free to contact me."
 	        ),
 	        React.createElement("br", null),
+	        React.createElement(
+	          "h2",
+	          null,
+	          "Bob Reis"
+	        ),
 	        React.createElement(
 	          "h4",
 	          null,
