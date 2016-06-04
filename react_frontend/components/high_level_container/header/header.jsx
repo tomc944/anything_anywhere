@@ -5,6 +5,9 @@ var React = require('react'),
     HeaderCart = require('./header_cart');
 
 var Header = React.createClass({
+  goToLandingPage: function() {
+    this.props.history.pushState(null, "/");
+  },
 
   render: function() {
     return (
@@ -13,12 +16,12 @@ var Header = React.createClass({
         <div className="header-top-bar container-fluid">
           <HeaderSearchBar/>
           <div className="header-title col-xs-6">
-            <h3>ANYTHING ANYWHERE</h3>
+            <h3 id="logo" onClick={this.goToLandingPage}>ANYTHING ANYWHERE</h3>
           </div>
           <HeaderCart/>
         </div>
 
-        <HeaderCategories/>
+        <HeaderCategories history={this.props.history}/>
 
       </div>
     );

@@ -25,6 +25,10 @@
 
 /* HEADER */
 
+#logo:hover {
+  cursor: pointer;
+}
+
 .header {
   border: 1px solid black;
 }
@@ -64,9 +68,23 @@
   margin-bottom: 0px;
 }
 
-.category-titles {
+#header-categories-accordion .panel-title {
   text-align: center;
-  border: 3px solid black;
+  line-height: 10px;
+  /*border: 1px solid black;*/
+}
+
+#header-categories-accordion .panel-title:hover {
+  cursor: pointer;
+}
+
+#header-categories-accordion .category-filter:hover {
+  cursor:pointer;
+}
+
+.header-dropdown {
+  border: 1px solid black;
+  margin: 0;
 }
 
 /* LANDING PAGE */

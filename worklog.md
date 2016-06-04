@@ -1,4 +1,5 @@
 Patrick Total Hours - 13
+Patrick Billed Hours - 13
 Thomas Total Hours - 10
 
 First conference call - 0.5 hours	x2 = 1 hour

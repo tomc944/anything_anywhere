@@ -18,7 +18,7 @@ var LandingPage = React.createClass({
 
   render: function() {
     var newArrivals = this.state.newArrivals.map(function(product, index) {
-      return <LandingPageNewArrivals landing_page_info={product}/>;
+      return <LandingPageNewArrivals landing_page_info={product} key={index}/>;
     });
 
     console.log(newArrivals);
