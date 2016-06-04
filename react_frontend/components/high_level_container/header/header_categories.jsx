@@ -5,7 +5,7 @@ var React = require('react'),
 var HeaderCategories = React.createClass({
   handleClick: function(event) {
     //go to history with filter
-    HeaderCategoriesActions.addTitleFilter(event.target.innerHTML);
+    HeaderCategoriesActions.addCategory(event.target.innerHTML);
     debugger
     this.props.history.pushState(null, "/products");
   },

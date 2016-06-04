@@ -4,8 +4,8 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
 
 
 var ItemIndexActions = {
-  fetchItems: function(categories, constraints) {
-    ApiUtilities.fetchProductsByCategory(categories, constraints);
+  fetchItems: function(filters) {
+    ApiUtilities.fetchProductsByCategory(filters);
   },
 
   receiveAllItems: function() {

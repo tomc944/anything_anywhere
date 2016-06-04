@@ -1,5 +1,5 @@
 var FilterConstants = {
-  ADD_TITLE_FILTER: "ADD_TITLE_FILTER" 
+  ADD_CATEGORY_FILTER: "ADD_CATEGORY_FILTER" 
 };
 
 module.exports = FilterConstants;

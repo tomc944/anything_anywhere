@@ -3,26 +3,26 @@ var Store = require('flux/utils').Store,
     FilterConstants = require('../constants/item_constants');
     FilterStore = new Store(Dispatcher);
 
-var _filterParams = { titleFilter: "Anything Anywhere"};
+var _filterParams = { category: "Anything Anywhere"};
 
 FilterStore.getAllFilters = function() {
   return Object.assign({}, _filterParams);
 };
 
-FilterStore.getTitle = function() {
-  return _filterParams.titleFilter;
+FilterStore.getCategory = function() {
+  return _filterParams.category;
 }
 
 FilterStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
-    case FilterConstants.ADD_TITLE_FILTER:
-      addTitleFilter(payload.titleFilter);
+    case FilterConstants.ADD_CATEGORY_FILTER:
+      addCategoryFilter(payload.category);
       break;
   }
 };
 
-function addTitleFilter (filter) {
-  _filterParams.titleFilter = filter;
+function addCategoryFilter (category) {
+  _filterParams.category = category;
 
   FilterStore.__emitChange();
 };

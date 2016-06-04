@@ -2,10 +2,10 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
     FilterConstants = require('../constants/filter_constants');
 
 var HeaderCategoriesActions = {
-  addTitleFilter: function(titleFilter) {
+  addCategory: function(category) {
     AppDispatcher.dispatch({
-      actionType: FilterConstants.ADD_TITLE_FILTER,
-      titleFilter: titleFilter
+      actionType: FilterConstants.ADD_CATEGORY_FILTER,
+      category: category
     });
   }
 };

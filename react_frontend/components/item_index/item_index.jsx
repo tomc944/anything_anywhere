@@ -11,7 +11,7 @@ var ItemIndex = React.createClass({
   getInitialState: function() {
     return ({
       items: _getAllItems(),
-      categoryTitle: FilterStore.getTitle()
+      categoryTitle: FilterStore.getCategory()
     });
   },
 
@@ -21,7 +21,7 @@ var ItemIndex = React.createClass({
 
   componentDidMount: function() {
     this.itemListener = ItemStore.addListener(this._handleChange);
-    ItemIndexActions.fetchItems(FilterStore.getAllFilters(), undefined);
+    ItemIndexActions.fetchItems(FilterStore.getAllFilters());
   },
 
   componentWillUmount: function() {
