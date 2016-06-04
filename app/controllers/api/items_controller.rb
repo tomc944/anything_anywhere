@@ -1,9 +1,8 @@
 class Api::ItemsController < ApplicationController
   # This filter argument allows us to query our DB for specific categories
   # If we are on the main page we don't need a filter - until we sort by newest.
-  
-  def index(filter = nil)
-    @items = Item.filter_search(filter)
+  def index
+    @items = Item.filter_search(params[:categories], params[:constraints])
     render json: @items
   end
 

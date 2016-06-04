@@ -12,10 +12,11 @@ ItemStore.getItems = function() {
 ItemStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
     case ItemConstants.RECEIVE_ALL_PRODUCTS:
-      resetAllItems(payload.items)
+      resetAllItems(payload.items);
       break;
-
-
+    case ItemConstants.RECEIVE_FILTERED_ITEMS:
+      resetAllItems(payload.items);
+      break;
   }
 };
 

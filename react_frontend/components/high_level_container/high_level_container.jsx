@@ -6,7 +6,7 @@ var HighLevelAppComponent = React.createClass({
   render: function() {
     return (
       <div>
-        <Header/>
+        <Header history={this.props.history}/>
         {this.props.children}
         <Footer/>
       </div>

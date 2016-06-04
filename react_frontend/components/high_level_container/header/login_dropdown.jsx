@@ -3,7 +3,7 @@ var React = require('react');
 var LoginDropdown = React.createClass({
   render: function() {
     return (
-      <div className="dropdown">
+      <div className="header-dropdown col-xs-2">
         <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Dropdown
           <span className="caret"></span>

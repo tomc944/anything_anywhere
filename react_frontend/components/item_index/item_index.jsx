@@ -1,22 +1,38 @@
 var React = require('react'),
-    ItemStore = require('../../stores/item_store');
+    ItemStore = require('../../stores/item_store'),
+    FilterStore = require('../../stores/filter_store'),
+    ItemIndexActions = require('../../actions/item_index_actions');
+
+function _getAllItems () {
+  ItemStore.getItems();
+};
 
 var ItemIndex = React.createClass({
   getInitialState: function() {
     return ({
-      products: [],
-      categoryTitle: ""
+      items: _getAllItems(),
+      categoryTitle: FilterStore.getCategory()
     });
   },
 
+  _handleChange: function() {
+
+  },
+
   componentDidMount: function() {
-    this.productListener = ItemStore.addListener(this._handleChange);
+    this.itemListener = ItemStore.addListener(this._handleChange);
+    ItemIndexActions.fetchItems(FilterStore.getAllFilters());
+  },
+
+  componentWillUmount: function() {
+    this.itemListener.remove();
   },
 
   render: function() {
+
     return (
       <div>
-        Category Title
+        {this.state.categoryTitle}
       </div>
     );
   }
