@@ -9,4 +9,4 @@ High-level overview - 1.5 hours x1 = 1.5 hours
 Front-end architecture - 4 hours x1 = 4 hours
 Landing Page & Highest Level Container Design - 4 hours x1 = 4 hours
 Item Index Page React Components - 2 hours x1 = 2 hours
-Landing Page & Information Pages Design, Architecture, and Planning - 5 hours x1 = 5 hours
+Landing Page & Information Pages Design, Architecture, and Planning - 5.5 hours x1 = 5.5 hours
