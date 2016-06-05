@@ -23,6 +23,7 @@ var About = React.createClass({
         <div className="info-terms">
           <h1>TERMS</h1>
           <h4>(read the fine print!)</h4>
+          <br/>
           <ol>
             <li>Everything guaranteed genuine &/or as described. If it is a repro or altered it will be so described.  If not, send it back. Lifetime return privilege on items sold as genuine that turn out to be fake or that were repaired and not so described.  (That's my lifetime.  Don't ask my heirs to fix something for you 50 years from now!)</li>
             <li>RETURNS: No-hassle return in reasonable time, no questions asked.  If return is for my error I will refund part or all of your return postage depending on how many bells & whistles you add to the basic postage cost of the return.  Ask me if you have questions.  Returns deemed to be absurd due to low value or ridiculous reason may result in termination of the business relationship without notice.  (I write this early in 2003 because it has happened several times recently.  If you don't know the parameters of quality, authenticity, pricing, etc. of the thing you're buying ask me and I'll be more than happy to tell you what I think and what I know.  But if you don't and you assume I'm trying to cheat you somehow I'll get all huffy inside and while I'm smilingly refunding your money I'll also be crossing you off my list.  Life is too short for both of us.)</li>
