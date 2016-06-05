@@ -158,6 +158,11 @@
   text-align: center;
 }
 
+.contact h1 {
+  font-weight: 300;
+  color: #3299ff;
+}
+
 /* INFO */
 
 .info-container {
@@ -173,5 +178,25 @@
 }
 
 .info h1, .info h3 {
+  font-weight: 300;
   text-decoration: underline;
+  color: #3299ff;
+}
+
+.info-terms-container {
+  padding-top: 50px;
+}
+
+.info-terms {
+  text-align: left;
+  font-size: 16px;
+}
+
+#operate-accordion {
+  padding-top: 50px;
+  text-align: left;
+}
+
+#operate-accordion .panel-collapse {
+  padding: 10px 20px;
 }

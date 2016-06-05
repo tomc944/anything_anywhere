@@ -1,12 +1,16 @@
 var React = require('react');
 
 var Footer = React.createClass({
-  goToInfo: function() {
-    this.props.history.pushState(null, "/info");
+  goToAbout: function() {
+    this.props.history.pushState(null, "/about");
   },
 
   goToContact: function() {
     this.props.history.pushState(null, "/contact");
+  },
+
+  goToOperate: function() {
+    this.props.history.pushState(null, "/operate");
   },
 
   render: function() {
@@ -14,9 +18,9 @@ var Footer = React.createClass({
       <div className="footer">
         <div className="footer-links container">
           <div className="row">
-            <div className="col-xs-3" onClick={this.goToInfo}>FAQ link</div>
+            <div className="col-xs-3" onClick={this.goToAbout}>About us</div>
             <div className="col-xs-3" onClick={this.goToContact}>Contact</div>
-            <div className="col-xs-3">How We Operate</div>
+            <div className="col-xs-3" onClick={this.goToOperate}>How We Operate</div>
             <div className="col-xs-3">Etc.</div>
           </div>
         </div>
