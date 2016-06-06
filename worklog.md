@@ -1,4 +1,4 @@
-Patrick Total Hours - 20
+Patrick Total Hours - 20.5
 Patrick Billed Hours - 13
 Thomas Total Hours - 10
 

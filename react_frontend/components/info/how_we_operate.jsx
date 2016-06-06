@@ -80,13 +80,13 @@ var HowWeOperate = React.createClass({
             <div className="panel panel-default">
               <div className="panel-heading" role="tab" id="headingTwo">
                 <h4 className="panel-title">
-                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#shippingCosts" aria-expanded="false" aria-controls="shippingCosts">
                     DISCUSSION OF SHIPPING COSTS, REFUNDS, AND GUARANTEES
                   </a>
                 </h4>
               </div>
-              <div id="collapseTwo" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <h3>TERMS</h3>
+              <div id="shippingCosts" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <h3>Terms</h3>
                 <ol>
                   <li>Everything guaranteed genuine &/or as described.  If not, send it back.</li>
                   <li>No-hassle return in reasonable time, no questions asked.</li>
@@ -101,6 +101,7 @@ var HowWeOperate = React.createClass({
 
               </div>
             </div>
+
             <div className="panel panel-default">
               <div className="panel-heading" role="tab" id="headingThree">
                 <h4 className="panel-title">
@@ -291,8 +292,321 @@ var HowWeOperate = React.createClass({
                 </ol>
               </div>
             </div>
-          </div>
 
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#abbreviations" aria-expanded="false" aria-controls="abbreviations">
+                     LIST OF ABBREVIATIONS I LIKE TO USE
+                  </a>
+                </h4>
+              </div>
+              <div id="abbreviations" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <h3>Abbreviations used in the inventory lists</h3>
+                <p>"c" = cent or local variant (except for things like Ghanaian cedis),</p>
+                <br/>
+                <p>"p" = penny, pfennig, etc.,</p>
+                <br/>
+                <p>"d" = old English pence</p>
+                <br/>
+                <p>aF/+ = about fine or better, & so forth for grading</p>
+                <br/>
+                <p>gF = fine plus (if I feel continental)</p>
+                <br/>
+                <p>scs = scratches</p>
+                <br/>
+                <p>ens/bs = edge nicks/bruises</p>
+                <br/>
+                <p>cor = corrosion</p>
+                <br/>
+                <p>sp = spot</p>
+                <br/>
+                <p>cl = cleaned</p>
+                <br/>
+                <p>sl = slight</p>
+                <br/>
+                <p>xx cr = very crude</p>
+                <br/>
+                <p>NM/ND = no mint/no date</p>
+                <br/>
+                <p>dm/mm = date/mint missing</p>
+                <br/>
+                <p>oc = off center</p>
+                <br/>
+                <p>R/L= right/left</p>
+                <br/>
+                <p>std = seated</p>
+                <br/>
+                <p>stg = standing</p>
+                <br/>
+                <p>adv = advancing</p>
+                <br/>
+                <p>w/ = with</p>
+                <br/>
+                <p>c/s = counterstamp</p>
+                <br/>
+                <p>o/s = overstruck</p>
+                <br/>
+                <p>o/p = overprint</p>
+                <br/>
+                <p>ham = holed as made</p>
+                <br/>
+                <p>AE20 = 20 millimeter bronze item</p>
+                <br/>
+                <p>AR = silver</p>
+                <br/>
+                <p>AV = gold</p>
+                <br/>
+                <p>Al = aluminum</p>
+                <br/>
+                <p>Bs = brass</p>
+                <br/>
+                <p>Albz = aluminum bronze</p>
+                <br/>
+                <p>CN = copper-nickel</p>
+                <br/>
+                <p>bil = billon</p>
+                <br/>
+                <p>ZnplFe = zinc plated iron</p>
+                <br/>
+                <p>sh = staple holes (paper) or sand holes (cast coins)</p>
+                <br/>
+                <p>(R), etc. = language (eg Russian)</p>
+                <br/>
+                <p>avg = average</p>
+                <br/>
+                <p>sim.=similar</p>
+                <br/>
+
+                <h3>Books:</h3>
+                <p>K-nl = unlisted in Krause-Mishler SCWC</p>
+                <br/>
+                <p>P = Pick</p>
+                <br/>
+                <p>S = Schjöth (Chinese cash) or Seaby (English, etc.)</p>
+                <br/>
+                <p>H = Hartill (Chinese cash)</p>
+                <br/>
+                <p>FD = Fisher&#39;s Ding (Chinese Cash)</p>
+                <br/>
+                <p>MI/MA/MN = Mitchiner&#39;s Oriental Coins vols. I/II/III</p>
+                <br/>
+                <p>SG/SGI/SR/SB = Sear&#39;s Greek,</p>
+                <br/>
+                <p>Greek Imperial, Roman, Byzantine</p>
+                <br/>
+                <p>-many other specialized references will be quoted occasionally</p>
+                <br/>
+
+                <p>(pretty annoying not to be alphabetized, eh?)</p>
+                <br/>
+
+              </div>
+            </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#grading" aria-expanded="false" aria-controls="grading">
+                    GRADING
+                  </a>
+                </h4>
+              </div>
+              <div id="grading" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <h3>Grading Policy - How I try to describe states of preservation</h3>
+
+                <p>My core business has revolved around coins, and that sector is where I take my notions about the condition of objects from.  I've discovered, as I attempt to operate in different collectible fields, that much of the nomenclature is similar, but though the words sound the same, they may mean something different.  I believe that I've also noticed that the coin business has the most standardized grading scale of all collectible fields.  For that reason, and from the fact of my long acquaintance with the coin grades, I will tend to use them indiscriminately for all the objects I try to sell to you.  Occasionally this will create misunderstanding, make me look like an idiot, etc.  But what can I do?  I'll just be a fool.  Maybe you'll get a bargain.  Or maybe I&#39;ll (inadvertently, I hope) rip you off.</p>
+                <br/>
+
+                <p>In my pre-website days I sold almost entirely by mail order, issuing 16-page paper pricelists more or less monthly.  I still do paper lists.  At this moment sales from the paper lists account for about 10% of my business, with the rest coming from this website.  If you want to get the monthly email announcements or paper lists, or if you want an email version sent specially to you please click here and tell me what you want.</p>
+                <br/>
+
+                <p>In the paper medium I would constantly face space limitations, and thus I developed space saving conventions, like calling an XF item with a scratch, a nick, and a spot "VG," and pricing it as such.  Maybe it's not quite accurate, but I usually discount problem items so severely that people don't seem to complain.  Perhaps as more stuff gets posted on this site I&#39;ll get less taciturn.  After all, my limitations here are of time, not space.</p>
+                <br/>
+
+                <p>Here are the condition designations I usually use, and what they mean to me:</p>
+                <br/>
+
+                <h3>For coins, medals, badges, and most other metal and hard objects</h3>
+
+                <p>poor - Identifiable as what it is, with all kinds of possible damage not needing to be described.</p>
+                <br/>
+                <p>fair - A little better, must have all of its identifying marks (date, etc.), but doesn&#39;t need to have much else.  Most damage would not need to be mentioned, except for things like holes.</p>
+                <br/>
+                <p>good (G) - All of the basic design is present, and a few of the details.  Light spots, scratches, nicks, etc. may be ignored, but all serious damage will be mentioned.</p>
+                <br/>
+                <p>very good (VG) - Substantial detail will be present, but there will also be substantial wear all over. Minor damage may be ignored.</p>
+                <br/>
+                <p>fine (F) - All major detail will be present, all defects will be described.</p>
+                <br/>
+                <p>very fine (VF) - All detail will be present, with light general wear all over.  All defects described.</p>
+                <br/>
+                <p>extremely fine (XF) - Wear on the high spots.  There will be traces of the original surface gleaming here and there.</p>
+                <br/>
+                <p>almost uncirculated (AU) - Just what it says.  Might even fool you until you look at it closely.</p>
+                <br/>
+                <p>uncirculated (Unc) - Never been used.  Can have toning or fingerprints or spots, all of which will be described, except that copper, brass, and zinc aged over 50 years or so can have up to 25% light tone without my feeling that they need to be described.  Can have bagmarks, which will not be mentioned unless they are, in my opinion, excessive.</p>
+                <br/>
+                <p>additional modifiers:</p>
+                <br/>
+                <p>+ - "better than," e.g. F+ is better than F</p>
+                <br/>
+                <p>about (a) - "not quite," e.g. aF is not quite F</p>
+                <br/>
+
+                <p>Then there are some special coin designations</p>
+                <br/>
+                <p>nice&#60;choice&#60;gem - niceness designations in ascending order.</p>
+                <br/>
+                <p>brilliant Unc (BU) - A nice Unc with all of the original shine, basically no toning, and approximately no bagmarks.</p>
+                <br/>
+                <p>gem BU - nicer yet.</p>
+                <br/>
+                <p>proof - a specially struck piece, usually assumed to be perfect gradewise, but may have defects which must be described. It is entirely possible, though uncommon, to have a proof that objectively grades VF, or even VG.</p>
+                <br/>
+
+                <p>And some common coin problem designations:</p>
+                <br/>
+                <p>scratch (sc) - means you can see it with a 10x lens.  DOES NOT MEAN YOU CAN SEE IT WITH A 20x LENS.</p>
+                <br/>
+                <p>bag marks - small contact marks on uncirculated coins.  Can be nicks, scratches, or rubs.  Must be &#60;2mm and shallow.  As far as the numbers go, bagmarks are allowed up to about MS63.</p>
+                <br/>
+                <p>edge bumps (ebs) - someone dropped the coin and now there&#39;s a bruise.  The 10x rule applies.</p>
+                <br/>
+                <p>edge nicks (ens) - little cuts at the edge.  The 10x rule applies.</p>
+                <br/>
+                <p>spots - only if you can see them with your naked eye.  I'll mention a tiny little spot on an Unc, but would require a bit more egregiosity on a VF or lower.  If the surface of the spot is raised or sunken then it's...</p>
+                <br/>
+                <p>corrosion (cor) - which is always bad news.</p>
+                <br/>
+                <p>cleaned (cl) - this includes anything that visibly disturbs the surface.  Any kind of abrasion from wiping, any polishing, any chemical treatment that can be noticed is considered to be cleaning.  The only kind of cleaning that can get by without mention is the unnoticeable kind.  If you can notice it it is bad news, how bad depends on the extent of the "treatment."</p>
+                <br/>
+
+                <p>And of course there are the number designations provided by the grading services that produce the "slabbed" coins that form a sector of the market.  I do not specialize in slabbed coins, and generally do not have a great deal of respect for the acumen of the graders, finding that I disagree with them more than half of the time.  But I do sell slabs when they come in.  A number of grade-extending designations have come into use for USA coins: DMPL, etc., and while it is possible to make a lot of money by catching a DMPL that the previous owner has missed, I can't get the energy together to convince someone that the coin I want to sell them is worth $13,000 instead of $250.  In all cases I try to avoid odious puffery, preferring sweet dreams at night to the stomach ache of wondering if someone's going to try to return a five-figure item tomorrow after I&#39;ve already spent the money.  My goal in grading is simple: no returns.</p>
+                <br/>
+
+                <p>A note on zinc and tin: I write this after a new customer expressed disappointment with a zinc coin of the 1940s because it was tarnished.  Customer claimed that the tarnish, according to my own published standards, made it only F-VF.  Got my dander up just a bit. Zinc tones in normal air all by itself.  If it was ever taken out of the original roll, or if it came from the bank in a bag it will be tarnished right there in the sealed bag.  You can have a perfect uncirculated zinc coin with the entire surface even gray.  That is actually normal for zinc.  Any luster at all is extraordinary.  Full luster is BU, rare, and in most circumstances worth at least double the regular catalog value for Unc.  Exceptions to the pricing guidelines that I can think of include Peru 1c of the 1960s and possibly Denmark 1, 2, 5 ore, also of the 60s.
+                Notwithstanding, I demand at least a trace of luster of my uncirculated zinc coins, otherwise I'll call it AU.  The returned coin is possessed of about 60% luster.  The customers are always right except when they're wrong.  I am pleased to have the coin back in my inventory.
+                Tin will develop pimples and crumbling at the edges, which of course spoils the coins.  Sometimes that&#39;s the only way they come though.  Tin coinage is almost exclusively a southeast Asian phenomenon.  Many tin coins of the 19th century and earlier from Malaya, etc. are known only from their contemporary and/or modern counterfeits, often made of a lead alloy.</p>
+                <br/>
+
+
+                <h3>For Paper and More</h3>
+
+                <p>poor - Identifiable, big pieces missing, the rest worn until barely identifiable.</p>
+                <br/>
+                <p>fair - At least 90% present, but unpleasantly bad, tape repairs, holes, tears, etc. that wouldn&#39;t need to be described for this grade.</p>
+                <br/>
+                <p>good (G) - 95% there, but can be missing corners, have big tears, can be badly worn, faded, graffiti, etc., not needing to be described.  Repairs of any quality would be described.</p>
+                <br/>
+                <p>very good (VG) - All there with substantial wear, dirt, etc.  Usually limp, but will not have any missing pieces, and only one or two minor edge tears, or tiny hole in the body at the folds.  Pinholes or staple holes need not be mentioned for this grade.  Any other problems will be described.</p>
+                <br/>
+                <p>fine (F) - All major detail will be present, all defects will be described. No holes or tears in this grade.</p>
+                <br/>
+                <p>very fine (VF) - Two or more hard folds that break the surface, minor dirt.</p>
+                <br/>
+                <p>extremely fine (XF) - Only one hard fold (breaking the surface), traces of dirt perhaps.</p>
+                <br/>
+                <p>almost uncirculated (AU) - Not more than one light, soft fold, NOT breaking the surface.  Perhaps a bent corner.</p>
+                <br/>
+                <p>uncirculated (Unc) - Never been used.</p>
+                <br/>
+                <p>Some special paper terms:</p>
+                <br/>
+                <p>foxing - dark spots or areas due usually to oxidation, therefore, technically, a bit of burn.  In pricing terms, foxing usually knocks it down a grade.  Bad foxing leads to crumbly fragility.</p>
+                <br/>
+                <p>proof - in paper, a special printing rather than a pseudo-grade.</p>
+                <br/>
+
+                <h3>Ironed Notes</h3>
+                <p>This has been a fairly common practice in various locales over the years.  To me an ironed note is usually a VF pretending it's an AU, so I'll just call it a VF. Generally speaking I'm not going to bother to mention it.  Usually it doesn't "hurt" the note I don't think, not as long as we don't pretend it's Unc.  Of course if the item has charisma I'll describe in detail.
+
+                Did I leave anything out?  Let me know. And I'm going to assemble a grading set for coins & paper, and if the pictures turn out to be useful I'll post them.  When will I do that?  Don&#39;t know.</p>
+              </div>
+            </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#consignment" aria-expanded="false" aria-controls="consignment">
+                    CONSIGNMENT & WEB AD TERMS
+                  </a>
+                </h4>
+              </div>
+              <div id="consignment" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <h3>Consignment</h3>
+                <p>I do this all the time.  Terms are by negotiation.  I have successfully sold single items at the four figure level, and have disposed of collections in the high five figures.  There is a written contract stating commissions, rates, disclosure provisions, security, etc.  I am competitive and I get the job done. You can list your material on my site.  This is a page rental and comission scheme: a monthly fee (very minimal), and small commission to me if it sells.  Email me for more details.</p>
+              </div>
+            </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#appraisal" aria-expanded="false" aria-controls="appraisal">
+                    APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES
+                  </a>
+                </h4>
+              </div>
+              <div id="appraisal" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <h3>CONSIGNMENT</h3>
+                <p>I do this all the time.  Terms are by negotiation.  I have successfully sold single items at the four figure level, and have disposed of collections in the high five figures.  There is a written contract stating commissions, rates, disclosure provisions, security, etc.  I am competitive and I get the job done. You can list your material on my site.  This is a page rental and comission scheme: a monthly fee (very minimal), and small commission to me if it sells.  Email me for more details.</p>
+              </div>
+            </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#appraisal" aria-expanded="false" aria-controls="appraisal">
+                    APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES
+                  </a>
+                </h4>
+              </div>
+              <div id="appraisal" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                I've appraised some large and valuable collections, for which I was paid well.  I've identified hundreds of items for clients, and authenticated over 113,000 items.
+                10/12/2007
+                IDENTIFICATION SERVICE
+                   I&#39;ve been in business for 35+ years, interested in coins over 40 years.  I can identify and authenticate most things numismatic.
+
+                1. OFFER: I will identify any coin, token, banknote, or other numismatic object.  “Identify” means I will tell you, at a minimum,  the country, denomination, date of the thing.  I will offer information on metal content, approximate value (whatever that means), commemorative aspects if any, and any other information I might have.  You can try me on other items not numismatic, but no promises.  Cost is $5.00 per item.
+                2. EXCLUSIONS: I will not grade and I will not authenticate from pictures or descriptions.  I can give my opinion on those aspects only if you ship me the object for physical inspection.  See below for details.
+                3. METHOD:
+                A. Either send me a picture or give me a good description.  The best pictures of coins, medals, etc. will be scanner images at 150%, 300 dpi, extra sharpness, taken on a black background (easily produced by leaving the cover off).  White background will tend to produce too much contrast.  The best pictures of banknotes will be on a scanner at 100%, 200 dpi, normal sharpness.  Take pictures of both sides and send as uncompressed jpgs attached to an email.  You can send up to 6 jpgs totalling about 2mgb per email.  You can send me other types of images (camera, etc.) in other formats, but they may not work for various reasons.  DO NOT SEND FAX PICTURES.  THEY DON'T WORK.  And a faxed picture uses up about 30 pages worth of ink.  Annoying.
+                B. If you send me a description I want to know as much as possible of the following:
+                -metal content and/or color
+                -size (millimeters preferred to inches) and shape
+                -description of the major design elements of both sides
+                -the legend on both sides.  If in a foreign alphabet (non-”Roman,” which is the one used for English, etc.) try to figure out what alphabet it is and tell me.  If it is Greek or Russian with a lot of letters similar to Roman then try to “fake it.”
+                C. I may ask you more questions
+                D. When I am done I will send you one of the following messages:
+                -I have identified your item(s).  Pay me $x through paypal or authorize credit card charge and I will send you my results, or
+                -I’m sorry, I can’t identify your item, you don’t owe me anything.
+                E. You will pay me and I will send you my information.
+                4. NO REFUNDS for any reason.
+
+                7/1/2007 - So this has been going for a year, and I kept stats.  121 people asked for identifications of 525 things. I provided 13 for free for various reasons, charged and was paid for 422.  The others refused to pay so I didn&#39;t act.  It was kind of funny sometimes - many of the 51 refuseniks had already failed in their google but they would not pay, you know, ANYTHING, to get the answer to their question.  Some of those coins had all the necessary information right there: BRIT. OMN...., REPUBLIQUE FRANCAISE..., hammer and sickle.  Makes the world go round.
+
+                GRADING AND AUTHENTICATION
+                   You must realize that anything I might say will not have the cachet, though it may have the accuracy, of the big grading services, but my opinion might turn out to be worth something, and I will do work on objects that the agencies will not touch.
+                METHOD
+                A. I must have the object in hand.  You will pay the shipping costs both ways, and I will charge you $5.00 for a grade opinion and $5.00 for an authentication opinion.  If I decide the thing is genuine you will get a signed letter from me giving my conclusions.  The item will be scanned or digitally photographed and that picture will be reproduced on the letter.  That and a couple of bucks will get you a cup of coffee.  Occasionally, however, you might run into someone who will take my word for something, and on that basis will buy something from you that otherwise maybe they would not.  If I think the thing is not genuine I will ask you if you want a signed letter with photo or not.
+                B. The turnaround time will usually be short.  If there is a problem that requires research or consultation I&#39;ll let you know.
+                C. At the moment I do not have an "application form." I'll make one when the traffic demands.  For now just get in touch and we'll work out the details.
+                D. For authentication you will get a "real," "fake," or "I can't tell" from me.  You will not be charged for "I can't tell."  For oriental cast coins a statement including the word "probably" will be billed as a definitive conclusion and will be accompanied by an explanation for the uncertainty and recommendations for further (expensive) research.
+                E. For grade you will get a standard "word" grade (very good, extremely fine, etc.).  Detractors will be mentioned.  Split grades will be mentioned, as will grading peculiarities specific to that item, country, type, year, etc. if I know them (such as the fact, on German minors of 1873-89, that unless the little shield on the eagle's breast has some detail the coin is not better than VG no matter how nice the rest of it looks).  So you'll get blather if necessary, but you will not get numbers.  I don&#39;t do numbers.  It will be "uncirculated," not MS60.
+                F. All of this stuff will be my opinion only.  I may be wrong.  If I am I will apologize and retract my opinion in writing, but I will not make a refund.
+
+                6/15/2008
+                In past year I have written 29 letters as described above.
+
+                APPRAISAL
+                   I have done a number (more than 6, less than 400) of collection appraisals for collectors or their estate.  The largest was 40,000 items, several were more than 10,000.  I produce a written report, details to be arranged by negotiation, telling you what you wanted to know.  Typically this will be what you have and what it is "worth."  "Value" can be described in terms of relaceablity or potential sales value were one to sell to a dealer.  "Retail" or "market" prices are subject to market forces, and I will be glad to explain why I think an appraisal giving values in these terms is not a good idea.  "Catalog" values are useful in some series, not in others, and I can explain my views on this as well.  I will travel if my expenses are paid.  I charge by the hour, but I work very fast.
+
+                6/15/2008
+                I have performed 8 formal appraisals with written reports.  Total over 113,000 items.
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     );
