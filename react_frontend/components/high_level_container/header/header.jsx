@@ -21,7 +21,16 @@ var Header = React.createClass({
           </div>
           <HeaderCart/>
         </div>
-        <LoginDropdown/>
+
+        <div className="row header-login">
+          <div className="col-xs-offset-8 col-xs-2">
+            ABOUT A/A
+          </div>
+          <div className="col-xs-2">
+            <LoginDropdown/>
+          </div>
+        </div>
+
 
         <HeaderCategories history={this.props.history}/>
 
