@@ -1,0 +1,60 @@
+#logo:hover {
+  cursor: pointer;
+}
+
+.header-top-bar {
+  padding-top: 50px;
+}
+
+.header-search-bar {
+  vertical-align: text-bottom;
+}
+
+.header-title {
+  font-weight: 300;
+  margin: auto;
+  width: 60%;
+  letter-spacing: 1vh;
+  text-align: center;
+}
+
+.header-login {
+  padding-top: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+#header-categories-accordion .panel {
+  margin-bottom: 0px;
+}
+
+#header-categories-accordion .panel-heading {
+  font-weight: 100;
+  background-color: #3f3f3f;
+  color: white;
+}
+
+#header-categories-accordion .panel-title {
+  text-align: center;
+  line-height: 10px;
+}
+
+#header-categories-accordion .panel-title:hover {
+  cursor: pointer;
+}
+
+#header-categories-accordion .category-filter:hover {
+  cursor:pointer;
+}
+
+#header-categories-accordion .category-divider {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 95%;
+  height: 10px;
+  margin: auto;
+}
+
+.header-dropdown {
+  margin: 0;
+}

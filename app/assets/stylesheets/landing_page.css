@@ -1,0 +1,56 @@
+#landing-page-carousel {
+  height: 600px;
+}
+
+.landing-page-new-arrivals {
+  border: 5px solid orange;
+  width: 90%;
+}
+
+.landing-page-info {
+  background-color: #FFFFF0;
+  padding: 50px 0;
+}
+
+.landing-page-info h3 {
+  letter-spacing: .5vh;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding: 30px 0 30px 0;
+}
+
+
+#new-arrivals {
+  letter-spacing: 1vh;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  text-decoration: underline;
+  padding: 30px 0 30px 0;
+  border: 1px solid black;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 400px;
+  border: 1px solid black;
+}
+
+.footer-links {
+  padding-top: 20px;
+  border: 1px solid red;
+}
+
+#scroll-to-top {
+  outline: 1px solid green;
+  height: 50px;
+  width: 110px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}
