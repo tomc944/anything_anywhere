@@ -549,7 +549,7 @@ var HowWeOperate = React.createClass({
               </div>
               <div id="appraisal" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <p>I've appraised some large and valuable collections, for which I was paid well.  I've identified hundreds of items for clients, and authenticated over 113,000 items.</p>
-                <h3>IDENTIFICATION SERVICE</h3>
+                <h3>Identification Service</h3>
                 <p>I&#39;ve been in business for 35+ years, interested in coins over 40 years.  I can identify and authenticate most things numismatic.</p>
 
                 <p>1. OFFER: I will identify any coin, token, banknote, or other numismatic object.  “Identify” means I will tell you, at a minimum,  the country, denomination, date of the thing.  I will offer information on metal content, approximate value (whatever that means), commemorative aspects if any, and any other information I might have.  You can try me on other items not numismatic, but no promises.  Cost is $5.00 per item.</p>
