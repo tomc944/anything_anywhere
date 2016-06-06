@@ -13,6 +13,10 @@ var Footer = React.createClass({
     this.props.history.pushState(null, "/operate");
   },
 
+  goToCoiinInformation: function() {
+    this.props.history.pushState(null, "/coin_information")
+  },
+
   render: function() {
     return (
       <div className="footer">
@@ -22,6 +26,7 @@ var Footer = React.createClass({
             <div className="col-xs-3" onClick={this.goToContact}>Contact</div>
             <div className="col-xs-3" onClick={this.goToOperate}>How We Operate</div>
             <div className="col-xs-3">Etc.</div>
+            <div classname="col-xs-3" onClick={this.goToCoinInformation}>Coin Information</div>
           </div>
         </div>
 

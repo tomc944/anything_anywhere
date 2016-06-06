@@ -1,6 +1,6 @@
 Patrick Total Hours - 20.5
 Patrick Billed Hours - 13
-Thomas Total Hours - 10
+Thomas Total Hours - 11 ---> 2 planning, 4 for Wednesday & Friday, 1 for over the weekend
 
 First conference call - 0.5 hours	x2 = 1 hour
 Initial Schema planning and architecture strategy	- 1 hour x2 = 2 hours
