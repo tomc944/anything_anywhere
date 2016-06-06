@@ -13,8 +13,12 @@ var Footer = React.createClass({
     this.props.history.pushState(null, "/operate");
   },
 
-  goToCoiinInformation: function() {
-    this.props.history.pushState(null, "/coin_information")
+  goToAdditionalInformation: function() {
+    // this.props.history.pushState(null, "/coin_information");
+  },
+
+  goToServices: function() {
+    this.props.history.pushState(null, "/services");
   },
 
   render: function() {
@@ -22,11 +26,15 @@ var Footer = React.createClass({
       <div className="footer">
         <div className="footer-links container">
           <div className="row">
-            <div className="col-xs-3" onClick={this.goToAbout}>About us</div>
-            <div className="col-xs-3" onClick={this.goToContact}>Contact</div>
-            <div className="col-xs-3" onClick={this.goToOperate}>How We Operate</div>
-            <div className="col-xs-3">Etc.</div>
-            <div classname="col-xs-3" onClick={this.goToCoinInformation}>Coin Information</div>
+            <div className="col-xs-3 footer-link"><a onClick={this.goToAbout}>ABOUT AA</a></div>
+            <div className="col-xs-3 footer-link"><a onClick={this.goToContact}>CONTACT</a></div>
+            <div className="col-xs-3 footer-link"><a onClick={this.goToOperate}>HOW I OPERATE</a></div>
+            <div className="col-xs-3 footer-link"><a onClick={this.goToAdditionalInformation}>ADDITIONAL INFORMATION</a></div>
+          </div>
+          <div className="row">
+            <div className="col-xs-3 footer-link"><a onClick={this.goToLinks}>LINKS - FRIENDS/COLLEAGUES</a></div>
+            <div className="col-xs-3 footer-link"><a onClick={this.goToBlog}>MY BLOG</a></div>
+            <div className="col-xs-3 footer-link"><a onClick={this.goToServices}>ADDITIONAL SERVICES</a></div>
           </div>
         </div>
 

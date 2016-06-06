@@ -8,7 +8,8 @@ var React = require('react'),
     ItemIndex = require('./components/item_index/item_index'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
-    HowWeOperate = require('./components/info/how_we_operate');
+    HowWeOperate = require('./components/info/how_we_operate'),
+    AdditionalServices = require('./components/info/additional_services');
 
 var routes = (
   <Route path="/" component={HighLevelContainer}>
@@ -17,6 +18,7 @@ var routes = (
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
     <Route path="/operate" component={HowWeOperate}/>
+    <Route path="/services" component={AdditionalServices}/>
   </Route>
 );
 
