@@ -14,7 +14,7 @@ var Footer = React.createClass({
   },
 
   goToAdditionalInformation: function() {
-    // this.props.history.pushState(null, "/coin_information");
+    this.props.history.pushState(null, "/additional_information");
   },
 
   goToServices: function() {

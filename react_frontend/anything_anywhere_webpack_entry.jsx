@@ -9,6 +9,7 @@ var React = require('react'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
     HowWeOperate = require('./components/info/how_we_operate'),
+    AdditionalInformation = require('./components/info/additional_information'),
     AdditionalServices = require('./components/info/additional_services');
 
 var routes = (
@@ -19,6 +20,21 @@ var routes = (
     <Route path="/contact" component={Contact}/>
     <Route path="/operate" component={HowWeOperate}/>
     <Route path="/services" component={AdditionalServices}/>
+    <Route path="/additional_information" component={AdditionalInformation}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+      <Route path="/" component={}>
+    </Route>
   </Route>
 );
 
