@@ -1,0 +1,35 @@
+.info-container {
+  background-color: #FFFFF0;
+}
+
+.info {
+ padding: 50px 0;
+ width: 90%;
+ margin: auto;
+ text-align: center;
+ font-size: 18px;
+}
+
+.info h1, .info h3 {
+  font-weight: 300
+  text-decoration: underline
+  color: #3299ff;
+}
+
+.info-terms-container {
+  padding-top: 50px;
+}
+
+.info-terms {
+ text-align: left;
+ font-size: 16px;
+}
+
+#operate-accordion {
+ padding-top: 50px;
+ text-align: left;
+}
+
+#operate-accordion .panel-collapse {
+ padding: 10px 20px;
+}
