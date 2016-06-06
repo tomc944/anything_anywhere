@@ -1,5 +1,5 @@
 var React = require('react');
-http://anythinganywhere.com/info/newcolinfo.htm
+
 var AdditionalInformation = React.createClass({
   render: function() {
     <div className="coin-information-container">
@@ -27,9 +27,13 @@ var AdditionalInformation = React.createClass({
           <li> <a href="http://anythinganywhere.com/additional_information/websiteman"> Click here for website development and management information</a> </li>
           <li> <a href="http://anythinganywhere.com/additional_information/faleri"> Introduction to faleristics (badges) </a></li>
           <li> <a href="http://anythinganywhere.com/additional_information/clean"> Coin Cleaning Secrets of the Ancients</a></li>
-          <li> <a href="http://anythinganywhere.com/additional_information/plasticmon"> Personal opinions regarding the collection of phonecards, etc. </a>< /li>
+          <li> <a href="http://anythinganywhere.com/additional_information/plasticmon"> Personal opinions regarding the collection of phonecards, etc. </a> </li>
           <li> <a href="http://anythinganywhere.com/additional_information/jerks"> FRAUD ALERTS - deadbeats & scammers </a></li>
+
+        {this.props.children}
       </div>
     </div>
   }
 })
+
+module.exports = AdditionalInformation
