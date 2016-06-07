@@ -55,7 +55,7 @@
 	    About = __webpack_require__(267),
 	    Contact = __webpack_require__(268),
 	    HowWeOperate = __webpack_require__(269),
-	    AdditionalInformation = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/info/additional_information\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+	    AdditionalInformation = __webpack_require__(276),
 	    A2Z = __webpack_require__(277),
 	    Abbrev = __webpack_require__(278),
 	    Apprais = __webpack_require__(279),
@@ -36259,7 +36259,239 @@
 
 /***/ },
 /* 275 */,
-/* 276 */,
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var AdditionalInformation = React.createClass({
+	  displayName: "AdditionalInformation",
+	
+	  // Might leave the below <li> out due to deprecated sales
+	  // For later, don't know how to pop-up email client correctly
+	  // Need to look how to route this one...
+	  render: function () {
+	    React.createElement(
+	      "div",
+	      { className: "coin-information-container" },
+	      React.createElement(
+	        "div",
+	        { className: "coin-information" },
+	        React.createElement(
+	          "h1",
+	          null,
+	          "This sector will have text files of info concerning the kinds of things I sell, and eventually links to further sources"
+	        ),
+	        React.createElement(
+	          "ul",
+	          null,
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/tye/" },
+	              " Articles by Robert Tye, in my opinion perhaps the most cogent (and maverick) thinker in historical economics alive today "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/varieties" },
+	              " COIN VARIETIES: large & small dates, etc. "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/fininst" },
+	              " INTRODUCTION TO FISCAL INSTRUMENTS "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/collecting" },
+	              " INTRODUCTION TO COLLECTING "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/britabbrev" },
+	              " Abbreviations found on British military medals, by R.A. Fikentscher "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "MEXICO, varieties of Sonoran revolutionary 5 and 10 pesos "
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/a2z" },
+	              "\"A to Z\" articles I've written for World Coin News "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "Click here to get on the mailing list for monthly new offers (usually about 1000 new items) just write \"anythinganywhere\" in message box.  Paper version available by subscription.  Ask for rates. "
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/security" },
+	              " Click here for a disquisition on \"secure\" commerce. "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "Click here for a discussion of shipping costs, guarantees, refunds, etc. "
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/abbrev" },
+	              " Click here for list of abbreviations I like to use. "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/grading" },
+	              " Click here for grading policy "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/sonsign" },
+	              " Click here for consignment and website listing terms "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/apprais" },
+	              " Click here for description of attribution, authentication, grading, and appraisal services "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/buying" },
+	              " Click here for to see what I want to buy (changes from time to time)"
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/privacy" },
+	              " Click here for my opinion on internet security"
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/websiteman" },
+	              " Click here for website development and management information"
+	            ),
+	            " "
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/faleri" },
+	              " Introduction to faleristics (badges) "
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/clean" },
+	              " Coin Cleaning Secrets of the Ancients"
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/plasticmon" },
+	              " Personal opinions regarding the collection of phonecards, etc. "
+	            ),
+	            " "
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            " ",
+	            React.createElement(
+	              "a",
+	              { href: "http://anythinganywhere.com/additional_information/jerks" },
+	              " FRAUD ALERTS - deadbeats & scammers "
+	            )
+	          )
+	        ),
+	        this.props.children
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = AdditionalInformation;
+
+/***/ },
 /* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
