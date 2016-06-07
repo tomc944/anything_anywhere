@@ -1,0 +1,15 @@
+.contact-container {
+  background-color: #FFFFF0;
+}
+
+.contact {
+  padding: 100px 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.contact h1 {
+  font-weight: 300;
+  color: #3299ff;
+}

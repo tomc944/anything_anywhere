@@ -52,18 +52,20 @@
 	    HighLevelContainer = __webpack_require__(229),
 	    LandingPage = __webpack_require__(242),
 	    ItemIndex = __webpack_require__(244),
-	    Info = __webpack_require__(271),
+	    About = __webpack_require__(267),
 	    Contact = __webpack_require__(268),
-	    HowWeOperate = __webpack_require__(269);
+	    HowWeOperate = __webpack_require__(269),
+	    AdditionalServices = __webpack_require__(270);
 	
 	var routes = React.createElement(
 	  Route,
 	  { path: '/', component: HighLevelContainer },
 	  React.createElement(IndexRoute, { component: LandingPage }),
 	  React.createElement(Route, { path: '/products', component: ItemIndex }),
-	  React.createElement(Route, { path: '/info', component: Info }),
+	  React.createElement(Route, { path: '/about', component: About }),
 	  React.createElement(Route, { path: '/contact', component: Contact }),
-	  React.createElement(Route, { path: '/operate', component: HowWeOperate })
+	  React.createElement(Route, { path: '/operate', component: HowWeOperate }),
+	  React.createElement(Route, { path: '/services', component: AdditionalServices })
 	);
 	
 	$(function () {
@@ -25871,6 +25873,97 @@
 	    return React.createElement(
 	      'div',
 	      null,
+	      React.createElement(
+	        'div',
+	        { className: 'modal fade', id: 'aboutModal', tabindex: '-1', role: 'dialog', 'aria-labelledby': 'myModalLabel' },
+	        React.createElement(
+	          'div',
+	          { className: 'modal-dialog', role: 'document' },
+	          React.createElement(
+	            'div',
+	            { className: 'modal-content' },
+	            React.createElement(
+	              'div',
+	              { className: 'modal-header' },
+	              React.createElement(
+	                'button',
+	                { type: 'button', className: 'close', 'data-dismiss': 'modal', 'aria-label': 'Close' },
+	                React.createElement(
+	                  'span',
+	                  { 'aria-hidden': 'true' },
+	                  '×'
+	                )
+	              ),
+	              React.createElement(
+	                'h3',
+	                { className: 'modal-title', id: 'myModalLabel' },
+	                'ANYTHING ANYWHERE'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'modal-body' },
+	              '(example)Hi, my name is Bob Reis, and I have been in the numismatic business for X years. etc etc etc',
+	              React.createElement('br', null),
+	              React.createElement('br', null),
+	              React.createElement(
+	                'p',
+	                null,
+	                'In addition to shopping and for more information, visit these:'
+	              ),
+	              React.createElement(
+	                'ul',
+	                null,
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Contact me'
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Buying and how I operate - this includes information on how to order, terms for all commerce done at by me, and my thoughts on secure commerce, refunds and guarantees, grading, consignment, buying, and what things are worth. '
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Addition services - Attribution, authentication, grading, and appraisal services, and market research.'
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Links - I only put out links to places run by people I like '
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'blog - I like to write and here are some of my thoughts on things'
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'etc.'
+	                )
+	              ),
+	              React.createElement('br', null),
+	              React.createElement(
+	                'p',
+	                null,
+	                'You can find all of these links at the bottom as well.'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'modal-footer' },
+	              React.createElement(
+	                'button',
+	                { type: 'button', className: 'btn btn-default', 'data-dismiss': 'modal' },
+	                'Close'
+	              )
+	            )
+	          )
+	        )
+	      ),
 	      React.createElement(Header, { history: this.props.history }),
 	      this.props.children,
 	      React.createElement(Footer, { history: this.props.history })
@@ -25926,8 +26019,8 @@
 	        { className: 'row header-login' },
 	        React.createElement(
 	          'div',
-	          { className: 'col-xs-offset-8 col-xs-2' },
-	          'ABOUT A/A'
+	          { className: 'col-xs-offset-8 col-xs-2 header-about', 'data-toggle': 'modal', 'data-target': '#aboutModal' },
+	          'NEW TO AA?'
 	        ),
 	        React.createElement(
 	          'div',
@@ -26703,12 +26796,20 @@
 	var Footer = React.createClass({
 	  displayName: "Footer",
 	
-	  goToInfo: function () {
-	    this.props.history.pushState(null, "/info");
-	  },
-	
 	  goToContact: function () {
 	    this.props.history.pushState(null, "/contact");
+	  },
+	
+	  goToOperate: function () {
+	    this.props.history.pushState(null, "/operate");
+	  },
+	
+	  goToAdditionalInformation: function () {
+	    // this.props.history.pushState(null, "/coin_information");
+	  },
+	
+	  goToServices: function () {
+	    this.props.history.pushState(null, "/services");
 	  },
 	
 	  render: function () {
@@ -26717,29 +26818,84 @@
 	      { className: "footer" },
 	      React.createElement(
 	        "div",
-	        { className: "footer-links container" },
+	        { className: "footer-container" },
 	        React.createElement(
 	          "div",
-	          { className: "row" },
+	          { className: "footer-links container" },
 	          React.createElement(
 	            "div",
-	            { className: "col-xs-3", onClick: this.goToInfo },
-	            "FAQ link"
+	            { className: "row" },
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { "data-toggle": "modal", "data-target": "#aboutModal" },
+	                React.createElement(
+	                  "b",
+	                  null,
+	                  "ABOUT AA"
+	                )
+	              )
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { onClick: this.goToContact },
+	                "CONTACT"
+	              )
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { onClick: this.goToOperate },
+	                "BUYING & HOW I OPERATE"
+	              )
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { onClick: this.goToAdditionalInformation },
+	                "ADDITIONAL INFORMATION"
+	              )
+	            )
 	          ),
 	          React.createElement(
 	            "div",
-	            { className: "col-xs-3", onClick: this.goToContact },
-	            "Contact"
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "col-xs-3" },
-	            "How We Operate"
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "col-xs-3" },
-	            "Etc."
+	            { className: "row" },
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { onClick: this.goToLinks },
+	                "LINKS - FRIENDS/COLLEAGUES"
+	              )
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { onClick: this.goToBlog },
+	                "MY BLOG"
+	              )
+	            ),
+	            React.createElement(
+	              "div",
+	              { className: "col-xs-3 footer-link" },
+	              React.createElement(
+	                "a",
+	                { onClick: this.goToServices },
+	                "ADDITIONAL SERVICES"
+	              )
+	            )
 	          )
 	        )
 	      ),
@@ -33618,7 +33774,188 @@
 	module.exports = ApiUtilities;
 
 /***/ },
-/* 267 */,
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var About = React.createClass({
+	  displayName: "About",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "info-container" },
+	      React.createElement(
+	        "div",
+	        { className: "info" },
+	        React.createElement(
+	          "h1",
+	          null,
+	          "HOW TO ORDER"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "For more than 10 years now I have conducted business here by ",
+	          React.createElement(
+	            "b",
+	            null,
+	            "email negotiation"
+	          ),
+	          " rather than \"secure commerce.\"  As we have seen recently, \"secure commerce\" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security.  You and I will negotiate until we are satisfied and only then will I process the order. You can cut and paste the text description of whatever you're interested in, including reference number (if any) and price, into your email. If you want more than one of something, put that information next to the item.  I will personally get back in touch with you regarding what's available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I'll constantly do the best I can."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "NOTES FOR CLIENTS IN COUNTRIES OTHER THAN THE USA"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "1. ",
+	          React.createElement(
+	            "b",
+	            null,
+	            "Paying cash"
+	          ),
+	          ": USA banknotes that are torn or have small pieces missing ARE acceptable as payment.  I also accept payment in any convertible currency."
+	        ),
+	        "2. ",
+	        React.createElement(
+	          "b",
+	          null,
+	          "IF YOU EXPERIENCE A QUERY OF SOME KIND FROM CUSTOMS DO NOT REFUSE THE PACKAGE!"
+	        ),
+	        "Typically, if they open the parcel for whatever reason, they will not find a packing list or invoice.  I do not include such unless YOU have asked me to.  When presented with the query ",
+	        React.createElement(
+	          "b",
+	          null,
+	          "YOU SHOULD CONTACT ME IMMEDIATELY"
+	        ),
+	        ".  I will prepare and fax a statement either to you or to them directly.  That action should take care of things.  If it doesn’t I will keep trying.  The basic point is that you should not deal with them alone.  I should be in on the process.  So when that kind of thing happens ",
+	        React.createElement(
+	          "b",
+	          null,
+	          "GET IN TOUCH!"
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "info-terms" },
+	        React.createElement(
+	          "h1",
+	          null,
+	          "TERMS"
+	        ),
+	        React.createElement(
+	          "h4",
+	          null,
+	          "(read the fine print!)"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "ol",
+	          null,
+	          React.createElement(
+	            "li",
+	            null,
+	            "Everything guaranteed genuine &/or as described. If it is a repro or altered it will be so described.  If not, send it back. Lifetime return privilege on items sold as genuine that turn out to be fake or that were repaired and not so described.  (That's my lifetime.  Don't ask my heirs to fix something for you 50 years from now!)"
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "RETURNS: No-hassle return in reasonable time, no questions asked.  If return is for my error I will refund part or all of your return postage depending on how many bells & whistles you add to the basic postage cost of the return.  Ask me if you have questions.  Returns deemed to be absurd due to low value or ridiculous reason may result in termination of the business relationship without notice.  (I write this early in 2003 because it has happened several times recently.  If you don't know the parameters of quality, authenticity, pricing, etc. of the thing you're buying ask me and I'll be more than happy to tell you what I think and what I know.  But if you don't and you assume I'm trying to cheat you somehow I'll get all huffy inside and while I'm smilingly refunding your money I'll also be crossing you off my list.  Life is too short for both of us.)"
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "When you return something either use the \"cheapest or most reasonable\" method or ask my advice.  If the reason for your return is because I made a mistake I will refund your shipping costs, but only the \"cheapest or most reasonable method.\"  Example: as I write I have on my desk a return.  My mistake.  Parcel weighs about 5 ounces, insured for $200, in a flat rate priority envelope, with delivery confirmation.  Items are worth $56.00.  Postage paid was $9.25.  I would have sent it as a first class package, insured for $100, no delivery confirmation, total $3.86.  I will round upward and refund $4.00.  Post office likes to encourage unnecessary \"services.\"  Do not be taken in.  I will pay for my mistakes.  You will pay for yours.  Talk to me."
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "PAYMENT WITH ORDER.  I accept check, money order, cash, credit card (Visa, Mastercard, Discover, American Express, Diners Club(!)), paypal, etc.  I also accept foreign currency by prearrangement (rates vary depending on the currency).  Wire transfers are possible, but carry extra fees that make it a silly method for amounts under $1000.00.  Contact me by email to make arrangements. reisbiz@earthlink.net"
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "REFUND if sold out (human error in inventory entry, etc.) or for return.  Form of refund is at my option.  This means that if you paid by credit card you MAY get a refund by check.  This is because credit card transactions carry fees in both directions, at least mine do.  If I'm going to pay 3.5% + $0.35 each way I may opt to write you a check instead.  Sorry for possible inconvenience.  Gotta trim those costs.  And if you are a regular customer you may get a store credit for the assumed next order, always cashable should you so prefer."
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "You pay the invoiced shipping costs.  Shipping costs are based on 1) actual shipping costs & 2) credit card processing costs (we split the cost, which averages 3+%).  Shipping in USA is usually by insured mail ($3.50 minimum).  Overseas methods vary and will be agreed on in advance."
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "THERE IS NO INDEMNITY FOR SHIPMENTS OUTSIDE THE USA THAT DON'T ARRIVE.  I ship several hundred parcels overseas every year.  Maybe 3-5 get lost, but registered shipments will recover no more than $45.00, depending on what was written on the customs form.  Overseas shipments are AT THE BUYER'S RISK.  Sorry.  The sole exception is if I ship by parcel post with insurance, in which case the customs sticker must reflect accurate value for those of you who suffer under a VAT or a duty.  \"Parcel post\" designation will typically double or triple the shipping costs.  IF YOU HAVE A PROBLEM WITH CUSTOMS CONTACT ME BEFORE YOU DO ANYTHING!"
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "NC state sales tax is 6.25% and will be added to all orders shipped to NC addresses."
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "You are welcome to ask for a discount and/or make counteroffers.  I may or may not grant the discount or accept your offer.  If I don't this time I might next time, so by all means keep asking.  BUT:"
+	          ),
+	          React.createElement(
+	            "ul",
+	            null,
+	            React.createElement(
+	              "li",
+	              null,
+	              "Asking for a price reduction will ALWAYS increase my response time while I think about it"
+	            ),
+	            React.createElement(
+	              "li",
+	              null,
+	              "Reductions will pretty much never happen for transactions of less than $100.00, for gold, for large orders of cheap stuff (e.g.: 150 different items @ $0.50 each)"
+	            ),
+	            React.createElement(
+	              "li",
+	              null,
+	              "In the low dollar / high precious metal price situation that obtains from late 2007 discounts become less likely and smaller, the opposite in fact, some prices may rise without prior notice."
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "WANTLISTS - I do not have an automated system that goes \"beep\" when I get something someone wanted.  Instead, you can do 2 things to maximize your chance of getting something:"
+	          ),
+	          React.createElement(
+	            "ul",
+	            null,
+	            React.createElement(
+	              "li",
+	              null,
+	              "Get on the email announcement list by asking to be on it,"
+	            ),
+	            React.createElement(
+	              "li",
+	              null,
+	              "call or email me in the 3rd week of every month to ask me about that specific thing you want."
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            "SECURITY CONSIDERATION (mine) - I like to develop relationships of trust.  Multiple repeat customers may experience ship-and-bill orders rather than pay-in-advance.  If this is the case with you I may, at any time, resume the pay-in-advance procedure.  The most likely reason will be that you have made an order much larger than usual, but any reason will do, and I \"reserve the right\" absolutely.  This policy may be applied even to customers that have had years of interaction with me.  Nothing personal.  Just business."
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = About;
+
+/***/ },
 /* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -35132,81 +35469,226 @@
 	module.exports = HowWeOperate;
 
 /***/ },
-/* 270 */,
-/* 271 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	
-	var MainInfo = React.createClass({
-	  displayName: "MainInfo",
+	var AdditionalServices = React.createClass({
+	  displayName: "AdditionalServices",
+	
 	
 	  render: function () {
 	    return React.createElement(
 	      "div",
-	      { className: "info-container" },
+	      { className: "panel panel-default" },
 	      React.createElement(
 	        "div",
-	        { className: "info" },
+	        { className: "panel-heading", role: "tab", id: "headingTwo" },
 	        React.createElement(
-	          "h1",
+	          "h4",
+	          { className: "panel-title" },
+	          React.createElement(
+	            "a",
+	            { className: "collapsed", "data-toggle": "collapse", "data-parent": "#operate-accordion", href: "#appraisal", "aria-expanded": "false", "aria-controls": "appraisal" },
+	            "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        { id: "appraisal", className: "panel-collapse collapse", role: "tabpanel", "aria-labelledby": "headingTwo" },
+	        React.createElement(
+	          "p",
 	          null,
-	          "HOW TO ORDER"
+	          "I've appraised some large and valuable collections, for which I was paid well.  I've identified hundreds of items for clients, and authenticated over 113,000 items."
+	        ),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "Identification Service"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I've been in business for 35+ years, interested in coins over 40 years.  I can identify and authenticate most things numismatic."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "1. OFFER: I will identify any coin, token, banknote, or other numismatic object.  “Identify” means I will tell you, at a minimum,  the country, denomination, date of the thing.  I will offer information on metal content, approximate value (whatever that means), commemorative aspects if any, and any other information I might have.  You can try me on other items not numismatic, but no promises.  Cost is $5.00 per item."
 	        ),
 	        React.createElement("br", null),
 	        React.createElement(
 	          "p",
 	          null,
-	          "For more than 10 years now I have conducted business here by ",
-	          React.createElement(
-	            "b",
-	            null,
-	            "email negotiation"
-	          ),
-	          " rather than \"secure commerce.\"  As we have seen recently, \"secure commerce\" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security.  You and I will negotiate until we are satisfied and only then will I process the order. You can cut and paste the text description of whatever you're interested in, including reference number (if any) and price, into your email. If you want more than one of something, put that information next to the item.  I will personally get back in touch with you regarding what's available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I'll constantly do the best I can."
+	          "2. EXCLUSIONS: I will not grade and I will not authenticate from pictures or descriptions.  I can give my opinion on those aspects only if you ship me the object for physical inspection.  See below for details."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "3. METHOD:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "A. Either send me a picture or give me a good description.  The best pictures of coins, medals, etc. will be scanner images at 150%, 300 dpi, extra sharpness, taken on a black background (easily produced by leaving the cover off).  White background will tend to produce too much contrast.  The best pictures of banknotes will be on a scanner at 100%, 200 dpi, normal sharpness.  Take pictures of both sides and send as uncompressed jpgs attached to an email.  You can send up to 6 jpgs totalling about 2mgb per email.  You can send me other types of images (camera, etc.) in other formats, but they may not work for various reasons.  DO NOT SEND FAX PICTURES.  THEY DON'T WORK.  And a faxed picture uses up about 30 pages worth of ink.  Annoying."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "B. If you send me a description I want to know as much as possible of the following:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-metal content and/or color"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-size (millimeters preferred to inches) and shape"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-description of the major design elements of both sides"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-the legend on both sides.  If in a foreign alphabet (non-”Roman,” which is the one used for English, etc.) try to figure out what alphabet it is and tell me.  If it is Greek or Russian with a lot of letters similar to Roman then try to “fake it.”"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "C. I may ask you more questions"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "D. When I am done I will send you one of the following messages:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-I have identified your item(s).  Pay me $x through paypal or authorize credit card charge and I will send you my results, or"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-I’m sorry, I can’t identify your item, you don’t owe me anything."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "E. You will pay me and I will send you my information."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "4. NO REFUNDS for any reason."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "7/1/2007 - So this has been going for a year, and I kept stats.  121 people asked for identifications of 525 things. I provided 13 for free for various reasons, charged and was paid for 422.  The others refused to pay so I didn't act.  It was kind of funny sometimes - many of the 51 refuseniks had already failed in their google but they would not pay, you know, ANYTHING, to get the answer to their question.  Some of those coins had all the necessary information right there: BRIT. OMN...., REPUBLIQUE FRANCAISE..., hammer and sickle.  Makes the world go round."
 	        ),
 	        React.createElement("br", null),
 	        React.createElement(
 	          "h3",
 	          null,
-	          "NOTES FOR CLIENTS IN COUNTRIES OTHER THAN THE USA"
+	          "Grading and Authentication"
 	        ),
 	        React.createElement(
 	          "p",
 	          null,
-	          "1. ",
-	          React.createElement(
-	            "b",
-	            null,
-	            "Paying cash"
-	          ),
-	          ": USA banknotes that are torn or have small pieces missing ARE acceptable as payment.  I also accept payment in any convertible currency."
+	          "You must realize that anything I might say will not have the cachet, though it may have the accuracy, of the big grading services, but my opinion might turn out to be worth something, and I will do work on objects that the agencies will not touch."
 	        ),
-	        "2. ",
+	        React.createElement("br", null),
 	        React.createElement(
-	          "b",
+	          "h3",
 	          null,
-	          "IF YOU EXPERIENCE A QUERY OF SOME KIND FROM CUSTOMS DO NOT REFUSE THE PACKAGE!"
+	          "Method"
 	        ),
-	        "Typically, if they open the parcel for whatever reason, they will not find a packing list or invoice.  I do not include such unless YOU have asked me to.  When presented with the query ",
 	        React.createElement(
-	          "b",
+	          "p",
 	          null,
-	          "YOU SHOULD CONTACT ME IMMEDIATELY"
+	          "A. I must have the object in hand.  You will pay the shipping costs both ways, and I will charge you $5.00 for a grade opinion and $5.00 for an authentication opinion.  If I decide the thing is genuine you will get a signed letter from me giving my conclusions.  The item will be scanned or digitally photographed and that picture will be reproduced on the letter.  That and a couple of bucks will get you a cup of coffee.  Occasionally, however, you might run into someone who will take my word for something, and on that basis will buy something from you that otherwise maybe they would not.  If I think the thing is not genuine I will ask you if you want a signed letter with photo or not."
 	        ),
-	        ".  I will prepare and fax a statement either to you or to them directly.  That action should take care of things.  If it doesn’t I will keep trying.  The basic point is that you should not deal with them alone.  I should be in on the process.  So when that kind of thing happens ",
+	        React.createElement("br", null),
 	        React.createElement(
-	          "b",
+	          "p",
 	          null,
-	          "GET IN TOUCH!"
+	          "B. The turnaround time will usually be short.  If there is a problem that requires research or consultation I'll let you know."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "C. At the moment I do not have an \"application form.\" I'll make one when the traffic demands.  For now just get in touch and we'll work out the details."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "D. For authentication you will get a \"real,\" \"fake,\" or \"I can't tell\" from me.  You will not be charged for \"I can't tell.\"  For oriental cast coins a statement including the word \"probably\" will be billed as a definitive conclusion and will be accompanied by an explanation for the uncertainty and recommendations for further (expensive) research."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "E. For grade you will get a standard \"word\" grade (very good, extremely fine, etc.).  Detractors will be mentioned.  Split grades will be mentioned, as will grading peculiarities specific to that item, country, type, year, etc. if I know them (such as the fact, on German minors of 1873-89, that unless the little shield on the eagle's breast has some detail the coin is not better than VG no matter how nice the rest of it looks).  So you'll get blather if necessary, but you will not get numbers.  I don't do numbers.  It will be \"uncirculated,\" not MS60."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "F. All of this stuff will be my opinion only.  I may be wrong.  If I am I will apologize and retract my opinion in writing, but I will not make a refund."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "6/15/2008 - In past year I have written 29 letters as described above."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "Appraisal"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I have done a number (more than 6, less than 400) of collection appraisals for collectors or their estate.  The largest was 40,000 items, several were more than 10,000.  I produce a written report, details to be arranged by negotiation, telling you what you wanted to know.  Typically this will be what you have and what it is \"worth.\"  \"Value\" can be described in terms of relaceablity or potential sales value were one to sell to a dealer.  \"Retail\" or \"market\" prices are subject to market forces, and I will be glad to explain why I think an appraisal giving values in these terms is not a good idea.  \"Catalog\" values are useful in some series, not in others, and I can explain my views on this as well.  I will travel if my expenses are paid.  I charge by the hour, but I work very fast."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "6/15/2008 - I have performed 8 formal appraisals with written reports.  Total over 113,000 items."
 	        )
-	      ),
-	      "TERMS (read the fine print!) 1. Everything guaranteed genuine &/or as described. If it is a repro or altered it will be so described.  If not, send it back. Lifetime return privilege on items sold as genuine that turn out to be fake or that were repaired and not so described.  (That's my lifetime.  Don't ask my heirs to fix something for you 50 years from now!) 2. RETURNS: No-hassle return in reasonable time, no questions asked.  If return is for my error I will refund part or all of your return postage depending on how many bells & whistles you add to the basic postage cost of the return.  Ask me if you have questions.  Returns deemed to be absurd due to low value or ridiculous reason may result in termination of the business relationship without notice.  (I write this early in 2003 because it has happened several times recently.  If you don't know the parameters of quality, authenticity, pricing, etc. of the thing you're buying ask me and I'll be more than happy to tell you what I think and what I know.  But if you don't and you assume I'm trying to cheat you somehow I'll get all huffy inside and while I'm smilingly refunding your money I'll also be crossing you off my list.  Life is too short for both of us.) 2a. When you return something either use the \"cheapest or most reasonable\" method or ask my advice.  If the reason for your return is because I made a mistake I will refund your shipping costs, but only the \"cheapest or most reasonable method.\"  Example: as I write I have on my desk a return.  My mistake.  Parcel weighs about 5 ounces, insured for $200, in a flat rate priority envelope, with delivery confirmation.  Items are worth $56.00.  Postage paid was $9.25.  I would have sent it as a first class package, insured for $100, no delivery confirmation, total $3.86.  I will round upward and refund $4.00.  Post office likes to encourage unnecessary \"services.\"  Do not be taken in.  I will pay for my mistakes.  You will pay for yours.  Talk to me. 3. PAYMENT WITH ORDER.  I accept check, money order, cash, credit card (Visa, Mastercard, Discover, American Express, Diners Club(!)), paypal, etc.  I also accept foreign currency by prearrangement (rates vary depending on the currency).  Wire transfers are possible, but carry extra fees that make it a silly method for amounts under $1000.00.  Contact me by email to make arrangements. reisbiz@earthlink.net 4. REFUND if sold out (human error in inventory entry, etc.) or for return.  Form of refund is at my option.  This means that if you paid by credit card you MAY get a refund by check.  This is because credit card transactions carry fees in both directions, at least mine do.  If I'm going to pay 3.5% + $0.35 each way I may opt to write you a check instead.  Sorry for possible inconvenience.  Gotta trim those costs.  And if you are a regular customer you may get a store credit for the assumed next order, always cashable should you so prefer. 5. You pay the invoiced shipping costs.  Shipping costs are based on 1) actual shipping costs & 2) credit card processing costs (we split the cost, which averages 3+%).  Shipping in USA is usually by insured mail ($3.50 minimum).  Overseas methods vary and will be agreed on in advance. 6. THERE IS NO INDEMNITY FOR SHIPMENTS OUTSIDE THE USA THAT DON'T ARRIVE.  I ship several hundred parcels overseas every year.  Maybe 3-5 get lost, but registered shipments will recover no more than $45.00, depending on what was written on the customs form.  Overseas shipments are AT THE BUYER'S RISK.  Sorry.  The sole exception is if I ship by parcel post with insurance, in which case the customs sticker must reflect accurate value for those of you who suffer under a VAT or a duty.  \"Parcel post\" designation will typically double or triple the shipping costs.  IF YOU HAVE A PROBLEM WITH CUSTOMS CONTACT ME BEFORE YOU DO ANYTHING! 7. NC state sales tax is 6.25% and will be added to all orders shipped to NC addresses. 8. You are welcome to ask for a discount and/or make counteroffers.  I may or may not grant the discount or accept your offer.  If I don't this time I might next time, so by all means keep asking.  BUT: a) asking for a price reduction will ALWAYS increase my response time while I think about it b) reductions will pretty much never happen for transactions of less than $100.00, for gold, for large orders of cheap stuff (e.g.: 150 different items @ $0.50 each) c) In the low dollar / high precious metal price situation that obtains from late 2007 discounts become less likely and smaller, the opposite in fact, some prices may rise without prior notice. 9. WANTLISTS - I do not have an automated system that goes \"beep\" when I get something someone wanted.  Instead, you can do 2 things to maximize your chance of getting something: a) get on the email announcement list by asking to be on it, b) call or email me in the 3rd week of every month to ask me about that specific thing you want. 10. SECURITY CONSIDERATION (mine) - I like to develop relationships of trust.  Multiple repeat customers may experience ship-and-bill orders rather than pay-in-advance.  If this is the case with you I may, at any time, resume the pay-in-advance procedure.  The most likely reason will be that you have made an order much larger than usual, but any reason will do, and I \"reserve the right\" absolutely.  This policy may be applied even to customers that have had years of interaction with me.  Nothing personal.  Just business."
+	      )
 	    );
 	  }
+	
 	});
 	
-	module.exports = MainInfo;
+	module.exports = AdditionalServices;
 
 /***/ }
 /******/ ]);

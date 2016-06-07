@@ -5,16 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
-
-10.times do
-  Item.create(
-    weight: rand(1..30),
-    number: rand(1..30),
-    country: "USA",
-    dynasty: "washington",
-    price: "20",
-    quanity: "20"
-  )
-end

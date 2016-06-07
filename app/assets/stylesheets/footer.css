@@ -1,0 +1,32 @@
+.footer {
+  height: 400px;
+}
+
+.footer-container {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-links {
+  padding: 20px 0;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer a:hover {
+  cursor: pointer;
+}
+
+#scroll-to-top {
+  outline: 1px solid green;
+  height: 50px;
+  width: 110px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}
