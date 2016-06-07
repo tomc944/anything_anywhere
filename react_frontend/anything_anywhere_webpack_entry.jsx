@@ -11,7 +11,8 @@ var React = require('react'),
     HowWeOperate = require('./components/info/how_we_operate'),
     AdditionalServices = require('./components/info/additional_services/additional_services'),
     Appraisal = require('./components/info/additional_services/appraisal'),
-    MarketResearch = require('./components/info/additional_services/market_research');
+    MarketResearch = require('./components/info/additional_services/market_research'),
+    SubscriptionService = require('./components/info/additional_services/subscription_service');
 
 
 var routes = (
@@ -24,6 +25,7 @@ var routes = (
     <Route path="/services" component={AdditionalServices}>
       <Route path="appraisal" component={Appraisal}/>
       <Route path="market_research" component={MarketResearch}/>
+      <Route path="subscription" component={SubscriptionService}/>
     </Route>
   </Route>
 );

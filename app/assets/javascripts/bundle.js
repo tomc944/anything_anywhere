@@ -57,7 +57,8 @@
 	    HowWeOperate = __webpack_require__(269),
 	    AdditionalServices = __webpack_require__(270),
 	    Appraisal = __webpack_require__(271),
-	    MarketResearch = __webpack_require__(272);
+	    MarketResearch = __webpack_require__(272),
+	    SubscriptionService = __webpack_require__(273);
 	
 	var routes = React.createElement(
 	  Route,
@@ -71,7 +72,8 @@
 	    Route,
 	    { path: '/services', component: AdditionalServices },
 	    React.createElement(Route, { path: 'appraisal', component: Appraisal }),
-	    React.createElement(Route, { path: 'market_research', component: MarketResearch })
+	    React.createElement(Route, { path: 'market_research', component: MarketResearch }),
+	    React.createElement(Route, { path: 'subscription', component: SubscriptionService })
 	  )
 	);
 	
@@ -26798,16 +26800,25 @@
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(1);
+	var React = __webpack_require__(1),
+	    FooterConstants = __webpack_require__(274);
+	
+	function animateScroll() {
+	  $("html, body").animate({ scrollTop: 0 }, "slow");
+	  return false;
+	};
 	
 	var Footer = React.createClass({
-	  displayName: "Footer",
+	  displayName: 'Footer',
 	
-	  goToContact: function () {
+	  goToContact: function (e) {
+	    e.preventDefault();
 	    this.props.history.pushState(null, "/contact");
 	  },
 	
-	  goToOperate: function () {
+	  goToOperate: function (e) {
+	    e.preventDefault();
+	    animateScroll();
 	    this.props.history.pushState(null, "/operate");
 	  },
 	
@@ -26815,101 +26826,124 @@
 	    // this.props.history.pushState(null, "/coin_information");
 	  },
 	
-	  goToServices: function () {
+	  goToServices: function (e) {
+	    e.preventDefault();
 	    this.props.history.pushState(null, "/services");
 	  },
 	
+	  componentDidMount: function () {
+	    $("#scroll-to-top").click(function (e) {
+	      e.preventDefault();
+	      animateScroll();
+	    });
+	
+	    //add scroll to top fade in and out
+	    $(window).scroll(function () {
+	      if ($(this).scrollTop() > FooterConstants.scrollTopOffset) {
+	        $('#scroll-to-top').fadeIn(FooterConstants.scrollTopDuration);
+	      } else {
+	        $('#scroll-to-top').fadeOut(FooterConstants.scrollTopDuration);
+	      }
+	    });
+	  },
+	
 	  render: function () {
+	
 	    return React.createElement(
-	      "div",
-	      { className: "footer" },
+	      'div',
+	      { className: 'footer' },
 	      React.createElement(
-	        "div",
-	        { className: "footer-container" },
+	        'div',
+	        { className: 'footer-container' },
 	        React.createElement(
-	          "div",
-	          { className: "footer-links container-fluid" },
+	          'div',
+	          { className: 'footer-links container-fluid' },
 	          React.createElement(
-	            "div",
-	            { className: "row" },
+	            'div',
+	            { className: 'row' },
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
-	                { "data-toggle": "modal", "data-target": "#aboutModal" },
+	                'a',
+	                { 'data-toggle': 'modal', 'data-target': '#aboutModal' },
 	                React.createElement(
-	                  "b",
+	                  'b',
 	                  null,
-	                  "ABOUT AA"
+	                  'ABOUT AA'
 	                )
 	              )
 	            ),
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
+	                'a',
 	                { onClick: this.goToContact },
-	                "CONTACT"
+	                'CONTACT'
 	              )
 	            ),
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
+	                'a',
 	                { onClick: this.goToOperate },
-	                "BUYING & HOW I OPERATE"
+	                'BUYING & HOW I OPERATE'
 	              )
 	            ),
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
+	                'a',
 	                { onClick: this.goToAdditionalInformation },
-	                "ADDITIONAL INFORMATION"
+	                'ADDITIONAL INFORMATION'
 	              )
 	            )
 	          ),
 	          React.createElement(
-	            "div",
-	            { className: "row" },
+	            'div',
+	            { className: 'row' },
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
+	                'a',
 	                { onClick: this.goToLinks },
-	                "LINKS - FRIENDS/COLLEAGUES"
+	                'LINKS - FRIENDS/COLLEAGUES'
 	              )
 	            ),
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
+	                'a',
 	                { onClick: this.goToBlog },
-	                "MY BLOG"
+	                'MY BLOG'
 	              )
 	            ),
 	            React.createElement(
-	              "div",
-	              { className: "col-xs-3 footer-link" },
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
-	                "a",
+	                'a',
 	                { onClick: this.goToServices },
-	                "ADDITIONAL SERVICES"
+	                'ADDITIONAL SERVICES'
 	              )
 	            )
 	          )
 	        )
 	      ),
 	      React.createElement(
-	        "div",
-	        { id: "scroll-to-top" },
-	        "Scroll to Top"
+	        'div',
+	        { className: 'footer-bottom' },
+	        '© 2016 ANYTHING ANYWHERE.'
+	      ),
+	      React.createElement(
+	        'div',
+	        { id: 'scroll-to-top' },
+	        'Scroll to Top'
 	      )
 	    );
 	  }
@@ -35492,6 +35526,10 @@
 	    this.props.history.pushState(null, "services/market_research");
 	  },
 	
+	  openSubscriptionService: function () {
+	    this.props.history.pushState(null, "services/subscription");
+	  },
+	
 	  render: function () {
 	    return React.createElement(
 	      "div",
@@ -35515,6 +35553,15 @@
 	            "a",
 	            { className: "service-links-link", onClick: this.openMarketResearch },
 	            "MARKET RESEARCH"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openSubscriptionService },
+	            "SUBSCRIPTION SERVICE"
 	          )
 	        )
 	      ),
@@ -35746,19 +35793,163 @@
 	var React = __webpack_require__(1);
 	
 	var MarketResearch = React.createClass({
-	  displayName: 'MarketResearch',
+	  displayName: "MarketResearch",
 	
 	  render: function () {
 	    return React.createElement(
-	      'div',
-	      null,
-	      'Market research'
+	      "div",
+	      { className: "market-research-container" },
+	      React.createElement(
+	        "div",
+	        { className: "market-research" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "MARKET RESEARCH"
+	        ),
+	        React.createElement(
+	          "h4",
+	          null,
+	          "This was posted on 9/20/2006."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I find that I have been getting a lot of \"What's it worth\" and \"What should I pay for it\" questions.  Looks like a business opportunity to me.  I will be happy to give you my opinion of whether you should buy the thing you're looking at.  Cost of the phone conversation or whatever the medium, and my research, will be $5.00 per incident and 3 or fewer items plus $5.00 per item for more than 3.  QUick websearch &/or consultation of catalogs.  Email or phone call.  You will be able to catch me most weekends during my normal business hours (8:30 AM - 10:30 PM), will send out emails if I'll be unavailable"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "It will be like this one that just happened:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "\"Hi.  I'm looking at a French gold 50 francs 1858-A NGC-62 but nicer than that.  Should I pay $550 for it?"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I go online for few minutes.  Call him back."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "\"It's the most common date of the type, there are dozens of them on the web, you should consider it a piece of choice bullion.\""
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "And so he did.  Saved him from spending $50 he would have regretted spending.  Of course things could change tomorrow..."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I would charge him $5.00 for telling him that under this new scheme.  Kind of like numismatic tech support."
+	        ),
+	        React.createElement("br", null)
+	      )
 	    );
 	  }
 	
 	});
 	
 	module.exports = MarketResearch;
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var SubscriptionService = React.createClass({
+	  displayName: "SubscriptionService",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "subscription-service-container" },
+	      React.createElement(
+	        "div",
+	        { className: "subscription-service" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "SUBSCRIPTION SERVICE"
+	        ),
+	        React.createElement(
+	          "h4",
+	          null,
+	          "This was posted on 10/12/2006."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I've been working on this for a couple of years.  Another way for me to utilize my decades of messing around with coins.  I want you to join my club for $25.00 per year.  Your subscription will get you access to the following services:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "1. Market research - I'll find out what I think about the deal you are about to do and will give you my opinion.  Priced as follows: $5 per day for first 3 items researched, $5 per item thereafter."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "2. Search service.  Per item: $5.00 for a web search up to 10 minutes, $10 for extended web search, $20 for up to 10 emails or phone calls, $1.50 per thereafter.  (because the longer I take doing this kind of thing the less likely it is findable)."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "3. Attributions, grading, authentication at half price: that is $1.25, $2.50, $2.50 respectively."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "4. At some point there will be a large numismatic database on line supported by a self-improving search function.  There will be basic and enhanced access.  You will have enhanced access, whatever that will turn out to mean, but it will be tasty."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "As always with everything I try to do, satisfaction is guaranteed."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "Come one, come all.  Send me your dues payment today.  Paypal or credit card.  Email me - reisbiz@earthlink.net to get started."
+	        ),
+	        React.createElement("br", null)
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = SubscriptionService;
+
+/***/ },
+/* 274 */
+/***/ function(module, exports) {
+
+	var FooterConstants = {
+	  //distance until scroll to top button shows up
+	  scrollTopOffset: 400,
+	  //time of scroll to top fade animation
+	  scrollTopDuration: 200
+	};
+	
+	module.exports = FooterConstants;
 
 /***/ }
 /******/ ]);
