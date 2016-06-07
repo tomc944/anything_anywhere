@@ -35915,10 +35915,10 @@
 	  render: function () {
 	    React.createElement(
 	      'div',
-	      { className: 'additional-information-container' },
+	      null,
 	      React.createElement(
 	        'div',
-	        { className: 'additional-information' },
+	        { className: 'additional-information-links' },
 	        React.createElement(
 	          'h1',
 	          null,

@@ -1,0 +1,17 @@
+.additional-information-links {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.additional-information-links div {
+  padding-bottom: 20px;
+}
+
+.additional-information-link {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.additional-information-link:hover {
+  cursor: pointer;
+}

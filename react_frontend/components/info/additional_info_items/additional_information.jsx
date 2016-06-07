@@ -77,8 +77,8 @@ var AdditionalInformation = React.createClass({
   // For later, don't know how to pop-up email client correctly
   // Need to look how to route this one...
   render: function() {
-    <div className="additional-information-container">
-      <div className="additional-information">
+    <div>
+      <div className="additional-information-links">
         <h1>This sector will have text files of info concerning the kinds of things I sell, and eventually links to further sources</h1>
 
         <div> <a className="additional-information-link" onClick={this.openTyeArticle}> Articles by Robert Tye, in my opinion perhaps the most cogent (and maverick) thinker in historical economics alive today </a></div>
