@@ -24,6 +24,10 @@
   letter-spacing: 1px;
 }
 
+.header-about:hover {
+  cursor: pointer;
+}
+
 #header-categories-accordion .panel {
   margin-bottom: 0px;
 }

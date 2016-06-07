@@ -23,14 +23,13 @@ var Header = React.createClass({
         </div>
 
         <div className="row header-login">
-          <div className="col-xs-offset-8 col-xs-2">
-            ABOUT A/A
+          <div className="col-xs-offset-8 col-xs-2 header-about" data-toggle="modal" data-target="#aboutModal">
+            NEW TO AA?
           </div>
           <div className="col-xs-2">
             <LoginDropdown/>
           </div>
         </div>
-
 
         <HeaderCategories history={this.props.history}/>
 
