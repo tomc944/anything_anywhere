@@ -35942,7 +35942,6 @@
 	  // For later, don't know how to pop-up email client correctly
 	  // Need to look how to route this one...
 	  render: function () {
-	
 	    return React.createElement(
 	      'div',
 	      null,
