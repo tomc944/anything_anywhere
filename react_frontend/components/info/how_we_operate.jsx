@@ -548,23 +548,116 @@ var HowWeOperate = React.createClass({
                 </h4>
               </div>
               <div id="buying" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                My job as a buyer is to get you the most money for your stuff.  My job as a seller is to get the best deal for the buyer.  It is NOT to make the most money for myself.  If I can take care of you to your satisfaction I'll get paid and I'll be fine.  Right?
-    But there's a built in conflict of interest between the buying side and the selling side.  If I buy high I have to sell high or cut my margin.  If I sell high I have to sell to fools.  If I buy cheap so I can sell cheap I have to rip off the sellers.  Never mind the moral issues, both extremes produce a long term degradation of the business environment.  I seek therefore, the golden mean.
-    There are two types of buys as far as quantity: 1) few things, 2) pile of stuff.  A few things will always get more individual attention.
-    Value of the stuff attracts more attention no matter how many things there are.  Typically, I'm looking at a "pile of stuff" and kind of nodding my head at all the 10¢ material and then comes a gold coin.  I have to look it up - pay attention to it, figure out what its really worth.  Pay you what its worth.
-    Now, that gold coin maybe turns out to be worth $200, that's what I'll pay you, and all the 10¢ stuff is worth $11.00.  I need all the stuff, but there's only $10 of profit in the gold coin and the $11.00 of 10¢ stuff I will turn into $27.00 but it will take me a year to do it.  But wait, there's some obscure Belgian coin with a KM value of $300, but it's a market slowpoke and I know its going to sit unless I cut the price, so I'm going to pay you $100 for the risk and time.  I'll try to get $300, maybe I will but probably not.  Then oh, there's a nice Russian coin but it's got some kind of problem.  Russia is hot, they'll take it, I'll give you 100% of KM, you'll be happy, I'll be happy.  I turn the page again and there's a solid, no problem $3000 coin, now we're talking turkey, so to speak.  What I usually do when I get to the 4-figure stuff is offer you a 90 day consignment at a 15% commission - sometimes works out to be a bunch more money for both of us, and I usually want a buy out guarantee - you'll sell it to me at the pre-agreed price if it doesn't sell.
+                <p>My job as a buyer is to get you the most money for your stuff.  My job as a seller is to get the best deal for the buyer.  It is NOT to make the most money for myself.  If I can take care of you to your satisfaction I'll get paid and I'll be fine.  Right?</p>
+                <br/>
+                <p>But there&#39;s a built in conflict of interest between the buying side and the selling side.  If I buy high I have to sell high or cut my margin.  If I sell high I have to sell to fools.  If I buy cheap so I can sell cheap I have to rip off the sellers.  Never mind the moral issues, both extremes produce a long term degradation of the business environment.  I seek therefore, the golden mean.</p>
+                <br/>
+                <p>There are two types of buys as far as quantity: 1) few things, 2) pile of stuff.  A few things will always get more individual attention.</p>
+                <br/>
+                <p>Value of the stuff attracts more attention no matter how many things there are.  Typically, I'm looking at a "pile of stuff" and kind of nodding my head at all the 10¢ material and then comes a gold coin.  I have to look it up - pay attention to it, figure out what its really worth.  Pay you what its worth.</p>
+                <br/>
+                <p>Now, that gold coin maybe turns out to be worth $200, that's what I'll pay you, and all the 10¢ stuff is worth $11.00.  I need all the stuff, but there's only $10 of profit in the gold coin and the $11.00 of 10¢ stuff I will turn into $27.00 but it will take me a year to do it.  But wait, there's some obscure Belgian coin with a KM value of $300, but it's a market slowpoke and I know its going to sit unless I cut the price, so I'm going to pay you $100 for the risk and time.  I'll try to get $300, maybe I will but probably not.  Then oh, there's a nice Russian coin but it's got some kind of problem.  Russia is hot, they'll take it, I'll give you 100% of KM, you'll be happy, I'll be happy.  I turn the page again and there's a solid, no problem $3000 coin, now we're talking turkey, so to speak.  What I usually do when I get to the 4-figure stuff is offer you a 90 day consignment at a 15% commission - sometimes works out to be a bunch more money for both of us, and I usually want a buy out guarantee - you'll sell it to me at the pre-agreed price if it doesn't sell.</p>
+                <br/>
 
+                <p>Today is 10/10/2007.  I am wondering how to get more of you to sell me good stuff at reasonable prices so I can continue to have good stuff at reasonable prices to sell to you.  A couple of things that have occurred to me are:</p>
+                <br/>
+                <p>1. If you buy something from me I will buy it back from you for a minimum of 70% of what you paid for it PROVIDED that you also sell me something else of equal value and quality that you didn't buy from me at the same time.  No time limit at the moment.  You understand the possible ways that you or I could take abusive advantage of such an offer.  Let&#39;s not do that and see if it works for us, eh?</p>
+                <br/>
 
-Today is 10/10/2007.  I am wondering how to get more of you to sell me good stuff at reasonable prices so I can continue to have good stuff at reasonable prices to sell to you.  A couple of things that have occurred to me are:
-1. If you buy something from me I will buy it back from you for a minimum of 70% of what you paid for it PROVIDED that you also sell me something else of equal value and quality that you didn't buy from me at the same time.  No time limit at the moment.  You understand the possible ways that you or I could take abusive advantage of such an offer.  Let's not do that and see if it works for us, eh?
+                <p>I WANT TO ACQUIRE (actually YOU want to acquire) (all kinds, grades,quantities, price levels): COINS, BANKNOTES, NOTGELD, tokens & medals, antiquities, arrowheads, "primitive" money, etc: all locations, bond & share certs, coupons, checks, cheques, cheki, bons, talons, bills of exchange,drafts, etc., movie, Hell, & other funny money, post cards (pre-1946), miscellaneous paper items (pre-1945), military: medals, badges, insignia, awards, fossils, mineral specimens...</p>
+                <br/>
 
-I WANT TO ACQUIRE (actually YOU want to acquire) (all kinds, grades,quantities, price levels): COINS, BANKNOTES, NOTGELD, tokens & medals, antiquities, arrowheads, "primitive" money, etc: all locations, bond & share certs, coupons, checks, cheques, cheki, bons, talons, bills of exchange,drafts, etc., movie, Hell, & other funny money, post cards (pre-1946), miscellaneous paper items (pre-1945), military: medals, badges, insignia, awards, fossils, mineral specimens...
-
-SPECIAL INSTRUCTIONS:
--If sending cheap stuff please don't overvalue  & don't overinsure.  Makes for disappointment.  Expensive stuff suggest you call first.  You can always send pics. At least  I could give you some idea.
--YOU MUST send an inventory sheet with anything you send me with your name, address, phone #, email address.  The inventory can be as simple as "lot of material," but if that simple I will not entertain any disputes along the lines of "you returned my stuff damaged or missing" should the deal fall through.  If you are sending value of more than $50.00 I suggest you call, fax, or email before sending.  I want to assure secure transactions. We should agree on the terms and methods.
+                <p>SPECIAL INSTRUCTIONS:</p>
+                <br/>
+                <p>-If sending cheap stuff please don't overvalue  & don't overinsure.  Makes for disappointment.  Expensive stuff suggest you call first.  You can always send pics. At least  I could give you some idea.</p>
+                <br/>
+                <p>-YOU MUST send an inventory sheet with anything you send me with your name, address, phone #, email address.  The inventory can be as simple as "lot of material," but if that simple I will not entertain any disputes along the lines of "you returned my stuff damaged or missing" should the deal fall through.  If you are sending value of more than $50.00 I suggest you call, fax, or email before sending.  I want to assure secure transactions. We should agree on the terms and methods.</p>
+                <br/>
               </div>
             </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#whatsItWorth" aria-expanded="false" aria-controls="whatsItWorth">
+                    WHAT'S IT WORTH?
+                  </a>
+                </h4>
+              </div>
+              <div id="whatsItWorth" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <p>Notes on evaluating your collection for possible sale</p>
+                <br/>
+
+                <p>I am a coin and banknote dealer, and have been such for 27 years.  Recently I began to actively promote the purchase by me of collections from my aging clientele.  Of course only a portion of my clientele is aging.  New people are wandering by all the time, and I need to buy things from these people (you) so I can sell to those people (them).</p>
+                <br/>
+                <p>So, I got responses to my blandishments.  People called me up.  The typical scenario goes like this: “I’m getting old, my kids aren’t interested, my eyes are going, better to get out of it now, simplify my life.”  I approve of that set of thoughts.</p>
+                <br/>
+                <p>There is another thought that has presented in some of the discussions: “I have some bills to pay.”  This can be problematic.  My explanation of the possible problems of this thought is the one of the subjects of this piece I am writing.  The other is how to maximize the value of your holdings, or, alternatively, how to be realistic.</p>
+                <br/>
+
+                <p>There are two aspects to the formation of a collection:</p>
+                <br/>
+                <p>1. you like the stuff (and maybe the process of acquiring it)</p>
+                <br/>
+                <p>2. maybe its worth something, or will be some day</p>
+                <br/>
+
+                <p>For the vast majority of my time in the business, the vast majority of my clients have been either what I (affectionately) call “bottom feeders” or are a bit up the food chain (“budget minded”).  For years now I have been putting out $0.50 coins and they sell and sell and sell.  $200 things, on the other hand, sell, usually, pretty slowly.  Your typical $1000 thing sells even</p>
+                <br/>
+                slower.  There are exceptions of course, but the cheap stuff sells all the time and lots of it.  Its “affordable.”
+
+                <p>Here is the kicker to building a collection on the budget model: you are not building an investment except by accident.  Most of the cheap stuff stays cheap.  There are two reasons for this:</p>
+                <br/>
+                <p>1. There is plenty of it around</p>
+                <br/>
+                <p>2. Because its cheap the processing costs are high for the dealer.  No, that’s not right.  Within a range the processing costs are the same per item.  It is the percentage of the retail price represented by the processing cost that is high for cheap stuff.</p>
+                <br/>
+                <p>This latter factor means that a coin that you bought from me at $0.50 did not cost me $0.40, or even $0.25.  More like $0.05.  It has to be that way.  The time it takes to process it so I can offer it to you makes that kind of markup necessary.  That is why there are so many big shot dealers running around chasing the $10,000 sales.</p>
+                <br/>
+                <p>This also means that your collection of cheap coins, even if you spent $10,000.00 on it, is inevitably going to get you less than you paid for it.  The cheaper the less.  Maybe far less.</p>
+                <br/>
+                <p>Let’s get out of the bottom (I don’t sell anything for less than $0.50) and move up to “budget mid-level.”  Better dates in “aVG,” or things with detracting aspects: marks, bumps, scratches, cleaning, a little tear or inkspot on a banknote.  Say the thing would be $200 in VF, and you got a specimen with 3 detractors for $50.00.  Your typical scenario would be that the solid VF will grow, possibly past the dealer markup level, and you will end up with a profit when you sell.  The markup will have been $25-40 most likely.  But your $50.00 “yes-but” thing is going to be heavily discounted.  It will not grow.  For you, it will shrink.  At least in most cases it will.  You will usually NOT MAKE MONEY on a banger, or a cleaner, etc.</p>
+                <br/>
+                <p>My conclusion, which I urge upon you, if you want to think of your collection in any way as an investment, is to buy the top grade of everything.  The kind of stuff I don’t have that much of.  Simple.  Easy.  You spend the money and get the top quality.  It will grow.  You don’t, it won’t.</p>
+                <br/>
+                <p>You need to be especially picky when you’re buying good stuff.  If you’re going to spend a lot of money on something you want to look at it with a magnifying glass under different kinds of lighting.  If you’re looking at paper money you need to hold it up to a light so you can see the hidden pinholes or the ironed fold, and you need to smell it to discover if its been cleaned with chemicals.  Get second opinions.  Refuse to be hurried.</p>
+                <br/>
+                <p>I’m thinking to myself: “is that all there is about that?”  It seems that I should be able to give you more sage advice about value.  I have turned this over in my mind for several more days after I wrote what I wrote above.  I think that’s all there is to it.  Buy the top if you want to make money.  If you don’t care about value while you’re collecting, don’t expect to suddenly be able to start caring when you’re ready to sell.  Unhappiness will usually result.</p>
+                <br/>
+
+                <p>Now, about selling your collection.  A detail: pull out the good stuff when you bring your collection to someone like me and instruct me to give you a good workup on the junk first - if you like my offer on the junk THEN give me the good stuff.  Such a move will counter the tendency of me, or someone like me, when faced with thousands of pieces of $0.10 material, to lump it all together in an estimate and just pick out the good stuff.  The song goes: “Dadadada, loolooloo, 5 pages, $3.00, ah, here’s another good one, better look it up.”  If you’ve already taken out the 6 good coins from the Lincoln cent book then I’m going to give the rest of them SOME consideration.  But if those 6 coins are there (and genuine!) then 99.999% of the value is in those coins, the rest of the book is not worth a second glance, value-wise.  Unless they’re all high grade.</p>
+                <br/>
+                <p>That’s just presentation of course.  Another way of dealing with this, if you don’t want to destroy the architecture of your collection picking out the good stuff, is to tell me “I trust you, just take it away, take your time, whatever you pay me will be fine.”  If I have enough time, as in I have the collection at home, I will put a value on every single item, no guesses.  But that last clause (“whatever you pay”) is crucial.  If I take your stuff home with me, after driving, say, 1000 miles, and then you don’t like my offer, well that’s a problem.  I ran into that twice recently.  Much effort and some money poured into deals that collapsed.  That is why, from now on, I write receipts for everything I receive, and on the receipt is legalistic verbiage to the effect that if I appraise a collection and the offer is not accepted I will return the collection by the cheapest available method at the expense of the owner of the collection, that expense to be collected by the abstraction of items of equivalent value from that collection, or by prior reimbusement by the owner.  You know how it is, right?  What am I supposed to do?</p>
+                <br/>
+                <p>Which brings me to a consideration of the question of why those two deals fell through.  In the first case we ended up in positions that were $11,000 apart, about a 30% discrepancy.  In the second it was $4500/2500.  The differences of opinion arose primarily from some of the aspects discussed above.  Mr. 11 grand had allowed himself to be cheated with a number of doctored banknotes, missed pinholes, other “yes-but” things.  He had also allowed himself, for several decades, to be swayed by marketing blandishments, acquiring thereby concoctions from Hutt River, Marshall Islands, Bureau of Engraving & Printing, etc. for which he would have endured at my hands (and will endure from whomever he eventually sells to) losses averaging, oh, maybe 75%.  The other guy had page after page of circulated poundage, with something good every now and then.  So there were those matters of bad choices of various kinds, but there were other aspects.</p>
+                <br/>
+                <p>Mr. 11 was figuring that I could live with an overall 20% markup.  He may have come to that thought from the observation that frequently when you ask a dealer for a discount you will get between 10 and 20%.  But he figured the markup wrong.  Us dealers want to end up the YEAR with a 20% PROFIT.  To do that the AVERAGE markup has to be well over 40%.  If you</p>
+                <br/>
+                deal in cheap stuff, like I do, the average has to be about 100%, with the bottom end averaging 500%.  That magic 20% markup tends to sit at the $100+ level per item.  You want me to take 5% you sell me a single $3000 item that I can move with a phone call.  I’ll let you sit there and watch me make it.  For that same $3000 retail value of circulated British pennies, say, I want to pay about $800.  For mixed Dutch and French minors I want to pay about $300.
+                <p>But there was an underlying aspect that helped to produce the overly hopeful expectations of both of those guys.  That was that each one wanted to use the quick sale of his collection to finance some current expenditures.  The perceived need pushed them from hard edged realism into the rosy world of hope, and they stretched the value of their holding to meet that need.  That only worked in their minds of course.  Reality set in when their rubber met my road.</p>
+                <br/>
+                <p>This brings me back to the first item discussed in this piece.  If you bought for investment and you tracked those investment items then you can pull this or that plum out of your basket when the need arises and sell it to buy that car, or kidney, or college education.  But if you collected primarily for pleasure and only incidentally for investment then you had to be extraordinarily lucky to be able to get your collection to behave like an investment.  How likely is that?  In my experience not very.</p>
+                <br/>
+                <p>The take home message: DO NOT SELL UNDER DURESS.  Don’t sell your house when its raining.  Do it when the sun is shining and you are in full possession of your faculties.</p>
+                <br/>
+
+                <p>Now to the preparation of your collection for sale.  THE MOST IMPORTANT THING is an inventory.  A copy for you, a copy for me.  They should both say the same thing.  A digital version will save an enormous amount of time during the evaluation process.  (I will travel to you and prepare a digital inventory for you (with paper report) for a suitable fee.)</p>
+                <br/>
+                <p>The inventory should clearly identify each object or group of objects.  A grade of conservation is, essentially, essential.  All detractors should be noted.  You should note the price you paid (it is acceptable, though of debatable value, to withold that information from the potential buyer).  A number representing the value you would like to receive and/or think it is worth may be useful to both you and the potential buyer.</p>
+                <br/>
+                <p>For me, if there is no inventory, then I will present you with an unitemized offer, and, should the deal fall through, I will not accept a claim that there was damage or loss amongst the returned items.  The inventory is protective for everyone.  If you have one you will know what you have.  If not, you will guess, probably you will guess more or less wrong.</p>
+                <br/>
+                <p>IF YOU HAVE AN INVENTORY THERE IS NOTHING ELSE YOU NEED TO DO.  There are details, but they will be covered by the sales contract that I, or someone like me, will present to you in the course of the transaction.  When I purchase anything now I present a sales contract that both of us sign.  Protective.  Read the fine print.  It gives you some rights and protections and requires you to relinquish others.</p>
+                <br/>
+
+                <p>There is also the possibility of consignment.  This is pertinent only for high value items, the exact definition of which must remain, for the moment, unstated.</p>
+                <br/>
+
+                <p>I think this piece covers the basic basics.  I reserve the right, of course, to amend and add to this presentation, and I encourage you to contact me with any questions you might have.  I’ll be happy to talk with you, and will be very happy if we can come to an agreement that allows me to trade your stuff for my money so I can then trade what has become my stuff for someone else’s money.</p>
+                <br/>
+              </div>
+            </div>
+
 
           </div>
         </div>
