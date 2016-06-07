@@ -21,7 +21,7 @@ var Footer = React.createClass({
     return (
       <div className="footer">
         <div className="footer-container">
-          <div className="footer-links container">
+          <div className="footer-links container-fluid">
             <div className="row">
               <div className="col-xs-3 footer-link"><a data-toggle="modal" data-target="#aboutModal"><b>ABOUT AA</b></a></div>
               <div className="col-xs-3 footer-link"><a onClick={this.goToContact}>CONTACT</a></div>

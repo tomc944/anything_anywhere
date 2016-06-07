@@ -55,7 +55,9 @@
 	    About = __webpack_require__(267),
 	    Contact = __webpack_require__(268),
 	    HowWeOperate = __webpack_require__(269),
-	    AdditionalServices = __webpack_require__(270);
+	    AdditionalServices = __webpack_require__(270),
+	    Appraisal = __webpack_require__(271),
+	    MarketResearch = __webpack_require__(272);
 	
 	var routes = React.createElement(
 	  Route,
@@ -65,7 +67,12 @@
 	  React.createElement(Route, { path: '/about', component: About }),
 	  React.createElement(Route, { path: '/contact', component: Contact }),
 	  React.createElement(Route, { path: '/operate', component: HowWeOperate }),
-	  React.createElement(Route, { path: '/services', component: AdditionalServices })
+	  React.createElement(
+	    Route,
+	    { path: '/services', component: AdditionalServices },
+	    React.createElement(Route, { path: 'appraisal', component: Appraisal }),
+	    React.createElement(Route, { path: 'market_research', component: MarketResearch })
+	  )
 	);
 	
 	$(function () {
@@ -26821,7 +26828,7 @@
 	        { className: "footer-container" },
 	        React.createElement(
 	          "div",
-	          { className: "footer-links container" },
+	          { className: "footer-links container-fluid" },
 	          React.createElement(
 	            "div",
 	            { className: "row" },
@@ -35477,27 +35484,69 @@
 	var AdditionalServices = React.createClass({
 	  displayName: "AdditionalServices",
 	
+	  openAppraisal: function () {
+	    this.props.history.pushState(null, "services/appraisal");
+	  },
+	
+	  openMarketResearch: function () {
+	    this.props.history.pushState(null, "services/market_research");
+	  },
 	
 	  render: function () {
 	    return React.createElement(
 	      "div",
-	      { className: "panel panel-default" },
+	      null,
 	      React.createElement(
 	        "div",
-	        { className: "panel-heading", role: "tab", id: "headingTwo" },
+	        { className: "services-links" },
 	        React.createElement(
-	          "h4",
-	          { className: "panel-title" },
+	          "div",
+	          null,
 	          React.createElement(
 	            "a",
-	            { className: "collapsed", "data-toggle": "collapse", "data-parent": "#operate-accordion", href: "#appraisal", "aria-expanded": "false", "aria-controls": "appraisal" },
+	            { className: "service-links-link", onClick: this.openAppraisal },
 	            "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openMarketResearch },
+	            "MARKET RESEARCH"
 	          )
 	        )
 	      ),
+	      this.props.children
+	    );
+	  }
+	
+	});
+	
+	module.exports = AdditionalServices;
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Appraisal = React.createClass({
+	  displayName: "Appraisal",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "appraisal" },
 	      React.createElement(
 	        "div",
-	        { id: "appraisal", className: "panel-collapse collapse", role: "tabpanel", "aria-labelledby": "headingTwo" },
+	        { className: "appraisal-info" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	        ),
 	        React.createElement(
 	          "p",
 	          null,
@@ -35688,7 +35737,28 @@
 	
 	});
 	
-	module.exports = AdditionalServices;
+	module.exports = Appraisal;
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var MarketResearch = React.createClass({
+	  displayName: 'MarketResearch',
+	
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      'Market research'
+	    );
+	  }
+	
+	});
+	
+	module.exports = MarketResearch;
 
 /***/ }
 /******/ ]);

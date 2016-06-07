@@ -9,7 +9,10 @@ var React = require('react'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
     HowWeOperate = require('./components/info/how_we_operate'),
-    AdditionalServices = require('./components/info/additional_services');
+    AdditionalServices = require('./components/info/additional_services/additional_services'),
+    Appraisal = require('./components/info/additional_services/appraisal'),
+    MarketResearch = require('./components/info/additional_services/market_research');
+
 
 var routes = (
   <Route path="/" component={HighLevelContainer}>
@@ -18,7 +21,10 @@ var routes = (
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
     <Route path="/operate" component={HowWeOperate}/>
-    <Route path="/services" component={AdditionalServices}/>
+    <Route path="/services" component={AdditionalServices}>
+      <Route path="appraisal" component={Appraisal}/>
+      <Route path="market_research" component={MarketResearch}/>
+    </Route>
   </Route>
 );
 
