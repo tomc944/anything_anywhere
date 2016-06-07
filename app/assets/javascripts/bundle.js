@@ -55,7 +55,11 @@
 	    About = __webpack_require__(268),
 	    Contact = __webpack_require__(269),
 	    HowWeOperate = __webpack_require__(270),
+<<<<<<< Updated upstream
 	    AdditionalInformation = __webpack_require__(294),
+=======
+	    AdditionalInformation = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/info/additional_information\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+>>>>>>> Stashed changes
 	    A2Z = __webpack_require__(272),
 	    Abbrev = __webpack_require__(273),
 	    Apprais = __webpack_require__(274),
@@ -35831,6 +35835,8 @@
 /***/ },
 /* 271 */,
 /* 272 */
+<<<<<<< Updated upstream
+=======
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35931,6 +35937,559 @@
 
 	var React = __webpack_require__(1);
 	
+	var Collecting = React.createClass({
+	  displayName: 'Collecting',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Collecting;
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Faleri = React.createClass({
+	  displayName: 'Faleri',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Faleri;
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Finnist = React.createClass({
+	  displayName: 'Finnist',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Finnist;
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Grading = React.createClass({
+	  displayName: 'Grading',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Grading;
+
+/***/ },
+/* 282 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Jerks = React.createClass({
+	  displayName: 'Jerks',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Jerks;
+
+/***/ },
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var PlasticMon = React.createClass({
+	  displayName: 'PlasticMon',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = PlasticMon;
+
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Privacy = React.createClass({
+	  displayName: 'Privacy',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Privacy;
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Security = React.createClass({
+	  displayName: 'Security',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Security;
+
+/***/ },
+/* 286 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var SonSign = React.createClass({
+	  displayName: 'SonSign',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = SonSign;
+
+/***/ },
+/* 287 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Tye = React.createClass({
+	  displayName: 'Tye',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Tye;
+
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Varieties = React.createClass({
+	  displayName: 'Varieties',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Varieties;
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var WebsiteMan = React.createClass({
+	  displayName: 'WebsiteMan',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = WebsiteMan;
+
+/***/ },
+/* 290 */
+>>>>>>> Stashed changes
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var A2Z = React.createClass({
+	  displayName: 'A2Z',
+	
+<<<<<<< Updated upstream
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+=======
+	  openAppraisal: function () {
+	    this.props.history.pushState(null, "services/appraisal");
+	  },
+>>>>>>> Stashed changes
+	
+	module.exports = A2Z;
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+<<<<<<< Updated upstream
+	var Abbrev = React.createClass({
+	  displayName: 'Abbrev',
+	
+	  render: function () {
+	    React.createElement('div', null);
+=======
+	  openSubscriptionService: function () {
+	    this.props.history.pushState(null, "services/subscription");
+	  },
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "div",
+	        { className: "services-links" },
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openAppraisal },
+	            "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openMarketResearch },
+	            "MARKET RESEARCH"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openSubscriptionService },
+	            "SUBSCRIPTION SERVICE"
+	          )
+	        )
+	      ),
+	      this.props.children
+	    );
+>>>>>>> Stashed changes
+	  }
+	});
+	
+	module.exports = Abbrev;
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Apprais = React.createClass({
+	  displayName: 'Apprais',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Apprais;
+
+/***/ },
+<<<<<<< Updated upstream
+/* 275 */
+=======
+/* 291 */
+>>>>>>> Stashed changes
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+<<<<<<< Updated upstream
+	var BritabBrev = React.createClass({
+	  displayName: 'BritabBrev',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = BritabBrev;
+
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Buying = React.createClass({
+	  displayName: 'Buying',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Buying;
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Clean = React.createClass({
+	  displayName: 'Clean',
+	
+	  render: function () {
+	    React.createElement('div', null);
+	  }
+	});
+	
+	module.exports = Clean;
+=======
+	var Appraisal = React.createClass({
+	  displayName: "Appraisal",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "appraisal" },
+	      React.createElement(
+	        "div",
+	        { className: "appraisal-info" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I've appraised some large and valuable collections, for which I was paid well.  I've identified hundreds of items for clients, and authenticated over 113,000 items."
+	        ),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "Identification Service"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I've been in business for 35+ years, interested in coins over 40 years.  I can identify and authenticate most things numismatic."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "1. OFFER: I will identify any coin, token, banknote, or other numismatic object.  “Identify” means I will tell you, at a minimum,  the country, denomination, date of the thing.  I will offer information on metal content, approximate value (whatever that means), commemorative aspects if any, and any other information I might have.  You can try me on other items not numismatic, but no promises.  Cost is $5.00 per item."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "2. EXCLUSIONS: I will not grade and I will not authenticate from pictures or descriptions.  I can give my opinion on those aspects only if you ship me the object for physical inspection.  See below for details."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "3. METHOD:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "A. Either send me a picture or give me a good description.  The best pictures of coins, medals, etc. will be scanner images at 150%, 300 dpi, extra sharpness, taken on a black background (easily produced by leaving the cover off).  White background will tend to produce too much contrast.  The best pictures of banknotes will be on a scanner at 100%, 200 dpi, normal sharpness.  Take pictures of both sides and send as uncompressed jpgs attached to an email.  You can send up to 6 jpgs totalling about 2mgb per email.  You can send me other types of images (camera, etc.) in other formats, but they may not work for various reasons.  DO NOT SEND FAX PICTURES.  THEY DON'T WORK.  And a faxed picture uses up about 30 pages worth of ink.  Annoying."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "B. If you send me a description I want to know as much as possible of the following:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-metal content and/or color"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-size (millimeters preferred to inches) and shape"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-description of the major design elements of both sides"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-the legend on both sides.  If in a foreign alphabet (non-”Roman,” which is the one used for English, etc.) try to figure out what alphabet it is and tell me.  If it is Greek or Russian with a lot of letters similar to Roman then try to “fake it.”"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "C. I may ask you more questions"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "D. When I am done I will send you one of the following messages:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-I have identified your item(s).  Pay me $x through paypal or authorize credit card charge and I will send you my results, or"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "-I’m sorry, I can’t identify your item, you don’t owe me anything."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "E. You will pay me and I will send you my information."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "4. NO REFUNDS for any reason."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "7/1/2007 - So this has been going for a year, and I kept stats.  121 people asked for identifications of 525 things. I provided 13 for free for various reasons, charged and was paid for 422.  The others refused to pay so I didn't act.  It was kind of funny sometimes - many of the 51 refuseniks had already failed in their google but they would not pay, you know, ANYTHING, to get the answer to their question.  Some of those coins had all the necessary information right there: BRIT. OMN...., REPUBLIQUE FRANCAISE..., hammer and sickle.  Makes the world go round."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "Grading and Authentication"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "You must realize that anything I might say will not have the cachet, though it may have the accuracy, of the big grading services, but my opinion might turn out to be worth something, and I will do work on objects that the agencies will not touch."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "Method"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "A. I must have the object in hand.  You will pay the shipping costs both ways, and I will charge you $5.00 for a grade opinion and $5.00 for an authentication opinion.  If I decide the thing is genuine you will get a signed letter from me giving my conclusions.  The item will be scanned or digitally photographed and that picture will be reproduced on the letter.  That and a couple of bucks will get you a cup of coffee.  Occasionally, however, you might run into someone who will take my word for something, and on that basis will buy something from you that otherwise maybe they would not.  If I think the thing is not genuine I will ask you if you want a signed letter with photo or not."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "B. The turnaround time will usually be short.  If there is a problem that requires research or consultation I'll let you know."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "C. At the moment I do not have an \"application form.\" I'll make one when the traffic demands.  For now just get in touch and we'll work out the details."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "D. For authentication you will get a \"real,\" \"fake,\" or \"I can't tell\" from me.  You will not be charged for \"I can't tell.\"  For oriental cast coins a statement including the word \"probably\" will be billed as a definitive conclusion and will be accompanied by an explanation for the uncertainty and recommendations for further (expensive) research."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "E. For grade you will get a standard \"word\" grade (very good, extremely fine, etc.).  Detractors will be mentioned.  Split grades will be mentioned, as will grading peculiarities specific to that item, country, type, year, etc. if I know them (such as the fact, on German minors of 1873-89, that unless the little shield on the eagle's breast has some detail the coin is not better than VG no matter how nice the rest of it looks).  So you'll get blather if necessary, but you will not get numbers.  I don't do numbers.  It will be \"uncirculated,\" not MS60."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "F. All of this stuff will be my opinion only.  I may be wrong.  If I am I will apologize and retract my opinion in writing, but I will not make a refund."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "6/15/2008 - In past year I have written 29 letters as described above."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "h3",
+	          null,
+	          "Appraisal"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I have done a number (more than 6, less than 400) of collection appraisals for collectors or their estate.  The largest was 40,000 items, several were more than 10,000.  I produce a written report, details to be arranged by negotiation, telling you what you wanted to know.  Typically this will be what you have and what it is \"worth.\"  \"Value\" can be described in terms of relaceablity or potential sales value were one to sell to a dealer.  \"Retail\" or \"market\" prices are subject to market forces, and I will be glad to explain why I think an appraisal giving values in these terms is not a good idea.  \"Catalog\" values are useful in some series, not in others, and I can explain my views on this as well.  I will travel if my expenses are paid.  I charge by the hour, but I work very fast."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "6/15/2008 - I have performed 8 formal appraisals with written reports.  Total over 113,000 items."
+	        )
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = Appraisal;
+>>>>>>> Stashed changes
+
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+<<<<<<< Updated upstream
 	var Collecting = React.createClass({
 	  displayName: 'Collecting',
 	
@@ -36400,6 +36959,8 @@
 
 	var React = __webpack_require__(1);
 	
+=======
+>>>>>>> Stashed changes
 	var MarketResearch = React.createClass({
 	  displayName: "MarketResearch",
 	
@@ -36546,6 +37107,7 @@
 	
 	module.exports = SubscriptionService;
 
+<<<<<<< Updated upstream
 /***/ },
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
@@ -36779,6 +37341,8 @@
 	
 	module.exports = AdditionalInformation;
 
+=======
+>>>>>>> Stashed changes
 /***/ }
 /******/ ]);
 //# sourceMappingURL=bundle.js.map
