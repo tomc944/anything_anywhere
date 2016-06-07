@@ -17,3 +17,21 @@
  * {
    font-family: 'Lato', sans-serif;
  }
+
+#aboutModal .modal-content{
+   border-radius: 0px;
+   text-align: center;
+   font-size: 16px;
+ }
+
+ #aboutModal .modal-body{
+    border-radius: 0px;
+    text-align: left;
+    font-size: 16px;
+  }
+
+ #aboutModal h3 {
+   color: #3299ff;
+   font-weight: 300;
+   text-decoration: underline;
+ }

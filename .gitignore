@@ -12,6 +12,8 @@ node_modules
 /log/*
 !/log/.keep
 /tmp
+bundle.js
+bundle.js.map
 worklog.md
 
 # Ignore all logfiles and tempfiles.

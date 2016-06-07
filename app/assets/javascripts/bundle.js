@@ -55,6 +55,7 @@
 	    About = __webpack_require__(267),
 	    Contact = __webpack_require__(268),
 	    HowWeOperate = __webpack_require__(269),
+<<<<<<< HEAD
 	    AdditionalInformation = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/info/additional_information\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
 	    AdditionalServices = __webpack_require__(271),
 	    A2Z = __webpack_require__(272),
@@ -75,6 +76,12 @@
 	    Tye = __webpack_require__(287),
 	    Varieties = __webpack_require__(288),
 	    WebsiteMan = __webpack_require__(289);
+=======
+	    AdditionalServices = __webpack_require__(270),
+	    Appraisal = __webpack_require__(271),
+	    MarketResearch = __webpack_require__(272),
+	    SubscriptionService = __webpack_require__(273);
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	
 	var routes = React.createElement(
 	  Route,
@@ -84,6 +91,7 @@
 	  React.createElement(Route, { path: '/about', component: About }),
 	  React.createElement(Route, { path: '/contact', component: Contact }),
 	  React.createElement(Route, { path: '/operate', component: HowWeOperate }),
+<<<<<<< HEAD
 	  React.createElement(Route, { path: '/services', component: AdditionalServices }),
 	  React.createElement(
 	    Route,
@@ -106,6 +114,14 @@
 	    React.createElement(Route, { path: '/tye', component: Tye }),
 	    React.createElement(Route, { path: '/varieties', component: Varieties }),
 	    React.createElement(Route, { path: '/websiteman', component: WebsiteMan })
+=======
+	  React.createElement(
+	    Route,
+	    { path: '/services', component: AdditionalServices },
+	    React.createElement(Route, { path: 'appraisal', component: Appraisal }),
+	    React.createElement(Route, { path: 'market_research', component: MarketResearch }),
+	    React.createElement(Route, { path: 'subscription', component: SubscriptionService })
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	  )
 	);
 	
@@ -25914,6 +25930,100 @@
 	    return React.createElement(
 	      'div',
 	      null,
+<<<<<<< HEAD
+=======
+	      React.createElement(
+	        'div',
+	        { className: 'modal fade', id: 'aboutModal', tabindex: '-1', role: 'dialog', 'aria-labelledby': 'myModalLabel' },
+	        React.createElement(
+	          'div',
+	          { className: 'modal-dialog', role: 'document' },
+	          React.createElement(
+	            'div',
+	            { className: 'modal-content' },
+	            React.createElement(
+	              'div',
+	              { className: 'modal-header' },
+	              React.createElement(
+	                'button',
+	                { type: 'button', className: 'close', 'data-dismiss': 'modal', 'aria-label': 'Close' },
+	                React.createElement(
+	                  'span',
+	                  { 'aria-hidden': 'true' },
+	                  '×'
+	                )
+	              ),
+	              React.createElement(
+	                'h3',
+	                { className: 'modal-title', id: 'myModalLabel' },
+	                'ANYTHING ANYWHERE'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'modal-body' },
+	              '(example)Hi, my name is Bob Reis, and I have been in the numismatic business for X years. etc etc etc',
+	              React.createElement('br', null),
+	              React.createElement('br', null),
+	              React.createElement(
+	                'p',
+	                null,
+	                'In addition to shopping and for more information, visit these:'
+	              ),
+	              React.createElement(
+	                'ul',
+	                null,
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Contact me'
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Buying and how I operate - this includes information on how to order, terms for all commerce done at by me, and my thoughts on secure commerce, refunds and guarantees, grading, consignment, buying, and what things are worth. '
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Addition services - Attribution, authentication, grading, and appraisal services, and market research.'
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'Links - I only put out links to places run by people I like '
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'blog - I like to write and here are some of my thoughts on things'
+	                ),
+	                React.createElement(
+	                  'li',
+	                  null,
+	                  'etc.'
+	                )
+	              ),
+	              React.createElement('br', null),
+	              React.createElement(
+	                'p',
+	                null,
+	                'You can find all of these links at the bottom as well.'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'modal-footer' },
+	              React.createElement(
+	                'button',
+	                { type: 'button', className: 'btn btn-default', 'data-dismiss': 'modal' },
+	                'Close'
+	              )
+	            )
+	          )
+	        )
+	      ),
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	      React.createElement(Header, { history: this.props.history }),
 	      this.props.children,
 	      React.createElement(Footer, { history: this.props.history })
@@ -25969,8 +26079,13 @@
 	        { className: 'row header-login' },
 	        React.createElement(
 	          'div',
+<<<<<<< HEAD
 	          { className: 'col-xs-offset-8 col-xs-2' },
 	          'ABOUT A/A'
+=======
+	          { className: 'col-xs-offset-8 col-xs-2 header-about', 'data-toggle': 'modal', 'data-target': '#aboutModal' },
+	          'NEW TO AA?'
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	        ),
 	        React.createElement(
 	          'div',
@@ -26741,6 +26856,7 @@
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 	var React = __webpack_require__(1);
 	
 	var Footer = React.createClass({
@@ -26755,10 +26871,32 @@
 	  },
 	
 	  goToOperate: function () {
+=======
+	var React = __webpack_require__(1),
+	    FooterConstants = __webpack_require__(274);
+	
+	function animateScroll() {
+	  $("html, body").animate({ scrollTop: 0 }, "slow");
+	  return false;
+	};
+	
+	var Footer = React.createClass({
+	  displayName: 'Footer',
+	
+	  goToContact: function (e) {
+	    e.preventDefault();
+	    this.props.history.pushState(null, "/contact");
+	  },
+	
+	  goToOperate: function (e) {
+	    e.preventDefault();
+	    animateScroll();
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	    this.props.history.pushState(null, "/operate");
 	  },
 	
 	  goToAdditionalInformation: function () {
+<<<<<<< HEAD
 	    this.props.history.pushState(null, "/additional_information");
 	  },
 	
@@ -26841,14 +26979,135 @@
 	              "a",
 	              { onClick: this.goToServices },
 	              "ADDITIONAL SERVICES"
+=======
+	    // this.props.history.pushState(null, "/coin_information");
+	  },
+	
+	  goToServices: function (e) {
+	    e.preventDefault();
+	    this.props.history.pushState(null, "/services");
+	  },
+	
+	  componentDidMount: function () {
+	    $("#scroll-to-top").click(function (e) {
+	      e.preventDefault();
+	      animateScroll();
+	    });
+	
+	    //add scroll to top fade in and out
+	    $(window).scroll(function () {
+	      if ($(this).scrollTop() > FooterConstants.scrollTopOffset) {
+	        $('#scroll-to-top').fadeIn(FooterConstants.scrollTopDuration);
+	      } else {
+	        $('#scroll-to-top').fadeOut(FooterConstants.scrollTopDuration);
+	      }
+	    });
+	  },
+	
+	  render: function () {
+	
+	    return React.createElement(
+	      'div',
+	      { className: 'footer' },
+	      React.createElement(
+	        'div',
+	        { className: 'footer-container' },
+	        React.createElement(
+	          'div',
+	          { className: 'footer-links container-fluid' },
+	          React.createElement(
+	            'div',
+	            { className: 'row' },
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { 'data-toggle': 'modal', 'data-target': '#aboutModal' },
+	                React.createElement(
+	                  'b',
+	                  null,
+	                  'ABOUT AA'
+	                )
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { onClick: this.goToContact },
+	                'CONTACT'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { onClick: this.goToOperate },
+	                'BUYING & HOW I OPERATE'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { onClick: this.goToAdditionalInformation },
+	                'ADDITIONAL INFORMATION'
+	              )
+	            )
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'row' },
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { onClick: this.goToLinks },
+	                'LINKS - FRIENDS/COLLEAGUES'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { onClick: this.goToBlog },
+	                'MY BLOG'
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'col-xs-3 footer-link' },
+	              React.createElement(
+	                'a',
+	                { onClick: this.goToServices },
+	                'ADDITIONAL SERVICES'
+	              )
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	            )
 	          )
 	        )
 	      ),
 	      React.createElement(
+<<<<<<< HEAD
 	        "div",
 	        { id: "scroll-to-top" },
 	        "Scroll to Top"
+=======
+	        'div',
+	        { className: 'footer-bottom' },
+	        '© 2016 ANYTHING ANYWHERE.'
+	      ),
+	      React.createElement(
+	        'div',
+	        { id: 'scroll-to-top' },
+	        'Scroll to Top'
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	      )
 	    );
 	  }
@@ -34002,7 +34261,11 @@
 	            null,
 	            "email negotiation"
 	          ),
+<<<<<<< HEAD
 	          " rather than \"secure commerce.\"  As we have seen recently, \"secure commerce\" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security.  You and I will negotiate until we are satisfied and only then will I process the order. You can cut and paste the text description of whatever you're interested in, including reference number (if any) and price, into your email. If you want more than one of something, put that information next to the item.  I will personally get back in touch with you regarding what's available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I'll constantly do the best I can."
+=======
+	          " rather than \"secure commerce.\"  As we have seen recently, \"secure commerce\" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security. Add any items that you are interested in to your shopping cart, and checkout whenever you are ready. Checking out will send me an email, and you and I will negotiate until we are satisfied and only then will I process the order. I will personally get back in touch with you regarding what's available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I'll constantly do the best I can."
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	        ),
 	        React.createElement("br", null),
 	        React.createElement(
@@ -34187,6 +34450,7 @@
 	              React.createElement(
 	                "p",
 	                null,
+<<<<<<< HEAD
 	                "HOW TO ORDER USING A CREDIT CARD",
 	                React.createElement(
 	                  "ol",
@@ -34201,6 +34465,22 @@
 	                    null,
 	                    "Email me again to confirm.  If you want to pay by credit card you can make totally reasonable security by sending me the first two sets of numbers in one email and the second batch and exp. date in a second email.  Or you can be creative and erudite and send me your card # written out in some code that you devise and send me the key for (like 1=a, etc. or 1=2, etc.) or in some language other than english (I can handle all Romance & Germanic languages, I think, and Chinese, Turkish, Arabic, Hebrew, Farsi, Hindi, Russian and probably most Slavic languages, Hungarian, and possibly others.  If I'm not sure I'll ask you.  Cute?  But it works."
 	                  )
+=======
+	                "HOW TO ORDER USING A CREDIT CARD"
+	              ),
+	              React.createElement(
+	                "ol",
+	                null,
+	                React.createElement(
+	                  "li",
+	                  null,
+	                  "Email me what you want.  I will send you back a pro forma order showing what's available and how much it will cost, including shipping costs, and will indicate shipping options if applicable."
+	                ),
+	                React.createElement(
+	                  "li",
+	                  null,
+	                  "Email me again to confirm.  If you want to pay by credit card you can make totally reasonable security by sending me the first two sets of numbers in one email and the second batch and exp. date in a second email.  Or you can be creative and erudite and send me your card # written out in some code that you devise and send me the key for (like 1=a, etc. or 1=2, etc.) or in some language other than english (I can handle all Romance & Germanic languages, I think, and Chinese, Turkish, Arabic, Hebrew, Farsi, Hindi, Russian and probably most Slavic languages, Hungarian, and possibly others.  If I'm not sure I'll ask you.  Cute?  But it works."
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	                )
 	              )
 	            )
@@ -35383,6 +35663,31 @@
 	                "I do this all the time.  Terms are by negotiation.  I have successfully sold single items at the four figure level, and have disposed of collections in the high five figures.  There is a written contract stating commissions, rates, disclosure provisions, security, etc.  I am competitive and I get the job done. You can list your material on my site.  This is a page rental and comission scheme: a monthly fee (very minimal), and small commission to me if it sells.  Email me for more details."
 	              )
 	            )
+<<<<<<< HEAD
+=======
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "panel panel-default" },
+	            React.createElement(
+	              "div",
+	              { className: "panel-heading", role: "tab", id: "headingTwo" },
+	              React.createElement(
+	                "h4",
+	                { className: "panel-title" },
+	                React.createElement(
+	                  "a",
+	                  { className: "collapsed", "data-toggle": "collapse", "data-parent": "#operate-accordion", href: "#buying", "aria-expanded": "false", "aria-controls": "buying" },
+	                  "BUYING"
+	                )
+	              )
+	            ),
+	            React.createElement(
+	              "div",
+	              { id: "buying", className: "panel-collapse collapse", role: "tabpanel", "aria-labelledby": "headingTwo" },
+	              "My job as a buyer is to get you the most money for your stuff.  My job as a seller is to get the best deal for the buyer.  It is NOT to make the most money for myself.  If I can take care of you to your satisfaction I'll get paid and I'll be fine.  Right? But there's a built in conflict of interest between the buying side and the selling side.  If I buy high I have to sell high or cut my margin.  If I sell high I have to sell to fools.  If I buy cheap so I can sell cheap I have to rip off the sellers.  Never mind the moral issues, both extremes produce a long term degradation of the business environment.  I seek therefore, the golden mean. There are two types of buys as far as quantity: 1) few things, 2) pile of stuff.  A few things will always get more individual attention. Value of the stuff attracts more attention no matter how many things there are.  Typically, I'm looking at a \"pile of stuff\" and kind of nodding my head at all the 10¢ material and then comes a gold coin.  I have to look it up - pay attention to it, figure out what its really worth.  Pay you what its worth. Now, that gold coin maybe turns out to be worth $200, that's what I'll pay you, and all the 10¢ stuff is worth $11.00.  I need all the stuff, but there's only $10 of profit in the gold coin and the $11.00 of 10¢ stuff I will turn into $27.00 but it will take me a year to do it.  But wait, there's some obscure Belgian coin with a KM value of $300, but it's a market slowpoke and I know its going to sit unless I cut the price, so I'm going to pay you $100 for the risk and time.  I'll try to get $300, maybe I will but probably not.  Then oh, there's a nice Russian coin but it's got some kind of problem.  Russia is hot, they'll take it, I'll give you 100% of KM, you'll be happy, I'll be happy.  I turn the page again and there's a solid, no problem $3000 coin, now we're talking turkey, so to speak.  What I usually do when I get to the 4-figure stuff is offer you a 90 day consignment at a 15% commission - sometimes works out to be a bunch more money for both of us, and I usually want a buy out guarantee - you'll sell it to me at the pre-agreed price if it doesn't sell. Today is 10/10/2007.  I am wondering how to get more of you to sell me good stuff at reasonable prices so I can continue to have good stuff at reasonable prices to sell to you.  A couple of things that have occurred to me are: 1. If you buy something from me I will buy it back from you for a minimum of 70% of what you paid for it PROVIDED that you also sell me something else of equal value and quality that you didn't buy from me at the same time.  No time limit at the moment.  You understand the possible ways that you or I could take abusive advantage of such an offer.  Let's not do that and see if it works for us, eh? I WANT TO ACQUIRE (actually YOU want to acquire) (all kinds, grades,quantities, price levels): COINS, BANKNOTES, NOTGELD, tokens & medals, antiquities, arrowheads, \"primitive\" money, etc: all locations, bond & share certs, coupons, checks, cheques, cheki, bons, talons, bills of exchange,drafts, etc., movie, Hell, & other funny money, post cards (pre-1946), miscellaneous paper items (pre-1945), military: medals, badges, insignia, awards, fossils, mineral specimens... SPECIAL INSTRUCTIONS: -If sending cheap stuff please don't overvalue  & don't overinsure.  Makes for disappointment.  Expensive stuff suggest you call first.  You can always send pics. At least  I could give you some idea. -YOU MUST send an inventory sheet with anything you send me with your name, address, phone #, email address.  The inventory can be as simple as \"lot of material,\" but if that simple I will not entertain any disputes along the lines of \"you returned my stuff damaged or missing\" should the deal fall through.  If you are sending value of more than $50.00 I suggest you call, fax, or email before sending.  I want to assure secure transactions. We should agree on the terms and methods."
+	            )
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	          )
 	        )
 	      )
@@ -35393,8 +35698,12 @@
 	module.exports = HowWeOperate;
 
 /***/ },
+<<<<<<< HEAD
 /* 270 */,
 /* 271 */
+=======
+/* 270 */
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35402,10 +35711,25 @@
 	var AdditionalServices = React.createClass({
 	  displayName: "AdditionalServices",
 	
+<<<<<<< HEAD
+=======
+	  openAppraisal: function () {
+	    this.props.history.pushState(null, "services/appraisal");
+	  },
+	
+	  openMarketResearch: function () {
+	    this.props.history.pushState(null, "services/market_research");
+	  },
+	
+	  openSubscriptionService: function () {
+	    this.props.history.pushState(null, "services/subscription");
+	  },
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	
 	  render: function () {
 	    return React.createElement(
 	      "div",
+<<<<<<< HEAD
 	      { className: "panel panel-default" },
 	      React.createElement(
 	        "div",
@@ -35423,6 +35747,69 @@
 	      React.createElement(
 	        "div",
 	        { id: "appraisal", className: "panel-collapse collapse", role: "tabpanel", "aria-labelledby": "headingTwo" },
+=======
+	      null,
+	      React.createElement(
+	        "div",
+	        { className: "services-links" },
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openAppraisal },
+	            "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openMarketResearch },
+	            "MARKET RESEARCH"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          null,
+	          React.createElement(
+	            "a",
+	            { className: "service-links-link", onClick: this.openSubscriptionService },
+	            "SUBSCRIPTION SERVICE"
+	          )
+	        )
+	      ),
+	      this.props.children
+	    );
+	  }
+	
+	});
+	
+	module.exports = AdditionalServices;
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Appraisal = React.createClass({
+	  displayName: "Appraisal",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "appraisal" },
+	      React.createElement(
+	        "div",
+	        { className: "appraisal-info" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "APPRAISAL, ATTRIBUTION, & AUTHENTICATION SERVICES"
+	        ),
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 	        React.createElement(
 	          "p",
 	          null,
@@ -35613,7 +36000,11 @@
 	
 	});
 	
+<<<<<<< HEAD
 	module.exports = AdditionalServices;
+=======
+	module.exports = Appraisal;
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 
 /***/ },
 /* 272 */
@@ -35621,6 +36012,7 @@
 
 	var React = __webpack_require__(1);
 	
+<<<<<<< HEAD
 	var A2Z = React.createClass({
 	  displayName: 'A2Z',
 	
@@ -35857,10 +36249,85 @@
 
 /***/ },
 /* 287 */
+=======
+	var MarketResearch = React.createClass({
+	  displayName: "MarketResearch",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "market-research-container" },
+	      React.createElement(
+	        "div",
+	        { className: "market-research" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "MARKET RESEARCH"
+	        ),
+	        React.createElement(
+	          "h4",
+	          null,
+	          "This was posted on 9/20/2006."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I find that I have been getting a lot of \"What's it worth\" and \"What should I pay for it\" questions.  Looks like a business opportunity to me.  I will be happy to give you my opinion of whether you should buy the thing you're looking at.  Cost of the phone conversation or whatever the medium, and my research, will be $5.00 per incident and 3 or fewer items plus $5.00 per item for more than 3.  QUick websearch &/or consultation of catalogs.  Email or phone call.  You will be able to catch me most weekends during my normal business hours (8:30 AM - 10:30 PM), will send out emails if I'll be unavailable"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "It will be like this one that just happened:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "\"Hi.  I'm looking at a French gold 50 francs 1858-A NGC-62 but nicer than that.  Should I pay $550 for it?"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I go online for few minutes.  Call him back."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "\"It's the most common date of the type, there are dozens of them on the web, you should consider it a piece of choice bullion.\""
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "And so he did.  Saved him from spending $50 he would have regretted spending.  Of course things could change tomorrow..."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I would charge him $5.00 for telling him that under this new scheme.  Kind of like numismatic tech support."
+	        ),
+	        React.createElement("br", null)
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = MarketResearch;
+
+/***/ },
+/* 273 */
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
 	
+<<<<<<< HEAD
 	var Tye = React.createClass({
 	  displayName: 'Tye',
 	
@@ -35902,6 +36369,90 @@
 	});
 	
 	module.exports = WebsiteMan;
+=======
+	var SubscriptionService = React.createClass({
+	  displayName: "SubscriptionService",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "subscription-service-container" },
+	      React.createElement(
+	        "div",
+	        { className: "subscription-service" },
+	        React.createElement(
+	          "h2",
+	          null,
+	          "SUBSCRIPTION SERVICE"
+	        ),
+	        React.createElement(
+	          "h4",
+	          null,
+	          "This was posted on 10/12/2006."
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "I've been working on this for a couple of years.  Another way for me to utilize my decades of messing around with coins.  I want you to join my club for $25.00 per year.  Your subscription will get you access to the following services:"
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "1. Market research - I'll find out what I think about the deal you are about to do and will give you my opinion.  Priced as follows: $5 per day for first 3 items researched, $5 per item thereafter."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "2. Search service.  Per item: $5.00 for a web search up to 10 minutes, $10 for extended web search, $20 for up to 10 emails or phone calls, $1.50 per thereafter.  (because the longer I take doing this kind of thing the less likely it is findable)."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "3. Attributions, grading, authentication at half price: that is $1.25, $2.50, $2.50 respectively."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "4. At some point there will be a large numismatic database on line supported by a self-improving search function.  There will be basic and enhanced access.  You will have enhanced access, whatever that will turn out to mean, but it will be tasty."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "As always with everything I try to do, satisfaction is guaranteed."
+	        ),
+	        React.createElement("br", null),
+	        React.createElement(
+	          "p",
+	          null,
+	          "Come one, come all.  Send me your dues payment today.  Paypal or credit card.  Email me - reisbiz@earthlink.net to get started."
+	        ),
+	        React.createElement("br", null)
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = SubscriptionService;
+
+/***/ },
+/* 274 */
+/***/ function(module, exports) {
+
+	var FooterConstants = {
+	  //distance until scroll to top button shows up
+	  scrollTopOffset: 400,
+	  //time of scroll to top fade animation
+	  scrollTopDuration: 200
+	};
+	
+	module.exports = FooterConstants;
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 
 /***/ }
 /******/ ]);

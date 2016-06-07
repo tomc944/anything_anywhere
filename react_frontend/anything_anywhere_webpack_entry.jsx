@@ -9,6 +9,7 @@ var React = require('react'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
     HowWeOperate = require('./components/info/how_we_operate'),
+<<<<<<< HEAD
     AdditionalInformation = require('./components/info/additional_information'),
     AdditionalServices = require('./components/info/additional_services'),
     A2Z = require('./components/info/additional_info_items/a2z'),
@@ -29,6 +30,13 @@ var React = require('react'),
     Tye = require('./components/info/additional_info_items/tye'),
     Varieties = require('./components/info/additional_info_items/varieties'),
     WebsiteMan = require('./components/info/additional_info_items/websiteman');
+=======
+    AdditionalServices = require('./components/info/additional_services/additional_services'),
+    Appraisal = require('./components/info/additional_services/appraisal'),
+    MarketResearch = require('./components/info/additional_services/market_research'),
+    SubscriptionService = require('./components/info/additional_services/subscription_service');
+
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
 
 var routes = (
   <Route path="/" component={HighLevelContainer}>
@@ -37,6 +45,7 @@ var routes = (
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
     <Route path="/operate" component={HowWeOperate}/>
+<<<<<<< HEAD
     <Route path="/services" component={AdditionalServices}/>
     <Route path="/additional_information" component={AdditionalInformation}>
       <Route path="/a2z" component={A2Z}/>
@@ -57,6 +66,12 @@ var routes = (
       <Route path="/tye" component={Tye}/>
       <Route path="/varieties" component={Varieties}/>
       <Route path="/websiteman" component={WebsiteMan}/>
+=======
+    <Route path="/services" component={AdditionalServices}>
+      <Route path="appraisal" component={Appraisal}/>
+      <Route path="market_research" component={MarketResearch}/>
+      <Route path="subscription" component={SubscriptionService}/>
+>>>>>>> 54f136eaa252cb0f67c1b5f9d625901ebbd5db05
     </Route>
   </Route>
 );

@@ -8,8 +8,7 @@ var HowWeOperate = React.createClass({
           <h1>HOW TO ORDER</h1>
           <br/>
           <p>
-            For more than 10 years now I have conducted business here by <b>email negotiation</b> rather than "secure commerce."  As we have seen recently, "secure commerce" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security.  You and I will negotiate until we are satisfied and only then will I process the order.
-            You can cut and paste the text description of whatever you&#39;re interested in, including reference number (if any) and price, into your email. If you want more than one of something, put that information next to the item.  I will personally get back in touch with you regarding what&#39;s available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I&#39;ll constantly do the best I can.
+            For more than 10 years now I have conducted business here by <b>email negotiation</b> rather than "secure commerce."  As we have seen recently, "secure commerce" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security. Add any items that you are interested in to your shopping cart, and checkout whenever you are ready. Checking out will send me an email, and you and I will negotiate until we are satisfied and only then will I process the order. I will personally get back in touch with you regarding what&#39;s available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I&#39;ll constantly do the best I can.
           </p>
           <br/>
           <h3>NOTES FOR CLIENTS IN COUNTRIES OTHER THAN THE USA</h3>
@@ -70,13 +69,11 @@ var HowWeOperate = React.createClass({
 
                 <br/>
 
-                <p>
-                  HOW TO ORDER USING A CREDIT CARD
+                <p>HOW TO ORDER USING A CREDIT CARD</p>
                   <ol>
                     <li>Email me what you want.  I will send you back a pro forma order showing what's available and how much it will cost, including shipping costs, and will indicate shipping options if applicable.</li>
                     <li>Email me again to confirm.  If you want to pay by credit card you can make totally reasonable security by sending me the first two sets of numbers in one email and the second batch and exp. date in a second email.  Or you can be creative and erudite and send me your card # written out in some code that you devise and send me the key for (like 1=a, etc. or 1=2, etc.) or in some language other than english (I can handle all Romance & Germanic languages, I think, and Chinese, Turkish, Arabic, Hebrew, Farsi, Hindi, Russian and probably most Slavic languages, Hungarian, and possibly others.  If I'm not sure I'll ask you.  Cute?  But it works.</li>
                   </ol>
-                </p>
               </div>
             </div>
 
@@ -539,6 +536,33 @@ var HowWeOperate = React.createClass({
               <div id="consignment" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <h3>Consignment</h3>
                 <p>I do this all the time.  Terms are by negotiation.  I have successfully sold single items at the four figure level, and have disposed of collections in the high five figures.  There is a written contract stating commissions, rates, disclosure provisions, security, etc.  I am competitive and I get the job done. You can list your material on my site.  This is a page rental and comission scheme: a monthly fee (very minimal), and small commission to me if it sells.  Email me for more details.</p>
+              </div>
+            </div>
+
+            <div className="panel panel-default">
+              <div className="panel-heading" role="tab" id="headingTwo">
+                <h4 className="panel-title">
+                  <a className="collapsed" data-toggle="collapse" data-parent="#operate-accordion" href="#buying" aria-expanded="false" aria-controls="buying">
+                    BUYING
+                  </a>
+                </h4>
+              </div>
+              <div id="buying" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                My job as a buyer is to get you the most money for your stuff.  My job as a seller is to get the best deal for the buyer.  It is NOT to make the most money for myself.  If I can take care of you to your satisfaction I'll get paid and I'll be fine.  Right?
+    But there's a built in conflict of interest between the buying side and the selling side.  If I buy high I have to sell high or cut my margin.  If I sell high I have to sell to fools.  If I buy cheap so I can sell cheap I have to rip off the sellers.  Never mind the moral issues, both extremes produce a long term degradation of the business environment.  I seek therefore, the golden mean.
+    There are two types of buys as far as quantity: 1) few things, 2) pile of stuff.  A few things will always get more individual attention.
+    Value of the stuff attracts more attention no matter how many things there are.  Typically, I'm looking at a "pile of stuff" and kind of nodding my head at all the 10¢ material and then comes a gold coin.  I have to look it up - pay attention to it, figure out what its really worth.  Pay you what its worth.
+    Now, that gold coin maybe turns out to be worth $200, that's what I'll pay you, and all the 10¢ stuff is worth $11.00.  I need all the stuff, but there's only $10 of profit in the gold coin and the $11.00 of 10¢ stuff I will turn into $27.00 but it will take me a year to do it.  But wait, there's some obscure Belgian coin with a KM value of $300, but it's a market slowpoke and I know its going to sit unless I cut the price, so I'm going to pay you $100 for the risk and time.  I'll try to get $300, maybe I will but probably not.  Then oh, there's a nice Russian coin but it's got some kind of problem.  Russia is hot, they'll take it, I'll give you 100% of KM, you'll be happy, I'll be happy.  I turn the page again and there's a solid, no problem $3000 coin, now we're talking turkey, so to speak.  What I usually do when I get to the 4-figure stuff is offer you a 90 day consignment at a 15% commission - sometimes works out to be a bunch more money for both of us, and I usually want a buy out guarantee - you'll sell it to me at the pre-agreed price if it doesn't sell.
+
+
+Today is 10/10/2007.  I am wondering how to get more of you to sell me good stuff at reasonable prices so I can continue to have good stuff at reasonable prices to sell to you.  A couple of things that have occurred to me are:
+1. If you buy something from me I will buy it back from you for a minimum of 70% of what you paid for it PROVIDED that you also sell me something else of equal value and quality that you didn't buy from me at the same time.  No time limit at the moment.  You understand the possible ways that you or I could take abusive advantage of such an offer.  Let's not do that and see if it works for us, eh?
+
+I WANT TO ACQUIRE (actually YOU want to acquire) (all kinds, grades,quantities, price levels): COINS, BANKNOTES, NOTGELD, tokens & medals, antiquities, arrowheads, "primitive" money, etc: all locations, bond & share certs, coupons, checks, cheques, cheki, bons, talons, bills of exchange,drafts, etc., movie, Hell, & other funny money, post cards (pre-1946), miscellaneous paper items (pre-1945), military: medals, badges, insignia, awards, fossils, mineral specimens...
+
+SPECIAL INSTRUCTIONS:
+-If sending cheap stuff please don't overvalue  & don't overinsure.  Makes for disappointment.  Expensive stuff suggest you call first.  You can always send pics. At least  I could give you some idea.
+-YOU MUST send an inventory sheet with anything you send me with your name, address, phone #, email address.  The inventory can be as simple as "lot of material," but if that simple I will not entertain any disputes along the lines of "you returned my stuff damaged or missing" should the deal fall through.  If you are sending value of more than $50.00 I suggest you call, fax, or email before sending.  I want to assure secure transactions. We should agree on the terms and methods.
               </div>
             </div>
 
