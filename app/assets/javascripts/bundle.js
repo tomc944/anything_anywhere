@@ -87,24 +87,24 @@
 	  React.createElement(
 	    Route,
 	    { path: '/additional_information', component: AdditionalInformation },
-	    React.createElement(Route, { path: '/a2z', component: A2Z }),
-	    React.createElement(Route, { path: '/abbrev', component: Abbrev }),
-	    React.createElement(Route, { path: '/apprais', component: Apprais }),
-	    React.createElement(Route, { path: '/britabbrev', component: BritabBrev }),
-	    React.createElement(Route, { path: '/buying', component: Buying }),
-	    React.createElement(Route, { path: '/clean', component: Clean }),
-	    React.createElement(Route, { path: '/collecting', component: Collecting }),
-	    React.createElement(Route, { path: '/faleri', component: Faleri }),
-	    React.createElement(Route, { path: '/finnist', component: Finnist }),
-	    React.createElement(Route, { path: '/grading', component: Grading }),
-	    React.createElement(Route, { path: '/jerks', component: Jerks }),
-	    React.createElement(Route, { path: '/plasticmon', component: PlasticMon }),
-	    React.createElement(Route, { path: '/privacy', component: Privacy }),
-	    React.createElement(Route, { path: '/security', component: Security }),
-	    React.createElement(Route, { path: '/sonsign', component: SonSign }),
-	    React.createElement(Route, { path: '/tye', component: Tye }),
-	    React.createElement(Route, { path: '/varieties', component: Varieties }),
-	    React.createElement(Route, { path: '/websiteman', component: WebsiteMan })
+	    React.createElement(Route, { path: 'a2z', component: A2Z }),
+	    React.createElement(Route, { path: 'abbrev', component: Abbrev }),
+	    React.createElement(Route, { path: 'apprais', component: Apprais }),
+	    React.createElement(Route, { path: 'britabbrev', component: BritabBrev }),
+	    React.createElement(Route, { path: 'buying', component: Buying }),
+	    React.createElement(Route, { path: 'clean', component: Clean }),
+	    React.createElement(Route, { path: 'collecting', component: Collecting }),
+	    React.createElement(Route, { path: 'faleri', component: Faleri }),
+	    React.createElement(Route, { path: 'finnist', component: Finnist }),
+	    React.createElement(Route, { path: 'grading', component: Grading }),
+	    React.createElement(Route, { path: 'jerks', component: Jerks }),
+	    React.createElement(Route, { path: 'plasticmon', component: PlasticMon }),
+	    React.createElement(Route, { path: 'privacy', component: Privacy }),
+	    React.createElement(Route, { path: 'security', component: Security }),
+	    React.createElement(Route, { path: 'sonsign', component: SonSign }),
+	    React.createElement(Route, { path: 'tye', component: Tye }),
+	    React.createElement(Route, { path: 'varieties', component: Varieties }),
+	    React.createElement(Route, { path: 'websiteman', component: WebsiteMan })
 	  ),
 	  React.createElement(
 	    Route,
@@ -26860,7 +26860,8 @@
 	    this.props.history.pushState(null, "/operate");
 	  },
 	
-	  goToAdditionalInformation: function () {
+	  goToAdditionalInformation: function (e) {
+	    e.preventDefault();
 	    this.props.history.pushState(null, "/additional_information");
 	  },
 	
@@ -35913,12 +35914,12 @@
 	  // For later, don't know how to pop-up email client correctly
 	  // Need to look how to route this one...
 	  render: function () {
-	    React.createElement(
+	    return React.createElement(
 	      'div',
-	      { className: 'additional-information-container' },
+	      null,
 	      React.createElement(
 	        'div',
-	        { className: 'additional-information' },
+	        { className: 'additional-information-links' },
 	        React.createElement(
 	          'h1',
 	          null,

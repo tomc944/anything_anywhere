@@ -18,7 +18,8 @@ var Footer = React.createClass({
     this.props.history.pushState(null, "/operate");
   },
 
-  goToAdditionalInformation: function() {
+  goToAdditionalInformation: function(e) {
+    e.preventDefault();
     this.props.history.pushState(null, "/additional_information");
   },
 

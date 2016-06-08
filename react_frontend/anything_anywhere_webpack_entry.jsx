@@ -44,24 +44,24 @@ var routes = (
     <Route path="/operate" component={HowWeOperate}/>
 
     <Route path="/additional_information" component={AdditionalInformation}>
-      <Route path="/a2z" component={A2Z}/>
-      <Route path="/abbrev" component={Abbrev}/>
-      <Route path="/apprais" component={Apprais}/>
-      <Route path="/britabbrev" component={BritabBrev}/>
-      <Route path="/buying" component={Buying}/>
-      <Route path="/clean" component={Clean}/>
-      <Route path="/collecting" component={Collecting}/>
-      <Route path="/faleri" component={Faleri}/>
-      <Route path="/finnist" component={Finnist}/>
-      <Route path="/grading" component={Grading}/>
-      <Route path="/jerks" component={Jerks}/>
-      <Route path="/plasticmon" component={PlasticMon}/>
-      <Route path="/privacy" component={Privacy}/>
-      <Route path="/security" component={Security}/>
-      <Route path="/sonsign" component={SonSign}/>
-      <Route path="/tye" component={Tye}/>
-      <Route path="/varieties" component={Varieties}/>
-      <Route path="/websiteman" component={WebsiteMan}/>
+      <Route path="a2z" component={A2Z}/>
+      <Route path="abbrev" component={Abbrev}/>
+      <Route path="apprais" component={Apprais}/>
+      <Route path="britabbrev" component={BritabBrev}/>
+      <Route path="buying" component={Buying}/>
+      <Route path="clean" component={Clean}/>
+      <Route path="collecting" component={Collecting}/>
+      <Route path="faleri" component={Faleri}/>
+      <Route path="finnist" component={Finnist}/>
+      <Route path="grading" component={Grading}/>
+      <Route path="jerks" component={Jerks}/>
+      <Route path="plasticmon" component={PlasticMon}/>
+      <Route path="privacy" component={Privacy}/>
+      <Route path="security" component={Security}/>
+      <Route path="sonsign" component={SonSign}/>
+      <Route path="tye" component={Tye}/>
+      <Route path="varieties" component={Varieties}/>
+      <Route path="websiteman" component={WebsiteMan}/>
     </Route>
     <Route path="/services" component={AdditionalServices}>
       <Route path="appraisal" component={Appraisal}/>

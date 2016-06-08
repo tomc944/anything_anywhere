@@ -77,38 +77,40 @@ var AdditionalInformation = React.createClass({
   // For later, don't know how to pop-up email client correctly
   // Need to look how to route this one...
   render: function() {
-    <div className="additional-information-container">
-      <div className="additional-information">
-        <h1>This sector will have text files of info concerning the kinds of things I sell, and eventually links to further sources</h1>
+    return (
+      <div>
+        <div className="additional-information-links">
+          <h1>This sector will have text files of info concerning the kinds of things I sell, and eventually links to further sources</h1>
 
-        <div> <a className="additional-information-link" onClick={this.openTyeArticle}> Articles by Robert Tye, in my opinion perhaps the most cogent (and maverick) thinker in historical economics alive today </a></div>
-        <div> <a className="additional-information-link" onClick={this.openVarieties}> COIN VARIETIES: large & small dates, etc. </a></div>
-        <div> <a className="additional-information-link" onClick={this.openFinnist}> INTRODUCTION TO FISCAL INSTRUMENTS </a></div>
-        <div> <a className="additional-information-link" onClick={this.openCollecting}> INTRODUCTION TO COLLECTING </a></div>
-        <div> <a className="additional-information-link" onClick={this.openAbbrev}> Abbreviations found on British military medals, by R.A. Fikentscher </a></div>
+          <div> <a className="additional-information-link" onClick={this.openTyeArticle}> Articles by Robert Tye, in my opinion perhaps the most cogent (and maverick) thinker in historical economics alive today </a></div>
+          <div> <a className="additional-information-link" onClick={this.openVarieties}> COIN VARIETIES: large & small dates, etc. </a></div>
+          <div> <a className="additional-information-link" onClick={this.openFinnist}> INTRODUCTION TO FISCAL INSTRUMENTS </a></div>
+          <div> <a className="additional-information-link" onClick={this.openCollecting}> INTRODUCTION TO COLLECTING </a></div>
+          <div> <a className="additional-information-link" onClick={this.openAbbrev}> Abbreviations found on British military medals, by R.A. Fikentscher </a></div>
 
-        <div>MEXICO, varieties of Sonoran revolutionary 5 and 10 pesos </div>
-        <div> <a className="additional-information-link" onClick={this.openA2Z} >A to Z articles I've written for World Coin News </a></div>
+          <div>MEXICO, varieties of Sonoran revolutionary 5 and 10 pesos </div>
+          <div> <a className="additional-information-link" onClick={this.openA2Z} >A to Z articles I've written for World Coin News </a></div>
 
-        <div>Click here to get on the mailing list for monthly new offers (usually about 1000 new items) just write "anythinganywhere" in message box.  Paper version available by subscription.  Ask for rates. </div>
-        <div> <a className="additional-information-link" onClick={this.openSecurity}> Click here for a disquisition on "secure" commerce. </a></div>
+          <div>Click here to get on the mailing list for monthly new offers (usually about 1000 new items) just write "anythinganywhere" in message box.  Paper version available by subscription.  Ask for rates. </div>
+          <div> <a className="additional-information-link" onClick={this.openSecurity}> Click here for a disquisition on "secure" commerce. </a></div>
 
-        <div>Click here for a discussion of shipping costs, guarantees, refunds, etc. </div>
-        <div> <a className="additional-information-link" onClick={this.openAbbrev}> Click here for list of abbreviations I like to use. </a></div>
-        <div> <a className="additional-information-link" onClick={this.openGrading}> Click here for grading policy </a></div>
-        <div> <a className="additional-information-link" onClick={this.openSonSign}> Click here for consignment and website listing terms </a></div>
-        <div> <a className="additional-information-link" onClick={this.openApprais}> Click here for description of attribution, authentication, grading, and appraisal services </a></div>
-        <div> <a className="additional-information-link" onClick={this.openBuying}> Click here for to see what I want to buy (changes from time to time)</a></div>
-        <div> <a className="additional-information-link" onClick={this.openPrivacy}> Click here for my opinion on internet security</a></div>
-        <div> <a className="additional-information-link" onClick={this.openWebsiteMan}> Click here for website development and management information</a> </div>
-        <div> <a className="additional-information-link" onClick={this.openFaleri}> Introduction to faleristics (badges) </a></div>
-        <div> <a className="additional-information-link" onClick={this.openClean}> Coin Cleaning Secrets of the Ancients</a></div>
-        <div> <a className="additional-information-link" onClick={this.openCollecting}> Personal opinions regarding the collection of phonecards, etc. </a> </div>
-        <div> <a className="additional-information-link" onClick={this.openJerks}> FRAUD ALERTS - deadbeats & scammers </a></div>
+          <div>Click here for a discussion of shipping costs, guarantees, refunds, etc. </div>
+          <div> <a className="additional-information-link" onClick={this.openAbbrev}> Click here for list of abbreviations I like to use. </a></div>
+          <div> <a className="additional-information-link" onClick={this.openGrading}> Click here for grading policy </a></div>
+          <div> <a className="additional-information-link" onClick={this.openSonSign}> Click here for consignment and website listing terms </a></div>
+          <div> <a className="additional-information-link" onClick={this.openApprais}> Click here for description of attribution, authentication, grading, and appraisal services </a></div>
+          <div> <a className="additional-information-link" onClick={this.openBuying}> Click here for to see what I want to buy (changes from time to time)</a></div>
+          <div> <a className="additional-information-link" onClick={this.openPrivacy}> Click here for my opinion on internet security</a></div>
+          <div> <a className="additional-information-link" onClick={this.openWebsiteMan}> Click here for website development and management information</a> </div>
+          <div> <a className="additional-information-link" onClick={this.openFaleri}> Introduction to faleristics (badges) </a></div>
+          <div> <a className="additional-information-link" onClick={this.openClean}> Coin Cleaning Secrets of the Ancients</a></div>
+          <div> <a className="additional-information-link" onClick={this.openCollecting}> Personal opinions regarding the collection of phonecards, etc. </a> </div>
+          <div> <a className="additional-information-link" onClick={this.openJerks}> FRAUD ALERTS - deadbeats & scammers </a></div>
 
-        {this.props.children}
+          {this.props.children}
+        </div>
       </div>
-    </div>
+    )
   }
 })
 
