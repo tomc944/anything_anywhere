@@ -1,0 +1,20 @@
+.links {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 18px;
+}
+
+.links p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.links h2 {
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.links a {
+  font-size: 24px;
+}

@@ -23,6 +23,12 @@ var Footer = React.createClass({
     this.props.history.pushState(null, "/additional_information");
   },
 
+  goToLinks: function(e) {
+    e.preventDefault();
+    animateScroll();
+    this.props.history.pushState(null, "/links");
+  },
+
   goToServices: function(e) {
     e.preventDefault();
     this.props.history.pushState(null, "/services");
@@ -58,14 +64,13 @@ var Footer = React.createClass({
             </div>
             <div className="row">
               <div className="col-xs-3 footer-link"><a onClick={this.goToLinks}>LINKS - FRIENDS/COLLEAGUES</a></div>
-              <div className="col-xs-3 footer-link"><a onClick={this.goToBlog}>MY BLOG</a></div>
+              <div className="col-xs-3 footer-link"><a href="http://anythinganywherestu.blogspot.com/">MY BLOG</a></div>
               <div className="col-xs-3 footer-link"><a onClick={this.goToServices}>ADDITIONAL SERVICES</a></div>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">© 2016 ANYTHING ANYWHERE.</div>
-
 
         <div id="scroll-to-top">Scroll to Top</div>
       </div>

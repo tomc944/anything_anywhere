@@ -5,7 +5,7 @@ var HowWeOperate = React.createClass({
     return (
       <div className="info-container">
         <div className="info">
-          <h1>HOW TO ORDER</h1>
+          <h2>HOW TO ORDER</h2>
           <br/>
           <p>
             For more than 10 years now I have conducted business here by <b>email negotiation</b> rather than "secure commerce."  As we have seen recently, "secure commerce" is not exactly secure, just convenient.  Here we are trading convenience for human interaction, which I consider the best security. Add any items that you are interested in to your shopping cart, and checkout whenever you are ready. Checking out will send me an email, and you and I will negotiate until we are satisfied and only then will I process the order. I will personally get back in touch with you regarding what&#39;s available, shipping costs, total bill, method of payment, etc.  Reply time will be variable, as befits a family guy with way too much to do, but I&#39;ll constantly do the best I can.
@@ -16,10 +16,10 @@ var HowWeOperate = React.createClass({
             1. <b>Paying cash</b>: USA banknotes that are torn or have small pieces missing ARE acceptable as payment.  I also accept payment in any convertible currency.
           </p>
             2. <b>IF YOU EXPERIENCE A QUERY OF SOME KIND FROM CUSTOMS DO NOT REFUSE THE PACKAGE!</b>
-          Typically, if they open the parcel for whatever reason, they will not find a packing list or invoice.  I do not include such unless YOU have asked me to.  When presented with the query <b>YOU SHOULD CONTACT ME IMMEDIATELY</b>.  I will prepare and fax a statement either to you or to them directly.  That action should take care of things.  If it doesn’t I will keep trying.  The basic point is that you should not deal with them alone.  I should be in on the process.  So when that kind of thing happens <b>GET IN TOUCH!</b>
+          <p>Typically, if they open the parcel for whatever reason, they will not find a packing list or invoice.  I do not include such unless YOU have asked me to.  When presented with the query <b>YOU SHOULD CONTACT ME IMMEDIATELY</b>.  I will prepare and fax a statement either to you or to them directly.  That action should take care of things.  If it doesn’t I will keep trying.  The basic point is that you should not deal with them alone.  I should be in on the process.  So when that kind of thing happens <b>GET IN TOUCH!</b></p>
 
         <div className="info-terms-container">
-            <h1>TERMS</h1>
+            <h2>TERMS</h2>
             <br/>
             <div className="info-terms">
               <ol>
@@ -48,7 +48,7 @@ var HowWeOperate = React.createClass({
           </div>
           <br/>
 
-          <h1>MORE TOPICS</h1>
+          <h2>MORE TOPICS</h2>
 
           <div id="operate-accordion" role="tablist" aria-multiselectable="false">
             <div className="panel panel-default">
