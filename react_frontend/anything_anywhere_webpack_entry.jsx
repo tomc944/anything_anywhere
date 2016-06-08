@@ -9,13 +9,9 @@ var React = require('react'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
     HowWeOperate = require('./components/info/how_we_operate'),
-<<<<<<< HEAD
     AdditionalInformation = require('./components/info/additional_info_items/additional_information'),
-=======
     Links = require('./components/info/links'),
     Blog = require('./components/info/blog'),
-    AdditionalInformation = require('./components/info/additional_information'),
->>>>>>> footer-links
     A2Z = require('./components/info/additional_info_items/a2z'),
     Abbrev = require('./components/info/additional_info_items/abbrev'),
     Apprais = require('./components/info/additional_info_items/apprais'),
