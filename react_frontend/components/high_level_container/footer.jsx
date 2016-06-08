@@ -64,7 +64,7 @@ var Footer = React.createClass({
             </div>
             <div className="row">
               <div className="col-xs-3 footer-link"><a onClick={this.goToLinks}>LINKS - FRIENDS/COLLEAGUES</a></div>
-              <div className="col-xs-3 footer-link"><a href="http://anythinganywherestu.blogspot.com/">MY BLOG</a></div>
+              <div className="col-xs-3 footer-link"><a href="http://anythinganywhere.com/prose/prose.htm">MY BLOG & PROSE</a></div>
               <div className="col-xs-3 footer-link"><a onClick={this.goToServices}>ADDITIONAL SERVICES</a></div>
             </div>
           </div>
