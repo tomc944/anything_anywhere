@@ -2,9 +2,11 @@ var React = require('react')
 
 var Apprais = React.createClass({
   render: function() {
-    <div>
+    return (
+      <div>
 
-    </div>
+      </div>
+    )
   }
 })
 

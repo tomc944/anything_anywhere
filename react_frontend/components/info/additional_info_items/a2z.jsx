@@ -2,9 +2,11 @@ var React = require('react')
 
 var A2Z = React.createClass({
   render: function() {
-    <div>
+    return (
+      <div>
 
-    </div>
+      </div>
+    )
   }
 })
 

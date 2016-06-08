@@ -36140,7 +36140,7 @@
 	  displayName: 'A2Z',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36156,7 +36156,7 @@
 	  displayName: 'Abbrev',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36172,7 +36172,7 @@
 	  displayName: 'Apprais',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36188,7 +36188,7 @@
 	  displayName: 'BritabBrev',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36204,7 +36204,7 @@
 	  displayName: 'Buying',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36220,7 +36220,7 @@
 	  displayName: 'Clean',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36236,7 +36236,7 @@
 	  displayName: 'Collecting',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
