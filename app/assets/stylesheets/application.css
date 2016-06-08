@@ -15,7 +15,11 @@
  */
 
  * {
-   font-family: 'Lato', sans-serif;
+   font-family: 'Quicksand', sans-serif;
+ }
+
+ .modal .modal-body, li, p {
+  font-family: 'Open Sans', sans-serif;
  }
 
 #aboutModal .modal-content{

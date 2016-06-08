@@ -9,6 +9,10 @@
   padding: 50px 0;
 }
 
+.subscription-service p {
+  font-family: 'Open Sans', sans-serif;
+}
+
 
 
 .subscription-service h2, .subscription-service h4 {
