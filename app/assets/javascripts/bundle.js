@@ -26972,8 +26972,8 @@
 	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
 	                'a',
-	                { href: 'http://anythinganywherestu.blogspot.com/' },
-	                'MY BLOG'
+	                { href: 'http://anythinganywhere.com/prose/prose.htm' },
+	                'MY BLOG & PROSE'
 	              )
 	            ),
 	            React.createElement(
