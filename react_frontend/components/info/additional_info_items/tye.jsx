@@ -3,8 +3,10 @@ var React = require('react')
 var Tye = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="tye">
+        <div className="tye-info">
 
+        </div>
       </div>
     )
   }

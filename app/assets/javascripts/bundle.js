@@ -36640,10 +36640,14 @@
 	var React = __webpack_require__(1);
 	
 	var Tye = React.createClass({
-	  displayName: 'Tye',
+	  displayName: "Tye",
 	
 	  render: function () {
-	    return React.createElement('div', null);
+	    return React.createElement(
+	      "div",
+	      { className: "tye" },
+	      React.createElement("div", { className: "tye-info" })
+	    );
 	  }
 	});
 	
