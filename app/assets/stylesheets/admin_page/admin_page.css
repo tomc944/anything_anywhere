@@ -1,0 +1,16 @@
+.admin-categories {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-category:hover {
+  cursor: pointer;
+  color: #e0e0e0;
+}
+
+.admin-underline {
+  border-top: 2px solid black;
+}

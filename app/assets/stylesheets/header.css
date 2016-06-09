@@ -36,6 +36,10 @@
   cursor:pointer;
 }
 
+.header-admin:hover {
+  cursor: pointer;
+}
+
 .header-title {
   font-weight: 300;
   margin: auto;

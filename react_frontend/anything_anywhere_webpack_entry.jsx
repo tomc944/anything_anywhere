@@ -5,6 +5,11 @@ var React = require('react'),
     IndexRoute = require('react-router').IndexRoute,
     HighLevelContainer = require('./components/high_level_container/high_level_container'),
     LandingPage = require('./components/landing_page/landing_page'),
+    AdminPage = require('./components/admin_page/admin_page'),
+    AddProduct = require('./components/admin_page/add_product'),
+    EditProduct = require('./components/admin_page/edit_product'),
+    ManageAuction = require('./components/admin_page/manage_auction'),
+    Settings = require('./components/admin_page/settings'),
     ItemIndex = require('./components/item_index/item_index'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
@@ -40,6 +45,14 @@ var React = require('react'),
 var routes = (
   <Route path="/" component={HighLevelContainer}>
     <IndexRoute component={LandingPage}/>
+
+    <Route path="/admin" component={AdminPage}>
+      <Route path="add_product" component={AddProduct}/>
+      <Route path="edit_product" component={EditProduct}/>
+      <Route path="manage_auction" component={ManageAuction}/>
+      <Route path="settings" component={Settings}/>
+    </Route>
+
     <Route path="/products" component={ItemIndex}/>
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
@@ -73,6 +86,7 @@ var routes = (
       <Route path="market_research" component={MarketResearch}/>
       <Route path="subscription" component={SubscriptionService}/>
     </Route>
+
   </Route>
 );
 
