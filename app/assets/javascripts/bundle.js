@@ -36624,7 +36624,7 @@
 	  displayName: 'Finnist',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36640,7 +36640,7 @@
 	  displayName: 'Grading',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36656,7 +36656,7 @@
 	  displayName: 'Jerks',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36672,7 +36672,7 @@
 	  displayName: 'PlasticMon',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36688,7 +36688,7 @@
 	  displayName: 'Privacy',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36704,7 +36704,7 @@
 	  displayName: 'Security',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36720,7 +36720,7 @@
 	  displayName: 'SonSign',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36736,7 +36736,7 @@
 	  displayName: 'Tye',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36752,7 +36752,7 @@
 	  displayName: 'Varieties',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
@@ -36768,7 +36768,7 @@
 	  displayName: 'WebsiteMan',
 	
 	  render: function () {
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
