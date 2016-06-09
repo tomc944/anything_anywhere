@@ -35882,36 +35882,8 @@
 	    this.props.history.pushState(null, "additional_information/collecting");
 	  },
 	
-	  openAbbrev: function () {
-	    this.props.history.pushState(null, "additional_information/abbrev");
-	  },
-	
 	  openA2Z: function () {
 	    this.props.history.pushState(null, 'additional_information/a2z');
-	  },
-	
-	  openSecurity: function () {
-	    this.props.history.pushState(null, 'additional_information/security');
-	  },
-	
-	  openAbbrev: function () {
-	    this.props.history.pushState(null, 'additional_information/abbrev');
-	  },
-	
-	  openGrading: function () {
-	    this.props.history.pushState(null, 'additional_information/grading');
-	  },
-	
-	  openSonSign: function () {
-	    this.props.history.pushState(null, 'additional_information/sonsign');
-	  },
-	
-	  openApprais: function () {
-	    this.props.history.pushState(null, 'additional_information/apprais');
-	  },
-	
-	  openBuying: function () {
-	    this.props.history.pushState(null, 'additional_information/buying');
 	  },
 	
 	  openPrivacy: function () {
@@ -36022,71 +35994,6 @@
 	          'div',
 	          null,
 	          'Click here to get on the mailing list for monthly new offers (usually about 1000 new items) just write "anythinganywhere" in message box.  Paper version available by subscription.  Ask for rates. '
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          ' ',
-	          React.createElement(
-	            'a',
-	            { className: 'additional-information-link', onClick: this.openSecurity },
-	            ' Click here for a disquisition on "secure" commerce. '
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          'Click here for a discussion of shipping costs, guarantees, refunds, etc. '
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          ' ',
-	          React.createElement(
-	            'a',
-	            { className: 'additional-information-link', onClick: this.openAbbrev },
-	            ' Click here for list of abbreviations I like to use. '
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          ' ',
-	          React.createElement(
-	            'a',
-	            { className: 'additional-information-link', onClick: this.openGrading },
-	            ' Click here for grading policy '
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          ' ',
-	          React.createElement(
-	            'a',
-	            { className: 'additional-information-link', onClick: this.openSonSign },
-	            ' Click here for consignment and website listing terms '
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          ' ',
-	          React.createElement(
-	            'a',
-	            { className: 'additional-information-link', onClick: this.openApprais },
-	            ' Click here for description of attribution, authentication, grading, and appraisal services '
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          null,
-	          ' ',
-	          React.createElement(
-	            'a',
-	            { className: 'additional-information-link', onClick: this.openBuying },
-	            ' Click here for to see what I want to buy (changes from time to time)'
-	          )
 	        ),
 	        React.createElement(
 	          'div',
