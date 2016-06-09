@@ -55,26 +55,28 @@
 	    About = __webpack_require__(268),
 	    Contact = __webpack_require__(269),
 	    HowWeOperate = __webpack_require__(270),
-	    AdditionalInformation = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/info/additional_info_items/additional_information\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
-	    A2Z = __webpack_require__(272),
-	    Abbrev = __webpack_require__(273),
-	    Apprais = __webpack_require__(274),
-	    BritabBrev = __webpack_require__(275),
-	    Buying = __webpack_require__(276),
-	    Clean = __webpack_require__(277),
-	    Collecting = __webpack_require__(278),
-	    Faleri = __webpack_require__(279),
-	    Finnist = __webpack_require__(280),
-	    Grading = __webpack_require__(281),
-	    Jerks = __webpack_require__(282),
-	    PlasticMon = __webpack_require__(283),
-	    Privacy = __webpack_require__(284),
-	    Security = __webpack_require__(285),
-	    SonSign = __webpack_require__(286),
-	    Tye = __webpack_require__(287),
-	    Varieties = __webpack_require__(288),
-	    WebsiteMan = __webpack_require__(289);
-	AdditionalServices = __webpack_require__(290), Appraisal = __webpack_require__(291), MarketResearch = __webpack_require__(292), SubscriptionService = __webpack_require__(293);
+	    AdditionalInformation = __webpack_require__(271),
+	    Links = __webpack_require__(272),
+	    Blog = __webpack_require__(273),
+	    A2Z = __webpack_require__(274),
+	    Abbrev = __webpack_require__(275),
+	    Apprais = __webpack_require__(276),
+	    BritabBrev = __webpack_require__(277),
+	    Buying = __webpack_require__(278),
+	    Clean = __webpack_require__(279),
+	    Collecting = __webpack_require__(280),
+	    Faleri = __webpack_require__(281),
+	    Finnist = __webpack_require__(282),
+	    Grading = __webpack_require__(283),
+	    Jerks = __webpack_require__(284),
+	    PlasticMon = __webpack_require__(285),
+	    Privacy = __webpack_require__(286),
+	    Security = __webpack_require__(287),
+	    SonSign = __webpack_require__(288),
+	    Tye = __webpack_require__(289),
+	    Varieties = __webpack_require__(290),
+	    WebsiteMan = __webpack_require__(291);
+	AdditionalServices = __webpack_require__(292), Appraisal = __webpack_require__(293), MarketResearch = __webpack_require__(294), SubscriptionService = __webpack_require__(295);
 	
 	var routes = React.createElement(
 	  Route,
@@ -84,6 +86,8 @@
 	  React.createElement(Route, { path: '/about', component: About }),
 	  React.createElement(Route, { path: '/contact', component: Contact }),
 	  React.createElement(Route, { path: '/operate', component: HowWeOperate }),
+	  React.createElement(Route, { path: '/links', component: Links }),
+	  React.createElement(Route, { path: '/blog', component: Blog }),
 	  React.createElement(
 	    Route,
 	    { path: '/additional_information', component: AdditionalInformation },
@@ -26098,8 +26102,8 @@
 	      { className: "header-search-bar col-xs-3" },
 	      React.createElement(
 	        "form",
-	        null,
-	        React.createElement("input", { type: "text", placeholder: "SEARCH" })
+	        { className: "form-group" },
+	        React.createElement("input", { type: "text", className: "form-control", placeholder: "SEARCH" })
 	      )
 	    );
 	  }
@@ -26816,16 +26820,20 @@
 	var HeaderCart = React.createClass({
 	  displayName: "HeaderCart",
 	
+	  getInitialState: function () {
+	    return { itemCount: 0 };
+	  },
 	
 	  render: function () {
 	    return React.createElement(
 	      "div",
-	      { className: "header-cart col-xs-3" },
-	      "Cart Button ",
+	      { className: "col-xs-3" },
 	      React.createElement(
-	        "span",
-	        { className: "badge" },
-	        "#"
+	        "div",
+	        { className: "header-cart" },
+	        "Cart (",
+	        this.state.itemCount,
+	        ")"
 	      )
 	    );
 	  }
@@ -26863,6 +26871,12 @@
 	  goToAdditionalInformation: function (e) {
 	    e.preventDefault();
 	    this.props.history.pushState(null, "/additional_information");
+	  },
+	
+	  goToLinks: function (e) {
+	    e.preventDefault();
+	    animateScroll();
+	    this.props.history.pushState(null, "/links");
 	  },
 	
 	  goToServices: function (e) {
@@ -26958,8 +26972,8 @@
 	              { className: 'col-xs-3 footer-link' },
 	              React.createElement(
 	                'a',
-	                { onClick: this.goToBlog },
-	                'MY BLOG'
+	                { href: 'http://anythinganywhere.com/prose/prose.htm' },
+	                'MY BLOG & PROSE'
 	              )
 	            ),
 	            React.createElement(
@@ -27158,7 +27172,7 @@
 	      ),
 	      React.createElement(
 	        'h3',
-	        { id: 'new-arrivals' },
+	        { className: 'landing-page-title' },
 	        'NEW ARRIVALS'
 	      ),
 	      React.createElement(
@@ -27169,6 +27183,16 @@
 	          { className: 'row' },
 	          newArrivals
 	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'landing-page-opinions container-fluid' },
+	        React.createElement(
+	          'h3',
+	          { className: 'landing-page-title' },
+	          'THOUGHTS & OPINIONS'
+	        ),
+	        'BUSINESS: 6/2/08 - because of the unusual situations with both the bullion markets and the USA dollar exchange rate everything (11/16/2008) you should consider ALL of my posted prices to be provisional.  There may be changes in any category.  This notice will be posted on a few other pages but not all.  But this is your official notice. (Renewed 1/4/2010 - this is what low level chaos feels like.)  (6/8/2010 chaos continues to build.  Think before you act.  Think before you think.  Observe before that.  Remember to breathe.) 10/21/2010 so here we are living history.  How long has this crisis been going on?  3 years?  11?  40?  65? This aviso renewed again 4/10/2011.  It hasn\'t been this eventful since the 60s.  And again 10/6/2011.  5 years of financial crisis. And again 2/26/2012.  And of course 8/3/2012.  May 26 2013: gold & silver were up, now they\'re down, there are still prices in my coins inventories that are too low, but probably also some that are too high.  I update this notice occasionally, and do so again 7/4/2014.  Over time the situation remains volatile.  At the moment raw numbers are down. 4/29/2016 So we see we have been living in an unsettled situation for over 15 years now.  Interesting times. IN GENERAL: Thanks for any comments and I will post them if you want me to.  I don’t write to convince anyone of anything.  I write for 3 reasons: 1) to figure out what I actually do think, 2) to see what the responses (if any) are, 3) to demonstrate the uses of the first amendment of the USA constitution.  I think the first amendment is possibly the most important contribution to human affairs of the entire American venture. 4/29/2016 1. POSTAL RATES have changed.  Big jump in international, domestic not so bad.  For domestic shipping either priority or first class is still the best bet for getting stuff delivered quickly.  In this business so far no one is offering free shipping programs like Amazon, whose free shipping program is really a pre-paid shipping program.  But you who have been working with me for a while know that I often partially subsidize the shipping & occasionally give a freebie.  When I feel like it. 2. LOSSES IN TRANSIT - client in one country reports that 2 sendings in succession did not arrive.  That appears to be a problem.  Something will have to be done.  Another kind of problem is I sold some of those fragile spade coins last list & a customer reported arrived broken.  I doubt it, I knew they were fragile & packed them accordingly, but my policy is everyone gets one chance.  This other guy in Singapore though, claimed it never arrived, forced a paypal refund, then the box came back opened, the spade removed from its protection, broken, thrown back in the box, PO sticker RETURN TO SENDER.  He\'s not my customer any more, though he has not been so notified.  Want to see if he tries to order something again.  Eventually I\'ll out him to the world as a turtle egg. But seriously, if you want guaranteed, full indemnity, fully insured international shipment the paperwork will have to be perfect and if will cost real money. 3. HAD ENOUGH OF BAD TASTING POLITICS YET?  Do yourself a favor, check out your local candidates: the real estate sharks, hired guns, clueless egotists, blank screen stuffed shirts, deluded ideologues, monomaniacs, maybe there\'s a good one in that ballot somewhere, but how will you know if you don\'t do your own research?  I was talking with a local guy who had been a judge, we elect em here.  "I did traffic all day long, maybe a bit of burglary & so forth.  What difference does my opinion of abortion make to my job?  But that\'s all anyone ever asked me when I was campaigning." 2. AND MY WIFE is beginning to see that having different names on different legal documents is getting to be more of an issue these days.  Straightening that out sooner rather than later is probably a good idea.  Just saying. 1/29/2016 1. SHAKEOUT IN THE BUSINESS?  I pay more attention to the Asian coin market than to the USA/Europe sector.  There is a general "settling" of price levels in Chinese stuff, except at the top of course, which I don\'t work in.  I\'ve seen interesting stuff come on the market as upper-middle class collectors can\'t afford their kids\' tuition & have too dump some of their goodies at a loss.  The Chinese market has not "broken" however.  Neither has the Indian market, though probably all of the lemming collector sector has disappeared.  All in all an OK situation for business & pleasure, assuming you have some disposable income, which, generally, fewer people do than, say, 10 years ago.  And I can\'t say I\'ve run into any "young numismatists" here where I live, though there are plenty living in other countries. 2. LOSSES IN TRANSIT last year were approximately at the same rate as usual: about 4 per 1000 packages, evenly split between USA and non-USA addresses.  Locations seem random.  No trends have become obvious. 3. 1. ALL OF THE FALSE STUFF being thrown at Hillary does not stick & will not stop her from winning if that is what she does.  The problem with the wrongwing is that they don\'t care whether something is true or not, they just like to throw stuff.  If they want to stop Hillary they need facts.  Shouldn\'t be too hard to find.  Unfortunately for them all of the potentially anti-Hillary facts have left implications and generally discredit wrongwing narratives. 2. WIFE & I were watching the debate on tape & noticing how conspicuously they were stiffing O\'Malley.  Putting on our moderate hats for a moment we found O\'Malley to be nicely put together, presidential looking, wellspoken, cogent, smart, all that good stuff, as opposed to Hillary, who has some, you know, issues, and Bernie, who has some too. We found ourselves asking each other how come O\'Malley gets nothing & doesn\'t have a chance.  Its as if the times demand a little bit of crazy.  Solid/bland doesn\'t cut the butter. 10/27/2015 1. LOOKS LIKE I sold 98% of my banknotes to another dealer so almost all of the old stuff sitting around is gone.  Good riddance.  Most of it had declined in value.  Immediately someone brought another 1000 banknotes, a collection no less, not an accumulation, so I\'m still in the banknote business.  Banknotes have always been about 5% of my business.  Nothing I\'ve tried has increased that ratio.  The guy who bought them wants to spend all his time on them but, he told me, he has to do coins to pay the bills.  What does it all mean?  I don\'t know. 2. MY PARENTS are still fragile and require care.  We just got the wills and associated paperwork in order.  Took about 2 months. Many people commented "why\'s it taking so long?  Can\'t you just do... (whatever).  Well, it turned out, no, it was kind of complicated.  Dad began with a one page document that wasn\'t going to work & hadn\'t been registered & all the other stuff that\'s supposed to be done.  When we were done with the new versions each parent had a 35 page document & other documents & memoranda & contingencies & modifications.  Piece of cake.  Now we can talk about long term care. 3. REMEMBER I WROTE about local politics last time, how I didn\'t exactly trust the new batch of local (Dem) party bosses?  Turns out they are more competent than their predecessors.  I still don\'t know if they are what you could call trustworthy, but they are making the trains run on time, politically speaking.  Meanwhile, I find myself not stirred by state politics: quite a few people up for reelection on both sides are getting out but the expectation is that the overall situation - domineering legislature intent on reverse robinhooding & neglecting infrastructure & cronyism - will not change due to extreme gerrymandering.  I find myself not stirred by presidential politics.  My preferred candidate appears to be becoming a bit more homogenized as time goes by, the connective bond thing being taken up by increasing propaganda about how authentic that person is.  I have not given anyone any money yet, may not until after the primary. 6/11/2015 1.SOME PEOPLE are telling me that coins are "in a slump."  Maybe so.  My flow of business is holding steady, more or less, though I went to a local show a couple of weeks ago & walked out in 5 minutes.  30 dealers, about 10 customers.  Nice weather that day, nice weather supposed to depress show attendance, but then bad weather is supposed to depress attendance too.  What would boost attendance?  Maybe nice coins & notes at reasonable prices but not so much of that.  Plenty of nice stuff but too high.  Junk was too high too, and not that much of it.  Maybe they\'re right, maybe it is a slump.  But I\'m still busy all day every day. 2. DAD had an episode of hospital & rehab, Mom can\'t totally take care of herself, so I\'ve had 3-6 hours of an extra job for the past 3 weeks, otherwise this list would have been in your hands 3 weeks ago.  He\'s back home, weaker & slower than before, my support activities will continue for the foreseeable future. 3. AT THE SAME TIME my political activities are in flux.  As you can see if you look around there is an increase in governing-by-seat-of-pants at almost every level of administration, with generally incompetent results.  Locally my state legislature is passing unconstitutional stuff (declared so by courts) and declining to fix the problems they created leaving administrative black holes (if you fall into the situation there is no way out).  In my local party the new officers apparently conspired together to ignore the rules for how to run the meeting that got them elected, did so, got elected, now what?  They seem not less incompetent than those that came before.  How do I know they did this?  I was at the meeting.  How do I know they conspired?  They told me, without me even asking.  Reminds me of toddlers playing with knives.   Can I work with people who act like that?  I don\'t know.  For that matter, are there candidates worth working for?  Debatable.  It seems to me the political party organizations have become irrelevant when a candidate can get hired by a rich person who can finance the entire campaign.  One imagines that this will not end well. 4. I WANT TO BUY COINS, medals, tokens, banknotes.  Good stuff to poundage.  Have money.  Need stuff now. 11/29/2014 SOME CHANGING MARKET & BUSINESS CONDITIONS OF NOTE: 1. SHIPPING COSTS & CONDITIONS: USPS is still cheapest but there are increasing problems.  Service is deteriorating (political reasons mostly, far as I can tell, maybe discuss that later) & prices are high.  To save bits of money I have begun using a private mailing service to buy discounted postage but still ship through USPS.  There have been losses in transit but not more than with USPS all by itself.  However, there is an overall slight increase in losses.  If your package is insured you will get your money back but if not, not.  Generally, for domestic shipments, your best bet (priority) now costs $6.00 minimum: quick, tracked, insured.  Less than that seems to be getting increasingly iffy.  For international the situation is worse.  The best service (quick and with tracking) now costs a minimum of $60.00.  Registered first class is trackable but transit time is uncertain, indemnity if lost is limited, there have been losses.  Without registration takes an undefined amount ot time, is not trackable, no indemnity if lost,  Most shipments get through but not all of them. 2. OVERALL ECONOMY HAS IMPACTED COIN BUSINESS AS FOLLOWS: healthy growth at the top, recession at lower levels, which is where I live & work.  There is less stuff available to buy, lower prices at both buy & sell, fewer customers trending older.  Low bullion prices don\'t help of course.  My benchmark for a bad year has been 1981.  It is not 1981 quite, but the subject comes up.  Your collection assembled 20+ years ago is worth a lot more than you paid for it but probably less than it was worth 2 years ago.  Now, there is a cyclic thing I\'ve seen in my life, so some kind of recovery is expected.  However, in my life every rebound has involved bigger numbers of dollar & people but a smaller percentage of people, so I am not in a position to advise you when & how much things will get better for, you know, "us." 3. THAT SAID, I plan to stay in the business next year, need to buy stuff so I can sell it, have money to do that.  Looking for "good stuff," ordinary stuff, bulk low end material, interesting things.  Help me out? 4. THIS MAY OR MAY NOT be my last offering for this year.  Wishing y\'all happy, merry, warm, calm & prosperous next year. 9/16/2014 1. I SEE I WROTE ABOUT the nasty stuff happening in northern Iraq back in July.  There are a couple of aspects to this complicated situation: 1) Iran is the tip of the spear in the short run & we have to help them do what needs to be done.  I am not worried about Iranian nukes because they want them to counter the Sunni nukes (Pakistan, possibly Saudi), threats to Israel are mere diversionary propaganda.  But Iran cannot win this Islamic 30 years war (population dynamics), it can only draw.  It could lose though, & losing would likely look like ISIS with 100 million people rather than few hundred thousand.  So we must, strategically, support Iran.  2) Which means supporting Assad in Syria.  We supported Stalin in WWII.  We can support Assad.  Greater good & all that.  We can always go back to hating him again when it gets to be 1946 again.  3) We USAers can\'t do it on the ground.  With all due respect to those what crave it, we, I\'m sorry to say, don\'t know how.  Proxies, back channel deals with various flavors of devils.  That\'s not the only way, but I am not at the moment thinking of other ways that would yield any kind of non-worse result.  Hard to think of any result less worse than the piles of bodies scenario we have going on there now.  "At least" they\'re not making mountains of the heads they\'re cutting, a not uncommon spectacle in the past.  Yet. 2. THIS IS the third year of no monarch butterflies.  Shortage of pollinators have decreased the local zucchini crop, but a fig tree around the corner is heavy with fruit.  There was an outstanding mushroom bloom this August from the rains & not-too-hot temperature.  A small emergence of big fat annual cicadas, dogs & cats find them tasty and fun. 3. BUSINESS has slowed on both the buying & selling sides.  I am finding less interesting stuff to sell at prices worth buying while ordinary stuff is sluggish & also not abundant.  I will need a few hundred pounds of poundage soon.  I really want to buy whole collections, anyone?'
 	      )
 	    );
 	  }
@@ -34135,7 +34159,7 @@
 	        "div",
 	        { className: "info" },
 	        React.createElement(
-	          "h1",
+	          "h2",
 	          null,
 	          "HOW TO ORDER"
 	        ),
@@ -34174,23 +34198,27 @@
 	          null,
 	          "IF YOU EXPERIENCE A QUERY OF SOME KIND FROM CUSTOMS DO NOT REFUSE THE PACKAGE!"
 	        ),
-	        "Typically, if they open the parcel for whatever reason, they will not find a packing list or invoice.  I do not include such unless YOU have asked me to.  When presented with the query ",
 	        React.createElement(
-	          "b",
+	          "p",
 	          null,
-	          "YOU SHOULD CONTACT ME IMMEDIATELY"
-	        ),
-	        ".  I will prepare and fax a statement either to you or to them directly.  That action should take care of things.  If it doesn’t I will keep trying.  The basic point is that you should not deal with them alone.  I should be in on the process.  So when that kind of thing happens ",
-	        React.createElement(
-	          "b",
-	          null,
-	          "GET IN TOUCH!"
+	          "Typically, if they open the parcel for whatever reason, they will not find a packing list or invoice.  I do not include such unless YOU have asked me to.  When presented with the query ",
+	          React.createElement(
+	            "b",
+	            null,
+	            "YOU SHOULD CONTACT ME IMMEDIATELY"
+	          ),
+	          ".  I will prepare and fax a statement either to you or to them directly.  That action should take care of things.  If it doesn’t I will keep trying.  The basic point is that you should not deal with them alone.  I should be in on the process.  So when that kind of thing happens ",
+	          React.createElement(
+	            "b",
+	            null,
+	            "GET IN TOUCH!"
+	          )
 	        ),
 	        React.createElement(
 	          "div",
 	          { className: "info-terms-container" },
 	          React.createElement(
-	            "h1",
+	            "h2",
 	            null,
 	            "TERMS"
 	          ),
@@ -34294,7 +34322,7 @@
 	        ),
 	        React.createElement("br", null),
 	        React.createElement(
-	          "h1",
+	          "h2",
 	          null,
 	          "MORE TOPICS"
 	        ),
@@ -35830,8 +35858,637 @@
 	module.exports = HowWeOperate;
 
 /***/ },
-/* 271 */,
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var AdditionalInformation = React.createClass({
+	  displayName: 'AdditionalInformation',
+	
+	  openTyeArticle: function () {
+	    this.props.history.pushState(null, 'additional_information/tye');
+	  },
+	
+	  openVarieties: function () {
+	    this.props.history.pushState(null, "additional_information/varieties");
+	  },
+	
+	  openFinnist: function () {
+	    this.props.history.pushState(null, "additional_information/finnist");
+	  },
+	
+	  openCollecting: function () {
+	    this.props.history.pushState(null, "additional_information/collecting");
+	  },
+	
+	  openAbbrev: function () {
+	    this.props.history.pushState(null, "additional_information/abbrev");
+	  },
+	
+	  openA2Z: function () {
+	    this.props.history.pushState(null, 'additional_information/a2z');
+	  },
+	
+	  openSecurity: function () {
+	    this.props.history.pushState(null, 'additional_information/security');
+	  },
+	
+	  openAbbrev: function () {
+	    this.props.history.pushState(null, 'additional_information/abbrev');
+	  },
+	
+	  openGrading: function () {
+	    this.props.history.pushState(null, 'additional_information/grading');
+	  },
+	
+	  openSonSign: function () {
+	    this.props.history.pushState(null, 'additional_information/sonsign');
+	  },
+	
+	  openApprais: function () {
+	    this.props.history.pushState(null, 'additional_information/apprais');
+	  },
+	
+	  openBuying: function () {
+	    this.props.history.pushState(null, 'additional_information/buying');
+	  },
+	
+	  openPrivacy: function () {
+	    this.props.history.pushState(null, 'additional_information/privacy');
+	  },
+	
+	  openWebsiteMan: function () {
+	    this.props.history.pushState(null, 'additional_information/websiteman');
+	  },
+	
+	  openFaleri: function () {
+	    this.props.history.pushState(null, 'additional_information/faleri');
+	  },
+	
+	  openClean: function () {
+	    this.props.history.pushState(null, 'additional_information/clean');
+	  },
+	
+	  openCollecting: function () {
+	    this.props.history.pushState(null, 'additional_information/collecting');
+	  },
+	
+	  openJerks: function () {
+	    this.props.history.pushState(null, 'additional_information/jerks');
+	  },
+	
+	  // Might leave the below <li> out due to deprecated sales
+	  // For later, don't know how to pop-up email client correctly
+	  // Need to look how to route this one...
+	  render: function () {
+	
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'div',
+	        { className: 'additional-information-links' },
+	        React.createElement(
+	          'h1',
+	          null,
+	          'This sector will have text files of info concerning the kinds of things I sell, and eventually links to further sources'
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openTyeArticle },
+	            ' Articles by Robert Tye, in my opinion perhaps the most cogent (and maverick) thinker in historical economics alive today '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openVarieties },
+	            ' COIN VARIETIES: large & small dates, etc. '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openFinnist },
+	            ' INTRODUCTION TO FISCAL INSTRUMENTS '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openCollecting },
+	            ' INTRODUCTION TO COLLECTING '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openAbbrev },
+	            ' Abbreviations found on British military medals, by R.A. Fikentscher '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          'MEXICO, varieties of Sonoran revolutionary 5 and 10 pesos '
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openA2Z },
+	            'A to Z articles I\'ve written for World Coin News '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          'Click here to get on the mailing list for monthly new offers (usually about 1000 new items) just write "anythinganywhere" in message box.  Paper version available by subscription.  Ask for rates. '
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openSecurity },
+	            ' Click here for a disquisition on "secure" commerce. '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          'Click here for a discussion of shipping costs, guarantees, refunds, etc. '
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openAbbrev },
+	            ' Click here for list of abbreviations I like to use. '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openGrading },
+	            ' Click here for grading policy '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openSonSign },
+	            ' Click here for consignment and website listing terms '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openApprais },
+	            ' Click here for description of attribution, authentication, grading, and appraisal services '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openBuying },
+	            ' Click here for to see what I want to buy (changes from time to time)'
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openPrivacy },
+	            ' Click here for my opinion on internet security'
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openWebsiteMan },
+	            ' Click here for website development and management information'
+	          ),
+	          ' '
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openFaleri },
+	            ' Introduction to faleristics (badges) '
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openClean },
+	            ' Coin Cleaning Secrets of the Ancients'
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openCollecting },
+	            ' Personal opinions regarding the collection of phonecards, etc. '
+	          ),
+	          ' '
+	        ),
+	        React.createElement(
+	          'div',
+	          null,
+	          ' ',
+	          React.createElement(
+	            'a',
+	            { className: 'additional-information-link', onClick: this.openJerks },
+	            ' FRAUD ALERTS - deadbeats & scammers '
+	          )
+	        ),
+	        this.props.children
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = AdditionalInformation;
+
+/***/ },
 /* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Links = React.createClass({
+	  displayName: "Links",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "links" },
+	      React.createElement(
+	        "h2",
+	        null,
+	        "LINKS"
+	      ),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "I only put out links to places run by people I like"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "JEWELLER"
+	      ),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.donnaspray.com" },
+	        "DONNA SPRAY"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "I've known her for years."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "NUMISMATICS & OTHER COLLECTIBLES"
+	      ),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.moneta-coins.com" },
+	        "MONETA TEMPLE & GALLERY"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Intends to be a numismatic portal.  Worthy of your support IMO."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.abhayaasianantiques.com/" },
+	        "ABHAYA ASIAN ANTIQUES"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "A registered and legal dealer in antiquities and antiques in Hong Kong.  High quality, utmost integrity."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://louisiana-trade-tokens.com/" },
+	        "LOUISIANA TRADE TOKENS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "A veritable shrine.  You must take a look.  This is how subjects should be treated"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "https://www.vcoins.com/en/stores/guy_clark-34/ancient-coins/Default.aspx" },
+	        "GUY CLARK'S ANCIENT COINS & ANTIQUITIES"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Local guy (relatively speaking), has stuff I don't have, friend"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.fsrcoin.com/index.html" },
+	        "FSR COINS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "General coins, no paper or other stuff, great prices, I've been dealing with him for decades"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.classicalcoins.com/" },
+	        "CLASSICAL COINS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Nice ancient coins site - info and sales"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.scripophily.org/" },
+	        "INTERNATIONAL BOND & SHARE SOCIETY"
+	      ),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.exonumia.com/" },
+	        "RICH HARTZOG"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "One of the best and biggest of the token dealers"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.bekkoame.ne.jp/i/ge6128/" },
+	        "SHUICHI YAMASHITA"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Old Chinese and Japanese coins, very nice pictures"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.monetarium.ru/" },
+	        "MONETARIUM"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Informational site in Russian.  Some nice pictures if you are illiterate in that language"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.vedamsbooks.com/numismat.htm#Books" },
+	        "VEDAM'S BOOKS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Books from India, including numismatic"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.ancients.info/" },
+	        "ANCIENT GREEK & ROMAN COINS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Information site with about ½ ton of info on Roman & Greek coins"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.wakeforestcoins.com/" },
+	        "WAKE FOREST COINS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "My buddy George Rogers.  Go email him that you want him to post more material!"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.banknotes.com/" },
+	        "BANKNOTES.COM"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Banknote guy.  Has stuff I don't have.  We've done business both ways.  Good guy. He describes his site thusly:"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "\"big choice of all kinds of world paper money, hundreds of images, more images being added every week, some coins and stamps too, related books, free ads, chat, forum and other useful information for paper money collectors\""
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.charm.ru/" },
+	        "CHINESE COINS WEB SITE"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Informational website.  Useful.  Take a look"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.paleoworld.com/" },
+	        "PALEOWORLD CONNECTION"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.antiquesatoz.com/" },
+	        "ANTIQUES AtoZ"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "All kinds.  He intends to publish a list of evidently every military medal in the world"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "ART"
+	      ),
+	      React.createElement(
+	        "a",
+	        { href: "https://www.mojarto.com/" },
+	        "Indianartcollectors.com"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Traditional & contemporary (visual) art from India.  Dynamic stuff happening there"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://goosebay-workshops.com/" },
+	        "goosebay-workshops.com"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Artist specializing in colonial American style metal, glass, etc."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "REFERENCE"
+	      ),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.irish-tokens.co.uk/splitscreen/entry.htm" },
+	        "IRISH TOKENS"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "He is attempting to be comprehensive.  Valuable resource."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.coins-of-panama.com/" },
+	        "COINS OF PANAMA"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "He claims its the only all-Panama numismatic site.  Very thorough."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://www.numismondo.net/" },
+	        "NUMISMONDO"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "A reference website for banknotes, especially strong in Haiti."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "a",
+	        { href: "http://my.raex.com/~obsidian/regindex.html" },
+	        "REGNAL CHRONOLOGIES"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Great site with king lists from all over the world."
+	      ),
+	      React.createElement("br", null)
+	    );
+	  }
+	});
+	
+	module.exports = Links;
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var Blog = React.createClass({
+	  displayName: 'Blog',
+	
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      ' Blog'
+	    );
+	  }
+	});
+	
+	module.exports = Blog;
+
+/***/ },
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35847,7 +36504,7 @@
 	module.exports = A2Z;
 
 /***/ },
-/* 273 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35863,7 +36520,7 @@
 	module.exports = Abbrev;
 
 /***/ },
-/* 274 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35879,7 +36536,7 @@
 	module.exports = Apprais;
 
 /***/ },
-/* 275 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35895,7 +36552,7 @@
 	module.exports = BritabBrev;
 
 /***/ },
-/* 276 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35911,7 +36568,7 @@
 	module.exports = Buying;
 
 /***/ },
-/* 277 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35927,7 +36584,7 @@
 	module.exports = Clean;
 
 /***/ },
-/* 278 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35943,7 +36600,7 @@
 	module.exports = Collecting;
 
 /***/ },
-/* 279 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35952,15 +36609,14 @@
 	  displayName: 'Faleri',
 	
 	  render: function () {
-	    return;
-	    React.createElement('div', null);
+	    return React.createElement('div', null);
 	  }
 	});
 	
 	module.exports = Faleri;
 
 /***/ },
-/* 280 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35976,7 +36632,7 @@
 	module.exports = Finnist;
 
 /***/ },
-/* 281 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -35992,7 +36648,7 @@
 	module.exports = Grading;
 
 /***/ },
-/* 282 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36008,7 +36664,7 @@
 	module.exports = Jerks;
 
 /***/ },
-/* 283 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36024,7 +36680,7 @@
 	module.exports = PlasticMon;
 
 /***/ },
-/* 284 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36040,7 +36696,7 @@
 	module.exports = Privacy;
 
 /***/ },
-/* 285 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36056,7 +36712,7 @@
 	module.exports = Security;
 
 /***/ },
-/* 286 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36072,7 +36728,7 @@
 	module.exports = SonSign;
 
 /***/ },
-/* 287 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36088,7 +36744,7 @@
 	module.exports = Tye;
 
 /***/ },
-/* 288 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36104,7 +36760,7 @@
 	module.exports = Varieties;
 
 /***/ },
-/* 289 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36120,7 +36776,7 @@
 	module.exports = WebsiteMan;
 
 /***/ },
-/* 290 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36184,7 +36840,7 @@
 	module.exports = AdditionalServices;
 
 /***/ },
-/* 291 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36397,7 +37053,7 @@
 	module.exports = Appraisal;
 
 /***/ },
-/* 292 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
@@ -36473,7 +37129,7 @@
 	module.exports = MarketResearch;
 
 /***/ },
-/* 293 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
