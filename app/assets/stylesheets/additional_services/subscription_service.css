@@ -9,8 +9,11 @@
   padding: 50px 0;
 }
 
-
-
 .subscription-service h2, .subscription-service h4 {
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
+}
+
+.subscription-service p {
+  font-family: 'Open Sans', sans-serif;
 }

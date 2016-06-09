@@ -1,5 +1,5 @@
-Patrick Total Hours - 26.5
-Patrick Billed Hours - 13
+Patrick Total Hours - 28.5
+Patrick Billed Hours - 26.5
 Thomas Total Hours - 11 ---> 2 planning, 4 for Wednesday & Friday, 1 for over the weekend
 
 Patrick's work
@@ -16,8 +16,10 @@ Patrick's work
   Item Index Page React Components - 2 hours * 40 =  80
   Landing Page & Information Pages Design, Architecture, and Planning - 5.5 hours * 40 = 220
   Footer Content, About Sections, etc. - 4 hours * 40 = 160
-  Footer Content, Additional Services, etc. - 2 hours x1 = 2 hours * 40 = 80
+  Footer Content, Additional Services, etc. - 2 hours * 40 = 80
 
   //Billed 13.5 hours
+
+  Footer Content, styling, & page design - 2 hours * 40 = 80
 
 Thomas's work
