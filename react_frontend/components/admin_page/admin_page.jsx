@@ -27,7 +27,7 @@ var AdminPage = React.createClass({
         <div className="admin-categories container-fluid">
           <div className="row">
             <div className="col-xs-3 admin-category" onClick={this.goToAddProduct}>Add Products</div>
-            <div className="col-xs-3 admin-category" onClick={this.goToEditProduct}>Edit/Delete Products</div>
+            <div className="col-xs-3 admin-category" onClick={this.goToEditProduct}>Edit/Delete</div>
             <div className="col-xs-3 admin-category" onClick={this.goToManageAuctions}>Manage Auctions</div>
             <div className="col-xs-3 admin-category" onClick={this.goToSettings}>Settings</div>
           </div>

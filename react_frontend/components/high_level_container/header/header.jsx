@@ -10,7 +10,7 @@ var Header = React.createClass({
   },
 
   goToAdminPage: function() {
-    this.props.history.pushState(null, "/admin");
+    this.props.history.pushState(null, "/admin/add_product");
   },
 
   render: function() {
