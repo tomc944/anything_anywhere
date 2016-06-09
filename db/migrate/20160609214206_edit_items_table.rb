@@ -1,0 +1,42 @@
+class EditItemsTable < ActiveRecord::Migration
+  def change
+    rename_column :items, :weight, :WEIGHT
+    rename_column :items, :list, :LIST
+    rename_column :items, :number, :NUMBER
+    rename_column :items, :country, :COUNTRY
+    rename_column :items, :reg, :REGION
+    rename_column :items, :dynasty, :DYNASTY
+    rename_column :items, :DENC, :DENOMINATION
+    rename_column :items, :DAT, :DATE
+    rename_column :items, :mintno, :MINTMARK
+    rename_column :items, :mint, :MINT
+    rename_column :items, :obv, :OBVERSE
+    rename_column :items, :rev, :REVERSE
+    rename_column :items, :edge, :EDGE
+    rename_column :items, :material, :MATERIAL
+    rename_column :items, :diameter, :DIAMETER
+    rename_column :items, :amw, :ACTUAL_METAL_WEIGHT
+    rename_column :items, :com, :COMMENT_1
+    rename_column :items, :CAT, :CATALOG
+    rename_column :items, :con, :COMMENT_2
+    rename_column :items, :Grade, :GRADE
+    rename_column :items, :wh, :WHOLESALE
+    rename_column :items, :price, :PRICE
+    add_column :items, :CATEGORY, :string
+    add_column :items, :SUBCATEGORY, :string
+    rename_column :items, :quanity, :QUANTITY
+    rename_column :items, :unit_cost, :UNIT_COST
+    rename_column :items, :cost, :TOTAL_COST
+    rename_column :items, :sold, :QUANTITY_SOLD
+    rename_column :items, :hold1, :HOLD_1
+    rename_column :items, :hold2, :HOLD_2
+    rename_column :items, :source, :SOURCE
+    rename_column :items, :date_acquired, :DATE_PURCHASED
+    rename_column :items, :picture, :PICTURE
+    rename_column :items, :date_sold, :DATE_SOLD
+    rename_column :items, :comment3, :COMMENT_3
+    rename_column :items, :comment4, :COMMENT_4
+    add_column :items, :COMMENT_5, :string
+    add_column :items, :CONSIGNMENT, :string
+  end
+end

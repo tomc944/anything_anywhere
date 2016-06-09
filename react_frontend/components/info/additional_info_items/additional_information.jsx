@@ -17,36 +17,8 @@ var AdditionalInformation = React.createClass({
     this.props.history.pushState(null, "additional_information/collecting");
   },
 
-  openAbbrev: function() {
-    this.props.history.pushState(null, "additional_information/abbrev");
-  },
-
   openA2Z: function() {
     this.props.history.pushState(null, 'additional_information/a2z');
-  },
-
-  openSecurity: function() {
-    this.props.history.pushState(null, 'additional_information/security');
-  },
-
-  openAbbrev: function() {
-    this.props.history.pushState(null, 'additional_information/abbrev');
-  },
-
-  openGrading: function() {
-    this.props.history.pushState(null, 'additional_information/grading');
-  },
-
-  openSonSign: function() {
-    this.props.history.pushState(null, 'additional_information/sonsign');
-  },
-
-  openApprais: function() {
-    this.props.history.pushState(null, 'additional_information/apprais');
-  },
-
-  openBuying: function() {
-    this.props.history.pushState(null, 'additional_information/buying');
   },
 
   openPrivacy: function() {
@@ -77,7 +49,6 @@ var AdditionalInformation = React.createClass({
   // For later, don't know how to pop-up email client correctly
   // Need to look how to route this one...
   render: function() {
-
     return (
       <div>
         <div className="additional-information-links">
@@ -88,19 +59,9 @@ var AdditionalInformation = React.createClass({
           <div> <a className="additional-information-link" onClick={this.openFinnist}> INTRODUCTION TO FISCAL INSTRUMENTS </a></div>
           <div> <a className="additional-information-link" onClick={this.openCollecting}> INTRODUCTION TO COLLECTING </a></div>
           <div> <a className="additional-information-link" onClick={this.openAbbrev}> Abbreviations found on British military medals, by R.A. Fikentscher </a></div>
-
           <div>MEXICO, varieties of Sonoran revolutionary 5 and 10 pesos </div>
           <div> <a className="additional-information-link" onClick={this.openA2Z} >A to Z articles I've written for World Coin News </a></div>
-
           <div>Click here to get on the mailing list for monthly new offers (usually about 1000 new items) just write "anythinganywhere" in message box.  Paper version available by subscription.  Ask for rates. </div>
-          <div> <a className="additional-information-link" onClick={this.openSecurity}> Click here for a disquisition on "secure" commerce. </a></div>
-
-          <div>Click here for a discussion of shipping costs, guarantees, refunds, etc. </div>
-          <div> <a className="additional-information-link" onClick={this.openAbbrev}> Click here for list of abbreviations I like to use. </a></div>
-          <div> <a className="additional-information-link" onClick={this.openGrading}> Click here for grading policy </a></div>
-          <div> <a className="additional-information-link" onClick={this.openSonSign}> Click here for consignment and website listing terms </a></div>
-          <div> <a className="additional-information-link" onClick={this.openApprais}> Click here for description of attribution, authentication, grading, and appraisal services </a></div>
-          <div> <a className="additional-information-link" onClick={this.openBuying}> Click here for to see what I want to buy (changes from time to time)</a></div>
           <div> <a className="additional-information-link" onClick={this.openPrivacy}> Click here for my opinion on internet security</a></div>
           <div> <a className="additional-information-link" onClick={this.openWebsiteMan}> Click here for website development and management information</a> </div>
           <div> <a className="additional-information-link" onClick={this.openFaleri}> Introduction to faleristics (badges) </a></div>
