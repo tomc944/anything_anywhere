@@ -1,16 +1,68 @@
 var React = require('react'),
-    LinkedStateMixin = require('react-addons-linked-state-mixin');
+    LinkedStateMixin = require('react-addons-linked-state-mixin'),
+    AddProductActions = require('../../actions/add_product_actions'),
+    ItemStore = require('../../stores/item_store');
 
 var AddProduct = React.createClass({
   mixins: [LinkedStateMixin],
 
   blankAttrs: {
-    productName: "",
-
+    WEIGHT: "",
+    LIST: "",
+    NUMBER: "",
+    COUNTRY: "",
+    REGION: "",
+    DYNASTY: "",
+    DENOMINATION: "",
+    DATE: "",
+    MINTMARK: "",
+    MINT: "",
+    OBVERSE: "",
+    REVERSE: "",
+    EDGE: "",
+    MATERIAL: "",
+    DIAMETER: "",
+    ACTUAL_METAL_WEIGHT: "",
+    COMMENT_1: "",
+    CATALOG: "",
+    COMMENT_2: "",
+    GRADE: "",
+    WHOLESALE: "",
+    PRICE: "",
+    QUANTITY: "",
+    UNIT_COST: "",
+    TOTAL_COST: "",
+    QUANTITY_SOLD: "",
+    HOLD_1: "",
+    HOLD_2: "",
+    SOURCE: "",
+    DATE_PURCHASED: "",
+    PICTURE: "",
+    DATE_SOLD: "",
+    COMMENT_3: "",
+    COMMENT_4: "",
+    CATEGORY: "",
+    SUBCATEGORY: "",
+    COMMENT_5: "",
+    CONSIGNMENT: "",
+    productionCreationStatus: ""
   },
 
   getInitialState: function() {
     return this.blankAttrs;
+  },
+
+  componentDidMount: function() {
+    this.itemListener = ItemStore.addListener(this._receiveProductCreationResponse);
+    ItemStore.resetCreationResponse();
+  },
+
+  componentWillUnmount: function() {
+    this.itemListener.remove();
+  },
+
+  _receiveProductCreationResponse: function() {
+    this.setState({ productionCreationStatus: ItemStore.getProductCreationResponse() });
   },
 
   chooseCSV: function() {
@@ -38,7 +90,9 @@ var AddProduct = React.createClass({
   },
 
   submitProduct: function() {
-    //AddProductActions.createProduct(this.state)
+    var productProperties = this.state;
+    delete productProperties.productionCreationStatus;
+    AddProductActions.createProduct(productProperties);
   },
 
   render: function() {
@@ -57,6 +111,9 @@ var AddProduct = React.createClass({
           <div id="div-file-submit" onClick={this.chooseCSV}>Choose File</div>
           <input type="file" id="file" onChange={this.showCSVSubmit}/>
           <div id="file-submit" onClick={this.submitCSV}>Submit File</div>
+          <br/>
+          <br/>
+          <p>Note: Format must be a CSV file, and match the column formatting of the database.</p>
         </div>
 
         <div className="admin-divider"></div>
@@ -79,62 +136,62 @@ var AddProduct = React.createClass({
                     </div>
 
                     <div className="col-xs-4">
-                       <label htmlFor="form-list">LIST</label>
-                       <input className="form-control"
-                              type="text"
-                              id="form-list"
-                              valueLink={this.linkState('LIST')}
-                              placeholder=""/>
+                     <label htmlFor="form-list">LIST</label>
+                     <input className="form-control"
+                            type="text"
+                            id="form-list"
+                            valueLink={this.linkState('LIST')}
+                            placeholder=""/>
                     </div>
 
                     <div className="col-xs-4">
-                        <label htmlFor="form-number">NUMBER</label>
-                        <input className="form-control"
-                         type="text"
-                         id="form-number"
-                         valueLink={this.linkState('NUMBER')}
-                         placeholder=""/>
-                     </div>
+                      <label htmlFor="form-number">NUMBER</label>
+                      <input className="form-control"
+                             type="text"
+                             id="form-number"
+                             valueLink={this.linkState('NUMBER')}
+                             placeholder=""/>
+                    </div>
                   </div>
 
                   <div className="row">
                     <div className="col-xs-4">
-                       <label htmlFor="form-country">COUNTRY</label>
-                       <input className="form-control"
-                        type="text"
-                        id="form-country"
-                        valueLink={this.linkState('COUNTRY')}
-                        placeholder=""/>
+                      <label htmlFor="form-country">COUNTRY</label>
+                      <input className="form-control"
+                             type="text"
+                             id="form-country"
+                             valueLink={this.linkState('COUNTRY')}
+                             placeholder=""/>
                     </div>
 
                     <div className="col-xs-4">
                       <label htmlFor="form-region">REGION</label>
                       <input className="form-control"
-                         type="text"
-                         id="form-region"
-                         valueLink={this.linkState('REGION')}
-                         placeholder=""/>
-                     </div>
+                            type="text"
+                            id="form-region"
+                            valueLink={this.linkState('REGION')}
+                            placeholder=""/>
+                    </div>
 
-                     <div className="col-xs-4">
-                       <label htmlFor="form-dynasty">DYNASTY</label>
-                       <input className="form-control"
-                        type="text"
-                        id="form-dynasty"
-                        valueLink={this.linkState('DYNASTY')}
-                        placeholder=""/>
+                    <div className="col-xs-4">
+                      <label htmlFor="form-dynasty">DYNASTY</label>
+                      <input className="form-control"
+                             type="text"
+                             id="form-dynasty"
+                             valueLink={this.linkState('DYNASTY')}
+                             placeholder=""/>
                     </div>
                   </div>
 
                   <div className="row">
-                  <div className="col-xs-4">
-                    <label htmlFor="form-denomination">DENOMINATION</label>
-                <input className="form-control"
-                       type="text"
-                       id="form-denomination"
-                       valueLink={this.linkState('DENOMINATION')}
-                       placeholder=""/>
-                   </div>
+                    <div className="col-xs-4">
+                      <label htmlFor="form-denomination">DENOMINATION</label>
+                      <input className="form-control"
+                             type="text"
+                             id="form-denomination"
+                             valueLink={this.linkState('DENOMINATION')}
+                             placeholder=""/>
+                    </div>
 
                    <div className="col-xs-4">
                      <label htmlFor="form-date">DATE</label>
@@ -439,6 +496,10 @@ var AddProduct = React.createClass({
                       </div>
 
                       <button type="submit" id="product-submit" className="btn btn-primary form-button btn-lg btn-block">Create Product</button>
+                    </div>
+
+                    <div className="product-creation-status">
+                      {this.state.productionCreationStatus}
                     </div>
 
                   </form>

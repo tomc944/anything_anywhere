@@ -1,7 +1,8 @@
 var React = require('react'),
     LinkedStateMixin = require('react-addons-linked-state-mixin'),
-    EditProductActions = require('../../actions/edit_product_actions.js'),
-    ItemStore = require('../../stores/item_store.js');
+    EditProductActions = require('../../../actions/edit_product_actions.js'),
+    EditProductItem = require('./edit_product_item'),
+    ItemStore = require('../../../stores/item_store.js');
 
 var EditProduct = React.createClass({
   mixins: [LinkedStateMixin],
@@ -26,15 +27,17 @@ var EditProduct = React.createClass({
     this.eventListener.remove();
   },
 
-  onChange: function(e) {
+  handleInput: function(e) {
     this.setState({ search: e.currentTarget.value });
 
     EditProductActions.autoComplete(e.currentTarget.value);
   },
 
   render: function() {
-    var results = this.state.results.map(function() {
-
+    var results = this.state.results.map(function(result, index) {
+      return (
+        <EditProductItem result={result} key={index}/>
+      )
     });
 
     return (

@@ -11,4 +11,8 @@ class Item < ActiveRecord::Base
 
     return items
   end
+
+  def self.edit_search(phrase)
+    
+  end
 end
