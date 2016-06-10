@@ -15,3 +15,8 @@
   border-top: 2px solid black;
   height: 30px;
 }
+
+.admin-children {
+  width: 90%;
+  margin: 0 auto;
+}

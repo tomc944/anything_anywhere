@@ -33,7 +33,9 @@ var AdminPage = React.createClass({
           </div>
         </div>
 
-        {this.props.children}
+        <div className="admin-children">
+          {this.props.children}
+        </div>
       </div>
     );
   }

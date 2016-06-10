@@ -1,3 +1,39 @@
-.admin-add-product {
-  
+.admin-csv {
+  margin-top: 50px;
+}
+
+.admin-csv div {
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 20px 30px 0 0;
+}
+
+.admin-csv div:hover {
+  cursor: pointer;
+}
+
+.admin-divider {
+  margin: 40px 0;
+  border-top: 1px solid black;
+}
+
+#file {
+  display: none;
+}
+
+#file-submit {
+  display: none;
+}
+
+#product-submit {
+  width: 25%;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  margin: 20px 10px;
 }
