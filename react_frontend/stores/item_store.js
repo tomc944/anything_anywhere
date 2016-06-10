@@ -9,6 +9,10 @@ ItemStore.getItems = function() {
   return _items.slice(0);
 };
 
+ItemStore.getCurrentEditSearch = function() {
+  //
+};
+
 ItemStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
     case ItemConstants.RECEIVE_ALL_PRODUCTS:

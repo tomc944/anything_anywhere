@@ -23,6 +23,18 @@ var ApiUtilities = {
         ItemIndexActions.receiveFilteredItems();
       }
     });
+  },
+
+  getEditableProduct: function(searchPhrase) {
+    $.ajax({
+      method: "GET",
+      url: "api/items",
+      data: { searchPhrase: searchPhrase },
+      dataType: 'json',
+      success: function(resp) {
+        //
+      }
+    });
   }
 };
 

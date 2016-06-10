@@ -13,12 +13,12 @@ var AddProduct = React.createClass({
     return this.blankAttrs;
   },
 
-  chooseFile: function() {
+  chooseCSV: function() {
     document.getElementById("file").click();
     return false;
   },
 
-  showSubmit: function() {
+  showCSVSubmit: function() {
     var file = document.getElementById("file").files[0];
     if (file) {
         alert("Name: " + file.name + "\n" + "Last Modified Date :" + file.lastModifiedDate);
@@ -29,7 +29,7 @@ var AddProduct = React.createClass({
     $('#file-submit').css("display", "inline-block");
   },
 
-  startRead: function(e) {
+  submitCSV: function(e) {
     var file = document.getElementById("file").files[0];
 
     e.stopPropagation();
@@ -37,7 +37,7 @@ var AddProduct = React.createClass({
     debugger
   },
 
-  handleSubmit: function() {
+  submitProduct: function() {
     //AddProductActions.createProduct(this.state)
   },
 
@@ -54,9 +54,9 @@ var AddProduct = React.createClass({
 
         <div className="admin-csv">
           <h1>IMPORT CSV</h1>
-          <div id="div-file-submit" onClick={this.chooseFile}>Choose File</div>
-          <input type="file" id="file" onChange={this.showSubmit}/>
-          <div id="file-submit" onClick={this.startRead}>Submit File</div>
+          <div id="div-file-submit" onClick={this.chooseCSV}>Choose File</div>
+          <input type="file" id="file" onChange={this.showCSVSubmit}/>
+          <div id="file-submit" onClick={this.submitCSV}>Submit File</div>
         </div>
 
         <div className="admin-divider"></div>
@@ -65,7 +65,7 @@ var AddProduct = React.createClass({
           <h1>ADD PRODUCT</h1>
           <div className="row">
             <div className = "admin-add-product">
-              <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.submitProduct}>
                 <div className="form-group">
 
                   <div className="row">
