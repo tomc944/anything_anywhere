@@ -32,7 +32,6 @@ var ApiUtilities = {
   },
 
   getEditableProduct: function(searchPhrase) {
-    debugger
     $.ajax({
       method: "GET",
       url: "api/items",
@@ -40,7 +39,7 @@ var ApiUtilities = {
               searchPhrase: searchPhrase },
       dataType: 'json',
       success: function(resp) {
-        //
+        debugger
       }
     });
   },
