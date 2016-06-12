@@ -1,6 +1,6 @@
 var React = require('react'),
     LinkedStateMixin = require('react-addons-linked-state-mixin'),
-    EditProductActions = require('../../../actions/edit_product_actions.js'),
+    ReusableSearchComponent = require('../../reusable_search_component'),
     EditProductItem = require('./edit_product_item'),
     ItemStore = require('../../../stores/item_store.js');
 
@@ -9,7 +9,7 @@ var EditProduct = React.createClass({
 
   getInitialState: function() {
     return (
-      { search: "",
+      { 
         results: []
       }
     );
@@ -19,26 +19,27 @@ var EditProduct = React.createClass({
     this.eventListener = ItemStore.addListener(this._onNewSearch);
   },
 
-  _onNewSearch: function() {
-    this.setState({ results: ItemStore.getCurrentEditSearch() });
-  },
-
   componentWillUnmount: function() {
     this.eventListener.remove();
   },
 
-  handleInput: function(e) {
-    this.setState({ search: e.currentTarget.value });
-
-    EditProductActions.autoComplete(e.currentTarget.value);
+  _onNewSearch: function() {
+    this.setState({ results: ItemStore.getCurrentSearch() });
   },
 
   render: function() {
     var results = this.state.results.map(function(result, index) {
       return (
-        <EditProductItem result={result} key={index}/>
+        <EditProductItem result={result} key={index} number={index}/>
       )
     });
+
+    var resultsCount;
+    if (results.length === 1) {
+      resultsCount = <h3>1 product match</h3>;
+    } else {
+      resultsCount = <h3>{results.length} product matches</h3>;
+    };
 
     return (
       <div className="admin-edit-product">
@@ -47,18 +48,16 @@ var EditProduct = React.createClass({
         </div>
 
         <div className="admin-edit-search">
-          <form>
-            <label htmlFor="form-edit-search">PRODUCT SEARCH</label>
-            <input className="form-control"
-                 type="text"
-                 id="form-edit-search"
-                 value={this.state.value}
-                 onChange={this.handleInput}
-                 placeholder="Search"/>
-          </form>
+          <h4>PRODUCT SEARCH</h4>
+          <ReusableSearchComponent/>
+        </div>
+
+        <div className="admin-edit-note">
+          <p>Type to search by denomination, dynasty, mint, and more. Products that contain the phrase will be shown below.</p>
         </div>
 
         <div className="admin-edit">
+          {resultsCount}
           {results}
         </div>
       </div>

@@ -5,13 +5,14 @@ var Store = require('flux/utils').Store,
 
 var _items = [];
 var _productCreationResponse = "";
+var _searchProducts = [];
 
 ItemStore.getItems = function() {
   return _items.slice(0);
 };
 
-ItemStore.getCurrentEditSearch = function() {
-  //
+ItemStore.getCurrentSearch = function() {
+  return _searchProducts.slice(0);
 };
 
 ItemStore.getProductCreationResponse = function() {
@@ -21,7 +22,7 @@ ItemStore.getProductCreationResponse = function() {
 ItemStore.resetCreationResponse = function() {
   _productCreationResponse = "";
   return false;
-}
+};
 
 ItemStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
@@ -34,11 +35,14 @@ ItemStore.__onDispatch = function(payload) {
     case ItemConstants.PRODUCT_CREATED:
       showProductCreationResponse(payload.resp);
       break;
+    case ItemConstants.EDIT_PRODUCTS_SEARCH:
+      resetEditProducts(payload.resp);
+      break;
   }
 };
 
 function resetAllItems(items) {
-  items = items;
+  _items = items;
 
   ItemStore.__emitChange();
 };
@@ -53,7 +57,11 @@ function showProductCreationResponse(resp) {
   ItemStore.__emitChange();
 };
 
+function resetEditProducts(products) {
+  _searchProducts = products;
 
+  ItemStore.__emitChange();
+};
 
 
 

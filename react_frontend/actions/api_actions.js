@@ -7,6 +7,13 @@ var ApiActions = {
       actionType: ItemConstants.PRODUCT_CREATED,
       resp: resp
     });
+  },
+
+  receiveEditProductSearch: function(resp) {
+    AppDispatcher.dispatch({
+      actionType: ItemConstants.EDIT_PRODUCTS_SEARCH,
+      resp: resp
+    });
   }
 };
 

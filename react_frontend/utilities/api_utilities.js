@@ -39,7 +39,7 @@ var ApiUtilities = {
               searchPhrase: searchPhrase },
       dataType: 'json',
       success: function(resp) {
-        debugger
+        ApiActions.receiveEditProductSearch(resp);
       }
     });
   },

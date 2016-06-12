@@ -1,9 +1,9 @@
 var ApiUtilities = require('../utilities/api_utilities');
 
-var EditProductActions = {
+var SearchActions = {
   autoComplete: function(searchPhrase) {
     ApiUtilities.getEditableProduct(searchPhrase);
   }
 };
 
-module.exports = EditProductActions;
+module.exports = SearchActions;
