@@ -5,10 +5,15 @@ var HeaderCart = React.createClass({
     return ({ itemCount: 0 });
   },
 
+  goToCart: function(e) {
+    e.preventDefault();
+    this.props.history.pushState(null, "/cart");
+  },
+
   render: function() {
     return (
       <div className="col-xs-3">
-        <div className="header-cart">
+        <div className="header-cart" onClick={this.goToCart}>
           Cart ({this.state.itemCount})
         </div>
       </div>

@@ -3,12 +3,15 @@ var React = require('react');
 var Settings = React.createClass({
   render: function() {
     return (
-      <div className="admin-edit-product">
+      <div className="admin-settings">
         <div className="col-xs-offset-9 col-xs-3 admin-underline"></div>
 
-        <h2>Settings</h2>
+        <div className="admin-settings-title">
+          SETTINGS
+        </div>
 
-
+        <br/>
+        TBD (email automation ettings, carousel settings,etc)
       </div>
     );
   }

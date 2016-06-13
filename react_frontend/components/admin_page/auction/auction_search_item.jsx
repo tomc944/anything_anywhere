@@ -7,7 +7,7 @@ var AuctionSearchItem = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="auction-item">
         <div>I am an auction search item</div>
         <button onClick={this.addToAuction}>Add to Auction</button>
       </div>

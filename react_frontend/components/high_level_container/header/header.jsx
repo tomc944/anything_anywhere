@@ -23,12 +23,12 @@ var Header = React.createClass({
             <h3 id="logo" onClick={this.goToLandingPage}>ANYTHING ANYWHERE</h3>
             <p>since 1978</p>
           </div>
-          <HeaderCart/>
+          <HeaderCart history={this.props.history}/>
         </div>
 
         <div className="row header-login">
           <div className="col-xs-offset-6 col-xs-2 header-admin" onClick={this.goToAdminPage}>
-            Admin
+            ADMIN
           </div>
           <div className="col-xs-2 header-about" data-toggle="modal" data-target="#aboutModal">
             NEW TO AA?

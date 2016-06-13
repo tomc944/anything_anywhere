@@ -11,6 +11,7 @@ var React = require('react'),
     ManageAuction = require('./components/admin_page/auction/manage_auction'),
     Settings = require('./components/admin_page/settings'),
     ItemIndex = require('./components/item_index/item_index'),
+    Cart = require('./components/cart'),
     About = require('./components/info/about'),
     Contact = require('./components/info/contact'),
     HowWeOperate = require('./components/info/how_we_operate'),
@@ -54,6 +55,7 @@ var routes = (
     </Route>
 
     <Route path="/products" component={ItemIndex}/>
+    <Route path="/cart" component={Cart}/>
     <Route path="/about" component={About}/>
     <Route path="/contact" component={Contact}/>
     <Route path="/operate" component={HowWeOperate}/>

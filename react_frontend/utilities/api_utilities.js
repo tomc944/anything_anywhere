@@ -65,7 +65,6 @@ var ApiUtilities = {
       data: { item: item },
       dataType: 'json',
       success: function(resp) {
-        debugger
         ApiActions.createProductResponse(resp);
       }
     });
@@ -80,7 +79,6 @@ var ApiUtilities = {
       data: { item: item },
       dataType: 'json',
       success: function(resp) {
-        debugger
         ApiActions.editProductResponse(resp);
       }
     });

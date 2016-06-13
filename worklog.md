@@ -1,5 +1,5 @@
-Patrick Total Hours - 28.5
-Patrick Billed Hours - 26.5
+Patrick Total Hours - 41.5
+Patrick Billed Hours - 41.5
 Thomas Total Hours - 11 ---> 2 planning, 4 for Wednesday & Friday, 1 for over the weekend
 
 Patrick's work
@@ -23,6 +23,9 @@ Patrick's work
   Footer Content, styling, & page design - 2 hours * 40 = 80
   Admin Add Products + styling + page design - 5 hours * 40 = 200
   Admin Edit Products - 1 hour * 40 = 40
-  Admin Add Product/ Edit Product - 2 hour * 40 = 80
+  Admin Add Product/ Edit Product - 2 hours * 40 = 80
+  Admin Add Product/ Edit Product/ Search Component/ Auction - 5 hours * 40 = 200
+
+  //Billed 15 hours
 
 Thomas's work

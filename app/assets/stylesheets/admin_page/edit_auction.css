@@ -2,6 +2,10 @@
   padding-bottom: 50px;
 }
 
+.auction-item {
+  padding-top: 5px;
+}
+
 .admin-auction .admin-auction-search {
   padding-top: 30px;
 }
@@ -12,9 +16,11 @@
 
 .admin-auction .admin-auction-search-items {
   padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .admin-auction h3 {
+  padding-bottom: 30px;
   width: 90%;
   margin: auto;
   text-align: center;
@@ -23,5 +29,5 @@
 .admin-auction .auction-divider {
   border-top: 1px solid black;
   width: 80%;
-  margin: 40px auto;
+  margin: 0 auto 80px auto;
 }

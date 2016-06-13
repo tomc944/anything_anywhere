@@ -7,7 +7,7 @@ var AuctionProduct = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className="auction-item">
         <div>I am an auction product</div>
         <button onClick={this.removeFromAuction}>Remove From Auction</button>
       </div>
