@@ -9,6 +9,13 @@ var ApiActions = {
     });
   },
 
+  editProductResponse: function(resp) {
+    AppDispatcher.dispatch({
+      actionType: ItemConstants.PRODUCT_EDITED,
+      resp: resp
+    });
+  },
+
   receiveProductSearch: function(resp) {
     AppDispatcher.dispatch({
       actionType: ItemConstants.PRODUCTS_SEARCH,

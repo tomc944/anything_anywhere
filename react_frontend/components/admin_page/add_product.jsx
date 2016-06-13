@@ -55,15 +55,15 @@ var AddProduct = React.createClass({
 
   componentDidMount: function() {
     this.itemListener = ItemStore.addListener(this._receiveProductCreationResponse);
-    ItemStore.resetCreationResponse();
   },
 
   componentWillUnmount: function() {
     this.itemListener.remove();
+    ItemStore.resetResponse();
   },
 
   _receiveProductCreationResponse: function() {
-    this.setState({ productionCreationStatus: ItemStore.getProductCreationResponse() });
+    this.setState({ productionCreationStatus: ItemStore.getResponse() });
   },
 
   chooseCSV: function() {

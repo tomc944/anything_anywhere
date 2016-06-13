@@ -4,7 +4,7 @@ var Store = require('flux/utils').Store,
     ItemStore = new Store(Dispatcher);
 
 var _items = [];
-var _productCreationResponse = "";
+var _productResponse = "";
 var _searchProducts = [];
 var _auctionProducts = [];
 
@@ -20,12 +20,12 @@ ItemStore.getAuctionItems = function() {
   return _auctionProducts.slice(0);
 };
 
-ItemStore.getProductCreationResponse = function() {
-  return _productCreationResponse;
+ItemStore.getResponse = function() {
+  return _productResponse;
 };
 
-ItemStore.resetCreationResponse = function() {
-  _productCreationResponse = "";
+ItemStore.resetResponse = function() {
+  _productResponse = "";
   return false;
 };
 
@@ -45,6 +45,9 @@ ItemStore.__onDispatch = function(payload) {
     case ItemConstants.PRODUCT_CREATED:
       showProductCreationResponse(payload.resp);
       break;
+    case ItemConstants.PRODUCT_EDITED:
+      showProductEditResponse(payload.resp);
+      break;
     case ItemConstants.PRODUCTS_SEARCH:
       resetSearchProducts(payload.resp);
       break;
@@ -62,9 +65,19 @@ function resetAllItems(items) {
 
 function showProductCreationResponse(resp) {
   if (resp.id) {
-    _productCreationResponse = "PRODUCT CREATED!";
+    _productResponse = "PRODUCT CREATED!";
   } else {
-    _productCreationResponse = "There was an error."; //display resp error message
+    _productResponse = "There was an error."; //display resp error message
+  }
+
+  ItemStore.__emitChange();
+};
+
+function showProductEditResponse(resp) {
+  if (resp.id) {
+    _productResponse = "PRODUCT EDITED!";
+  } else {
+    _productResponse = "There was an error."; //display resp error message
   }
 
   ItemStore.__emitChange();

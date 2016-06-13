@@ -1,5 +1,6 @@
 var React = require('react'),
-    LinkedStateMixin = require('react-addons-linked-state-mixin');
+    LinkedStateMixin = require('react-addons-linked-state-mixin'),
+    EditProductActions = require('../../../actions/edit_product_actions');
 
 var EditProductItem = React.createClass({
   mixins: [LinkedStateMixin],
@@ -16,6 +17,7 @@ var EditProductItem = React.createClass({
     }
 
     startAttrs = {
+      id: this.props.result.id,
       weight: this.props.result.weight,
       list: this.props.result.list,
       number: this.props.result.number,
@@ -58,6 +60,28 @@ var EditProductItem = React.createClass({
     };
 
     return startAttrs;
+  },
+
+  componentDidMount: function() {
+    this.itemListener = ItemStore.addListener(this._receiveEditResponse);
+  },
+
+  componentWillUnmount: function() {
+    this.itemListener.remove();
+    ItemStore.resetResponse();
+  },
+
+  _receiveEditResponse: function() {
+    this.setState({ editStatus: ItemStore.getResponse() })
+  },
+
+  submitEdit: function(e) {
+    e.preventDefault();
+
+    var productProperties = this.state;
+    delete productProperties.editStatus;
+
+    EditProductActions.editProduct(productProperties);
   },
 
   render: function() {

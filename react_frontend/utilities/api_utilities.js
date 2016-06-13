@@ -69,8 +69,22 @@ var ApiUtilities = {
         ApiActions.createProductResponse(resp);
       }
     });
-  }
+  },
 
+  //PATCH
+
+  editProduct: function(item) {
+    $.ajax({
+      method: "PATCH",
+      url: "api/items/" + item.id,
+      data: { item: item },
+      dataType: 'json',
+      success: function(resp) {
+        debugger
+        ApiActions.editProductResponse(resp);
+      }
+    });
+  }
 
 };
 
