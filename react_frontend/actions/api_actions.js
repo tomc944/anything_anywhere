@@ -9,9 +9,16 @@ var ApiActions = {
     });
   },
 
-  receiveEditProductSearch: function(resp) {
+  receiveProductSearch: function(resp) {
     AppDispatcher.dispatch({
-      actionType: ItemConstants.EDIT_PRODUCTS_SEARCH,
+      actionType: ItemConstants.PRODUCTS_SEARCH,
+      resp: resp
+    });
+  },
+
+  receiveAuctionProducts: function(resp) {
+    AppDispatcher.dispatch({
+      actionType: ItemConstants.AUCTION_PRODUCTS_RECEIVED,
       resp: resp
     });
   }

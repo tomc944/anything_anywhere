@@ -4,10 +4,11 @@ var Settings = React.createClass({
   render: function() {
     return (
       <div className="admin-edit-product">
-        <div className="col-xs-offset-9 col-xs-3 admin-underline">
-        </div>
+        <div className="col-xs-offset-9 col-xs-3 admin-underline"></div>
 
-        Edit
+        <h2>Settings</h2>
+
+
       </div>
     );
   }

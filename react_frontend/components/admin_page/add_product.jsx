@@ -7,44 +7,45 @@ var AddProduct = React.createClass({
   mixins: [LinkedStateMixin],
 
   blankAttrs: {
-    WEIGHT: "",
-    LIST: "",
-    NUMBER: "",
-    COUNTRY: "",
-    REGION: "",
-    DYNASTY: "",
-    DENOMINATION: "",
-    DATE: "",
-    MINTMARK: "",
-    MINT: "",
-    OBVERSE: "",
-    REVERSE: "",
-    EDGE: "",
-    MATERIAL: "",
-    DIAMETER: "",
-    ACTUAL_METAL_WEIGHT: "",
-    COMMENT_1: "",
-    CATALOG: "",
-    COMMENT_2: "",
-    GRADE: "",
-    WHOLESALE: "",
-    PRICE: "",
-    QUANTITY: "",
-    UNIT_COST: "",
-    TOTAL_COST: "",
-    QUANTITY_SOLD: "",
-    HOLD_1: "",
-    HOLD_2: "",
-    SOURCE: "",
-    DATE_PURCHASED: "",
-    PICTURE: "",
-    DATE_SOLD: "",
-    COMMENT_3: "",
-    COMMENT_4: "",
-    CATEGORY: "",
-    SUBCATEGORY: "",
-    COMMENT_5: "",
-    CONSIGNMENT: "",
+    weight: "",
+    list: "",
+    number: "",
+    country: "",
+    region: "",
+    dynasty: "",
+    denomination: "",
+    date: "",
+    mintmark: "",
+    mint: "",
+    obverse: "",
+    reverse: "",
+    edge: "",
+    material: "",
+    diameter: "",
+    actual_metal_weight: "",
+    comment_1: "",
+    catalog: "",
+    comment_2: "",
+    grade: "",
+    wholesale: "",
+    price: "",
+    quantity: "",
+    unit_cost: "",
+    total_cost: "",
+    quantity_sold: "",
+    hold_1: "",
+    hold_2: "",
+    source: "",
+    date_purchased: "",
+    picture: "",
+    date_sold: "",
+    comment_3: "",
+    comment_4: "",
+    category: "",
+    subcategory: "",
+    comment_5: "",
+    consignment: "",
+    auction: false,
     productionCreationStatus: ""
   },
 
@@ -100,9 +101,20 @@ var AddProduct = React.createClass({
     debugger
   },
 
-  submitProduct: function() {
+  handleCheckbox: function() {
+    if ($( "input:checked" ).length > 0) {
+      this.setState({ auction: true });
+    } else {
+      this.setState({ auction: false });
+    }
+  },
+
+  submitProduct: function(e) {
+    e.preventDefault();
+
     var productProperties = this.state;
     delete productProperties.productionCreationStatus;
+
     AddProductActions.createProduct(productProperties);
   },
 
@@ -150,7 +162,7 @@ var AddProduct = React.createClass({
                     <input className="form-control"
                            type="text"
                            id="form-weight"
-                           valueLink={this.linkState('WEIGHT')}
+                           valueLink={this.linkState('weight')}
                            placeholder=""/>
                   </div>
 
@@ -159,7 +171,7 @@ var AddProduct = React.createClass({
                    <input className="form-control"
                           type="text"
                           id="form-list"
-                          valueLink={this.linkState('LIST')}
+                          valueLink={this.linkState('list')}
                           placeholder=""/>
                   </div>
 
@@ -168,7 +180,7 @@ var AddProduct = React.createClass({
                     <input className="form-control"
                            type="text"
                            id="form-number"
-                           valueLink={this.linkState('NUMBER')}
+                           valueLink={this.linkState('number')}
                            placeholder=""/>
                   </div>
                 </div>
@@ -179,7 +191,7 @@ var AddProduct = React.createClass({
                     <input className="form-control"
                            type="text"
                            id="form-country"
-                           valueLink={this.linkState('COUNTRY')}
+                           valueLink={this.linkState('country')}
                            placeholder=""/>
                   </div>
 
@@ -188,7 +200,7 @@ var AddProduct = React.createClass({
                     <input className="form-control"
                           type="text"
                           id="form-region"
-                          valueLink={this.linkState('REGION')}
+                          valueLink={this.linkState('region')}
                           placeholder=""/>
                   </div>
 
@@ -197,7 +209,7 @@ var AddProduct = React.createClass({
                     <input className="form-control"
                            type="text"
                            id="form-dynasty"
-                           valueLink={this.linkState('DYNASTY')}
+                           valueLink={this.linkState('dynasty')}
                            placeholder=""/>
                   </div>
                 </div>
@@ -208,7 +220,7 @@ var AddProduct = React.createClass({
                       <input className="form-control"
                              type="text"
                              id="form-denomination"
-                             valueLink={this.linkState('DENOMINATION')}
+                             valueLink={this.linkState('denomination')}
                              placeholder=""/>
                     </div>
 
@@ -217,7 +229,7 @@ var AddProduct = React.createClass({
                      <input className="form-control"
                             type="text"
                             id="form-date"
-                            valueLink={this.linkState('DATE')}
+                            valueLink={this.linkState('date')}
                             placeholder=""/>
                     </div>
 
@@ -226,7 +238,7 @@ var AddProduct = React.createClass({
                       <input className="form-control"
                              type="text"
                              id="form-mintmark"
-                             valueLink={this.linkState('MINTMARK')}
+                             valueLink={this.linkState('mintmark')}
                              placeholder=""/>
                     </div>
                   </div>
@@ -237,7 +249,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-mint"
-                               valueLink={this.linkState('MINT')}
+                               valueLink={this.linkState('mint')}
                                placeholder=""/>
                      </div>
 
@@ -246,7 +258,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                               type="text"
                               id="form-obverse"
-                              valueLink={this.linkState('OBVERSE')}
+                              valueLink={this.linkState('obverse')}
                               placeholder=""/>
                      </div>
 
@@ -255,7 +267,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                           type="text"
                           id="form-reverse"
-                          valueLink={this.linkState('REVERSE')}
+                          valueLink={this.linkState('reverse')}
                           placeholder=""/>
                       </div>
                     </div>
@@ -266,7 +278,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-edge"
-                               valueLink={this.linkState('EDGE')}
+                               valueLink={this.linkState('edge')}
                                placeholder=""/>
                      </div>
 
@@ -275,7 +287,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                               type="text"
                               id="form-material"
-                              valueLink={this.linkState('MATERIAL')}
+                              valueLink={this.linkState('material')}
                               placeholder=""/>
                      </div>
 
@@ -284,7 +296,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                               type="text"
                               id="form-diameter"
-                              valueLink={this.linkState('DIAMETER')}
+                              valueLink={this.linkState('diameter')}
                               placeholder=""/>
                      </div>
                    </div>
@@ -295,7 +307,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                               type="text"
                               id="form-actual-metal-weight"
-                              valueLink={this.linkState('ACTUAL_METAL_WEIGHT')}
+                              valueLink={this.linkState('actual_metal_weight')}
                               placeholder=""/>
                      </div>
 
@@ -304,7 +316,7 @@ var AddProduct = React.createClass({
                       <input className="form-control"
                              type="text"
                              id="form-comment1"
-                             valueLink={this.linkState('COMMENT_1')}
+                             valueLink={this.linkState('comment_1')}
                              placeholder=""/>
                     </div>
 
@@ -313,7 +325,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                               type="text"
                               id="form-catalog"
-                              valueLink={this.linkState('CATALOG')}
+                              valueLink={this.linkState('catalog')}
                               placeholder=""/>
                     </div>
                   </div>
@@ -324,7 +336,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-comment2"
-                               valueLink={this.linkState('COMMENT_2')}
+                               valueLink={this.linkState('comment_2')}
                                placeholder=""/>
                       </div>
 
@@ -333,7 +345,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-grade"
-                               valueLink={this.linkState('GRADE')}
+                               valueLink={this.linkState('grade')}
                                placeholder=""/>
                       </div>
 
@@ -342,7 +354,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-wholesale"
-                               valueLink={this.linkState('WHOLESALE')}
+                               valueLink={this.linkState('wholesale')}
                                placeholder=""/>
                       </div>
                     </div>
@@ -353,7 +365,7 @@ var AddProduct = React.createClass({
                          <input className="form-control"
                                 type="text"
                                 id="form-price"
-                                valueLink={this.linkState('PRICE')}
+                                valueLink={this.linkState('price')}
                                 placeholder=""/>
                        </div>
 
@@ -362,7 +374,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-quantity"
-                               valueLink={this.linkState('QUANTITY')}
+                               valueLink={this.linkState('quantity')}
                                placeholder=""/>
                      </div>
 
@@ -371,7 +383,7 @@ var AddProduct = React.createClass({
                        <input className="form-control"
                               type="text"
                               id="form-unit-cost"
-                              valueLink={this.linkState('UNIT_COST')}
+                              valueLink={this.linkState('unit_cost')}
                               placeholder=""/>
                      </div>
                    </div>
@@ -383,7 +395,7 @@ var AddProduct = React.createClass({
                          <input className="form-control"
                                 type="text"
                                 id="form-total-cost"
-                                valueLink={this.linkState('TOTAL_COST')}
+                                valueLink={this.linkState('total_cost')}
                                 placeholder=""/>
                       </div>
 
@@ -392,7 +404,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-quantity-sold"
-                               valueLink={this.linkState('QUANTITY_SOLD')}
+                               valueLink={this.linkState('quantity_sold')}
                                placeholder=""/>
                       </div>
 
@@ -401,7 +413,7 @@ var AddProduct = React.createClass({
                         <input className="form-control"
                                type="text"
                                id="form-hold1"
-                               valueLink={this.linkState('HOLD_1')}
+                               valueLink={this.linkState('hold_1')}
                                placeholder=""/>
                        </div>
                      </div>
@@ -412,7 +424,7 @@ var AddProduct = React.createClass({
                           <input className="form-control"
                                  type="text"
                                  id="form-hold2"
-                                 valueLink={this.linkState('HOLD_2')}
+                                 valueLink={this.linkState('hold_2')}
                                  placeholder=""/>
                         </div>
 
@@ -421,7 +433,7 @@ var AddProduct = React.createClass({
                           <input className="form-control"
                                  type="text"
                                  id="form-source"
-                                 valueLink={this.linkState('SOURCE')}
+                                 valueLink={this.linkState('source')}
                                  placeholder=""/>
                         </div>
 
@@ -430,7 +442,7 @@ var AddProduct = React.createClass({
                           <input className="form-control"
                                  type="text"
                                  id="form-date-purchased"
-                                 valueLink={this.linkState('DATE_PURCHASED')}
+                                 valueLink={this.linkState('date_purchased')}
                                  placeholder=""/>
                         </div>
                       </div>
@@ -441,7 +453,7 @@ var AddProduct = React.createClass({
                          <input className="form-control"
                                 type="text"
                                 id="form-consignment"
-                                valueLink={this.linkState('CONSIGNMENT')}
+                                valueLink={this.linkState('consignment')}
                                 placeholder=""/>
                         </div>
 
@@ -450,7 +462,7 @@ var AddProduct = React.createClass({
                            <input className="form-control"
                                   type="text"
                                   id="form-sold"
-                                  valueLink={this.linkState('DATE_SOLD')}
+                                  valueLink={this.linkState('date_sold')}
                                   placeholder=""/>
                         </div>
 
@@ -459,7 +471,7 @@ var AddProduct = React.createClass({
                           <input className="form-control"
                                  type="text"
                                  id="form-comment3"
-                                 valueLink={this.linkState('COMMENT_3')}
+                                 valueLink={this.linkState('comment_3')}
                                  placeholder=""/>
                         </div>
                       </div>
@@ -470,7 +482,7 @@ var AddProduct = React.createClass({
                               <input className="form-control"
                                      type="text"
                                      id="form-comment4"
-                                     valueLink={this.linkState('COMMENT_4')}
+                                     valueLink={this.linkState('comment_4')}
                                      placeholder=""/>
                             </div>
 
@@ -479,7 +491,7 @@ var AddProduct = React.createClass({
                               <input className="form-control"
                                      type="text"
                                      id="form-category"
-                                     valueLink={this.linkState('CATEGORY')}
+                                     valueLink={this.linkState('category')}
                                      placeholder=""/>
                             </div>
 
@@ -489,7 +501,7 @@ var AddProduct = React.createClass({
                               <input className="form-control"
                                      type="text"
                                      id="form-subcategory"
-                                     valueLink={this.linkState('SUBCATEGORY')}
+                                     valueLink={this.linkState('subcategory')}
                                      placeholder=""/>
                            </div>
                          </div>
@@ -500,8 +512,16 @@ var AddProduct = React.createClass({
                               <input className="form-control"
                                      type="text"
                                      id="form-comment5"
-                                     valueLink={this.linkState('COMMENT_5')}
+                                     valueLink={this.linkState('comment_5')}
                                      placeholder=""/>
+                            </div>
+
+                            <div className="col-xs-4">
+                              <label htmlFor="form-auction">ADD TO AUCTION</label>
+                              <input className="form-control"
+                                     type="checkbox"
+                                     id="form-auction"
+                                     onChange={this.handleCheckbox}/>
                             </div>
                           </div>
 

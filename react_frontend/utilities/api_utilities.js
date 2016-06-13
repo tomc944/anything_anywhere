@@ -31,7 +31,7 @@ var ApiUtilities = {
     });
   },
 
-  getEditableProduct: function(searchPhrase) {
+  getSearchProduct: function(searchPhrase) {
     $.ajax({
       method: "GET",
       url: "api/items",
@@ -39,7 +39,19 @@ var ApiUtilities = {
               searchPhrase: searchPhrase },
       dataType: 'json',
       success: function(resp) {
-        ApiActions.receiveEditProductSearch(resp);
+        ApiActions.receiveProductSearch(resp);
+      }
+    });
+  },
+
+  retrieveAllAuctionItems: function() {
+    $.ajax({
+      method: "GET",
+      url: "api/items",
+      data: { requestOrigin: "auction" },
+      dataType: 'json',
+      success: function(resp) {
+        ApiActions.receiveAuctionProducts(resp);
       }
     });
   },

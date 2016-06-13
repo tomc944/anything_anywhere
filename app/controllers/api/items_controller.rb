@@ -8,12 +8,15 @@ class Api::ItemsController < ApplicationController
     when "categoryLink"
       debugger
       @items = Item.filter_search(params[:filter_hash])
+    when "auction"
+      @items = Item.where("auction" => true)
     end
 
     render json: @items
   end
 
   def create
+    debugger
     # item_params are all strings right now, need to convert weight, quantity, etc.
     @item = Item.new(item_params)
 
@@ -35,16 +38,16 @@ class Api::ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:WEIGHT, :LIST, :NUMBER, :COUNTRY, :REGION,
-                                 :DYNASTY, :DENOMINATION, :DATE, :MINTMARK,
-                                 :MINT, :OBVERSE, :REVERSE, :EDGE, :MATERIAL,
-                                 :DIAMETER, :ACTUAL_METAL_WEIGHT, :COMMENT_1,
-                                 :CATALOG, :COMMENT_2, :GRADE, :WHOLESALE,
-                                 :PRICE, :QUANTITY, :UNIT_COST, :TOTAL_COST,
-                                 :QUANTITY_SOLD, :HOLD_1, :HOLD_2, :SOURCE,
-                                 :DATE_PURCHASED, :PICTURE, :DATE_SOLD, :COMMENT_3,
-                                 :COMMENT_4, :CATEGORY, :SUBCATEGORY, :COMMENT_5,
-                                 :CONSIGNMENT)
+    params.require(:item).permit(:weight, :list, :number, :country, :region,
+                                 :dynasty, :denomination, :date, :mintmark,
+                                 :mint, :obverse, :reverse, :edge, :material,
+                                 :diameter, :actual_metal_weight, :comment_1,
+                                 :catalog, :comment_2, :grade, :wholesale,
+                                 :price, :quantity, :unit_cost, :total_costs,
+                                 :quantity_sold, :hold_1, :hold_2, :source,
+                                 :date_purchased, :picture, :date_sold, :comment_3,
+                                 :comment_4, :category, :subcategory, :comment_5,
+                                 :consignment, :auction)
   end
 
 end

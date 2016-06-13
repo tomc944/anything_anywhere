@@ -6,6 +6,7 @@ var Store = require('flux/utils').Store,
 var _items = [];
 var _productCreationResponse = "";
 var _searchProducts = [];
+var _auctionProducts = [];
 
 ItemStore.getItems = function() {
   return _items.slice(0);
@@ -13,6 +14,10 @@ ItemStore.getItems = function() {
 
 ItemStore.getCurrentSearch = function() {
   return _searchProducts.slice(0);
+};
+
+ItemStore.getAuctionItems = function() {
+  return _auctionProducts.slice(0);
 };
 
 ItemStore.getProductCreationResponse = function() {
@@ -23,6 +28,11 @@ ItemStore.resetCreationResponse = function() {
   _productCreationResponse = "";
   return false;
 };
+
+ItemStore.resetSearch = function() {
+  _searchProducts = [];
+  return false;
+}
 
 ItemStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
@@ -35,8 +45,11 @@ ItemStore.__onDispatch = function(payload) {
     case ItemConstants.PRODUCT_CREATED:
       showProductCreationResponse(payload.resp);
       break;
-    case ItemConstants.EDIT_PRODUCTS_SEARCH:
-      resetEditProducts(payload.resp);
+    case ItemConstants.PRODUCTS_SEARCH:
+      resetSearchProducts(payload.resp);
+      break;
+    case ItemConstants.AUCTION_PRODUCTS_RECEIVED:
+      resetAuctionProducts(payload.resp);
       break;
   }
 };
@@ -57,8 +70,14 @@ function showProductCreationResponse(resp) {
   ItemStore.__emitChange();
 };
 
-function resetEditProducts(products) {
+function resetSearchProducts(products) {
   _searchProducts = products;
+
+  ItemStore.__emitChange();
+};
+
+function resetAuctionProducts(auctionProducts) {
+  _auctionProducts = auctionProducts;
 
   ItemStore.__emitChange();
 };

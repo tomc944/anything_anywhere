@@ -9,7 +9,7 @@ var EditProduct = React.createClass({
 
   getInitialState: function() {
     return (
-      { 
+      {
         results: []
       }
     );
@@ -21,6 +21,7 @@ var EditProduct = React.createClass({
 
   componentWillUnmount: function() {
     this.eventListener.remove();
+    ItemStore.resetSearch();
   },
 
   _onNewSearch: function() {
@@ -53,7 +54,7 @@ var EditProduct = React.createClass({
         </div>
 
         <div className="admin-edit-note">
-          <p>Type to search by denomination, dynasty, mint, and more. Products that contain the phrase will be shown below.</p>
+          <p>Type to search by denomination, dynasty, mint, and more. Can search using the header search bar as well. Products that contain the phrase will be shown below.</p>
         </div>
 
         <div className="admin-edit">
