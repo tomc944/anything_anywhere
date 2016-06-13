@@ -5,7 +5,6 @@ var Tye = React.createClass({
     return (
       <div className="tye">
         <div className="tye-info">
-
         </div>
       </div>
     )
