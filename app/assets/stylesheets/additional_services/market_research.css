@@ -1,0 +1,19 @@
+.market-research-container {
+  background-color: #FFFFF0;
+}
+
+.market-research {
+  border-top: 1px solid #e0e0e0;
+  width: 90%;
+  margin:auto;
+  padding: 50px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.market-research p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.market-research h2, .market-research h4 {
+  text-align: center;
+}

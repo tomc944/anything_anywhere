@@ -1,13 +1,31 @@
-Patrick Total Hours - 24.5
-Patrick Billed Hours - 13
+Patrick Total Hours - 41.5
+Patrick Billed Hours - 41.5
 Thomas Total Hours - 11 ---> 2 planning, 4 for Wednesday & Friday, 1 for over the weekend
 
-First conference call - 0.5 hours	x2 = 1 hour
-Initial Schema planning and architecture strategy	- 1 hour x2 = 2 hours
-Wireframes & Wireframe Design -	2 hours x1 = 2 hours
-High-level overview - 1.5 hours x1 = 1.5 hours
-Front-end architecture - 4 hours x1 = 4 hours
-Landing Page & Highest Level Container Design - 4 hours x1 = 4 hours
-Item Index Page React Components - 2 hours x1 = 2 hours
-Landing Page & Information Pages Design, Architecture, and Planning - 5.5 hours x1 = 5.5 hours
-Footer Content, About Sections, etc. - 4 hours x 1 = 4 hours
+Patrick's work
+
+  First Conference call - 0.5 hours * 40 = 20
+  Initial Schema planning and architecture strategy - 1 hour * 40 = 40
+  Wireframes & Wireframe Design -	2 hours * 40 = 80
+  High-level overview - 1.5 hours * 40 = 60
+  Front-end architecture - 4 hours * 40 = 160
+  Landing Page & Highest Level Container Design - 4 hours * 40 = 1960s
+
+  //Billed 13 hours
+
+  Item Index Page React Components - 2 hours * 40 =  80
+  Landing Page & Information Pages Design, Architecture, and Planning - 5.5 hours * 40 = 220
+  Footer Content, About Sections, etc. - 4 hours * 40 = 160
+  Footer Content, Additional Services, etc. - 2 hours * 40 = 80
+
+  //Billed 13.5 hours
+
+  Footer Content, styling, & page design - 2 hours * 40 = 80
+  Admin Add Products + styling + page design - 5 hours * 40 = 200
+  Admin Edit Products - 1 hour * 40 = 40
+  Admin Add Product/ Edit Product - 2 hours * 40 = 80
+  Admin Add Product/ Edit Product/ Search Component/ Auction - 5 hours * 40 = 200
+
+  //Billed 15 hours
+
+Thomas's work

@@ -8,6 +8,36 @@
 
 .header-search-bar {
   vertical-align: text-bottom;
+  width: 350px;
+}
+
+.header-search-bar input {
+  border-radius: 0;
+  border: none;
+}
+
+.header-search-bar input:focus {
+  border: 2px solid black;
+}
+
+.header-cart {
+  color: white;
+  background-color: black;
+  position: absolute;
+  right: 40px;
+  /*border: 4px solid black;*/
+  height: 40px;
+  width: 110px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.header-cart:hover {
+  cursor:pointer;
+}
+
+.header-admin:hover {
+  cursor: pointer;
 }
 
 .header-title {
@@ -29,12 +59,16 @@
 }
 
 #header-categories-accordion .panel {
+  padding: 10px 0;
+  border-right: none;
+  border-left: none;
   margin-bottom: 0px;
 }
 
 #header-categories-accordion .panel-heading {
+  padding: 15px 0;
   font-weight: 100;
-  background-color: #151515;
+  background-color: black;
   color: white;
 }
 
@@ -49,14 +83,6 @@
 
 #header-categories-accordion .category-filter:hover {
   cursor:pointer;
-}
-
-#header-categories-accordion .category-divider {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  width: 95%;
-  height: 10px;
-  margin: auto;
 }
 
 .header-dropdown {

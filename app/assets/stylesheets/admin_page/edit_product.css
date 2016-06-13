@@ -1,0 +1,14 @@
+.admin-edit-product {
+  padding-bottom: 50px;
+}
+
+.admin-edit-product .admin-edit-note {
+  padding: 10px 0;
+}
+
+.admin-edit-product h3 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}

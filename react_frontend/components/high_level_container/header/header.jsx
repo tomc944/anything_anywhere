@@ -9,6 +9,10 @@ var Header = React.createClass({
     this.props.history.pushState(null, "/");
   },
 
+  goToAdminPage: function() {
+    this.props.history.pushState(null, "/admin/add_product");
+  },
+
   render: function() {
     return (
       <div className="header">
@@ -19,11 +23,14 @@ var Header = React.createClass({
             <h3 id="logo" onClick={this.goToLandingPage}>ANYTHING ANYWHERE</h3>
             <p>since 1978</p>
           </div>
-          <HeaderCart/>
+          <HeaderCart history={this.props.history}/>
         </div>
 
         <div className="row header-login">
-          <div className="col-xs-offset-8 col-xs-2 header-about" data-toggle="modal" data-target="#aboutModal">
+          <div className="col-xs-offset-6 col-xs-2 header-admin" onClick={this.goToAdminPage}>
+            ADMIN
+          </div>
+          <div className="col-xs-2 header-about" data-toggle="modal" data-target="#aboutModal">
             NEW TO AA?
           </div>
           <div className="col-xs-2">

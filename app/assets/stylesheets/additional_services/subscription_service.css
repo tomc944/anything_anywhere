@@ -1,0 +1,19 @@
+.subscription-service-container {
+  background-color: #FFFFF0;
+}
+
+.subscription-service {
+  border-top: 1px solid #e0e0e0;
+  width: 90%;
+  margin:auto;
+  padding: 50px 0;
+}
+
+.subscription-service h2, .subscription-service h4 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.subscription-service p {
+  font-family: 'Open Sans', sans-serif;
+}

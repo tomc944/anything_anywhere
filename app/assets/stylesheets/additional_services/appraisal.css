@@ -1,0 +1,19 @@
+.appraisal {
+  background-color: #FFFFF0;
+}
+
+.appraisal-info {
+  border-top: 1px solid #e0e0e0;
+  width: 90%;
+  margin:auto;
+  padding: 50px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.appraisal-info p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.appraisal-info h2 {
+  text-align: center;
+}

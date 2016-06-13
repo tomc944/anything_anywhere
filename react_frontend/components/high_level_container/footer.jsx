@@ -1,27 +1,61 @@
-var React = require('react');
+var React = require('react'),
+    FooterConstants = require('../../constants/footer_constants');
+
+function animateScroll() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+};
 
 var Footer = React.createClass({
-  goToContact: function() {
+  goToContact: function(e) {
+    e.preventDefault();
     this.props.history.pushState(null, "/contact");
   },
 
-  goToOperate: function() {
+  goToOperate: function(e) {
+    e.preventDefault();
+    animateScroll();
     this.props.history.pushState(null, "/operate");
   },
 
-  goToAdditionalInformation: function() {
-    // this.props.history.pushState(null, "/coin_information");
+  goToAdditionalInformation: function(e) {
+    e.preventDefault();
+    this.props.history.pushState(null, "/additional_information");
   },
 
-  goToServices: function() {
+  goToLinks: function(e) {
+    e.preventDefault();
+    animateScroll();
+    this.props.history.pushState(null, "/links");
+  },
+
+  goToServices: function(e) {
+    e.preventDefault();
     this.props.history.pushState(null, "/services");
   },
 
+  componentDidMount: function() {
+    $("#scroll-to-top").click(function(e) {
+      e.preventDefault();
+      animateScroll();
+    });
+
+    //add scroll to top fade in and out
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > FooterConstants.scrollTopOffset) {
+        $('#scroll-to-top').fadeIn(FooterConstants.scrollTopDuration);
+      } else {
+        $('#scroll-to-top').fadeOut(FooterConstants.scrollTopDuration);
+      }
+    });
+  },
+
   render: function() {
+
     return (
       <div className="footer">
         <div className="footer-container">
-          <div className="footer-links container">
+          <div className="footer-links container-fluid">
             <div className="row">
               <div className="col-xs-3 footer-link"><a data-toggle="modal" data-target="#aboutModal"><b>ABOUT AA</b></a></div>
               <div className="col-xs-3 footer-link"><a onClick={this.goToContact}>CONTACT</a></div>
@@ -30,11 +64,13 @@ var Footer = React.createClass({
             </div>
             <div className="row">
               <div className="col-xs-3 footer-link"><a onClick={this.goToLinks}>LINKS - FRIENDS/COLLEAGUES</a></div>
-              <div className="col-xs-3 footer-link"><a onClick={this.goToBlog}>MY BLOG</a></div>
+              <div className="col-xs-3 footer-link"><a href="http://anythinganywhere.com/prose/prose.htm">MY BLOG & PROSE</a></div>
               <div className="col-xs-3 footer-link"><a onClick={this.goToServices}>ADDITIONAL SERVICES</a></div>
             </div>
           </div>
         </div>
+
+        <div className="footer-bottom">© 2016 ANYTHING ANYWHERE.</div>
 
         <div id="scroll-to-top">Scroll to Top</div>
       </div>
