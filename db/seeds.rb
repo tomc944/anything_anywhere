@@ -15,28 +15,101 @@ csv.each do |row|
   t.list = row['list']
   t.weight = row['weight']
   t.number = row['number']
-  t.country = row['country']
-  t.region = row['region']
+
+  if !!row['country']
+    t.country = row['country'].split(", ").first
+  else
+    t.country = row['country']
+  end
+
+  if !!row['region']
+    t.region = row['region'].split(", ").first
+  else
+    t.region = row['region']
+  end
+
   t.dynasty = row['dynasty']
-  t.denomination = row['denomination']
+
+  if !!row['denomination']
+    t.denomination = row['denomination'].split(", ").first
+  else
+    t.denomination = row['denomination']
+  end
+
   t.date = row['date']
   t.mintmark = row['mintmark']
   t.mint = row['mint']
-  t.obverse = row['obverse']
-  t.reverse = row['reverse']
+
+  if !!row['obverse']
+    t.obverse = row['obverse'].split(", ").first
+  else
+    t.obverse = row['obverse']
+  end
+
+  if !!row['reverse']
+    t.reverse = row['reverse'].split(", ").first
+  else
+    t.reverse = row['reverse']
+  end
+
   t.edge = row['edge']
-  t.material = row['material']
-  t.diameter = row['diameter']
+
+  if !!row['material']
+    t.material = row['material'].split(", ").first
+  else
+    t.material = row['material']
+  end
+
+  if !!row['diameter']
+    t.diameter = row['diameter'].split(", ").first
+  else
+    t.diameter = row['diameter']
+  end
+
   t.actual_metal_weight = row['actual_metal_weight']
-  t.comment_1 = row['comment_1']
+
+  if !!row['comment_1']
+    t.comment_1 = row['comment_1'].split(", ").first
+  else
+    t.comment_1 = row['comment_1']
+  end
+
   t.catalog = row['catalog']
-  t.comment_2 = row['comment_2']
-  t.grade = row['grade']
+
+  if !!row['comment_2']
+    t.comment_2 = row['comment_2'].split(", ").first
+  else
+    t.comment_2 = row['comment_2']
+  end
+
+  if !!row['grade']
+    t.grade = row['grade'].split(", ").first
+  else
+    t.grade = row['grade']
+  end
+
   t.wholesale = row['wholesale']
-  t.price = row['price']
+
+  if !!row['price']
+    t.price = row['price'].split(" ").first
+  else
+    t.price = row['price']
+  end
+
   t.quantity = row['quantity']
-  t.unit_cost = row['unit_cost']
-  t.total_cost = row['total_cost']
+
+  if !!row['unit_cost']
+    t.unit_cost = row['unit_cost'].split(" ").first
+  else
+    t.unit_cost = row['unit_cost']
+  end
+
+  if !!row['total_cost']
+    t.total_cost = row['total_cost'].split(" ").first
+  else
+    t.total_cost = row['total_cost']
+  end
+
   t.quantity_sold = row['quantity_sold']
   t.hold_1 = row['hold_1']
   t.hold_2 = row['hold_2']

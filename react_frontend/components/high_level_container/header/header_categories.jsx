@@ -4,6 +4,7 @@ var React = require('react'),
 var HeaderCategories = React.createClass({
   handleClick: function(event) {
     //go to history with filter
+    debugger;
     HeaderCategoriesActions.addCategory(event.target.innerHTML);
     debugger
     this.props.history.pushState(null, "/products");
@@ -120,8 +121,22 @@ var HeaderCategories = React.createClass({
           </div>
 
           <div id="collapseCoins" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            (introductory offer: 100 different coins including one ancient, $25.00 postpaid in USA) <div className="category-filter" onClick={this.handleClick}>I am a link with this filter.</div>
-          </div>
+            (introductory offer: 100 different coins including one ancient, $25.00 postpaid in USA)
+            <div className="category-filter" data-categorgies="ancient 2000" onClick={this.handleClick}>Ancient Coints</div>
+            <div className="category-filter" onClick={this.handleClick}>Islamic & Old Indian Coins</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins A-B</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins C-D</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins E-F</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins G</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins H-I</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins J-L</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins M-N</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins O-Q</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins R</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins S</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins T</div>
+            <div className="category-filter" onClick={this.handleClick}>Modern World Coins U-Z</div>
+           </div>
           <div id="collapsePaperMoney" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
             (introductory offer: 25 different banknotes, $10.00 postpaid in USA)
           </div>
