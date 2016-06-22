@@ -15,28 +15,79 @@ csv.each do |row|
   t.list = row['list']
   t.weight = row['weight']
   t.number = row['number']
-  t.country = row['country']
-  t.region = row['region']
+
+  if !!row['country']
+    t.country = row['country'].split(", ").first
+  end
+
+  if !!row['region']
+    t.region = row['region'].split(", ").first
+  end
+
   t.dynasty = row['dynasty']
-  t.denomination = row['denomination']
+
+  if !!row['denomination']
+    t.denomination = row['denomination'].split(", ").first
+  end
+
   t.date = row['date']
   t.mintmark = row['mintmark']
-  t.mint = row['mint']
-  t.obverse = row['obverse']
-  t.reverse = row['reverse']
-  t.edge = row['edge']
-  t.material = row['material']
-  t.diameter = row['diameter']
+
+  if !!row['mint']
+    t.mint = row['mint'].split(" ").first
+  end
+
+  if !!row['obverse']
+    t.obverse = row['obverse'].split(", ").first
+  end
+
+  if !!row['reverse']
+    t.reverse = row['reverse'].split(", ").first
+  end
+
+  if !!row['edge']
+    t.edge = row['edge'].split(", ").first
+  end
+  
+  if !!row['material']
+    t.material = row['material'].split(", ").first
+  end
+
+  if !!row['diameter']
+    t.diameter = row['diameter'].split(", ").first
+  end
+
   t.actual_metal_weight = row['actual_metal_weight']
-  t.comment_1 = row['comment_1']
+
+  if !!row['comment_1']
+    t.comment_1 = row['comment_1'].split(" ").first
+  end
+
   t.catalog = row['catalog']
-  t.comment_2 = row['comment_2']
-  t.grade = row['grade']
+
+  if !!row['comment_2']
+    t.comment_2 = row['comment_2'].split(", ").first
+  end
+  if !!row['grade']
+    t.grade = row['grade'].split(", ").first
+  end
+
   t.wholesale = row['wholesale']
-  t.price = row['price']
+
+  if !!row['price']
+    t.price = row['price'].split(" ").first
+  end
+
   t.quantity = row['quantity']
-  t.unit_cost = row['unit_cost']
-  t.total_cost = row['total_cost']
+
+  if !!row['unit_cost']
+    t.unit_cost = row['unit_cost'].split(" ").first
+  end
+
+  if !!row['total_cost']
+    t.total_cost = row['total_cost'].split(" ").first
+  end
+
   t.quantity_sold = row['quantity_sold']
   t.hold_1 = row['hold_1']
   t.hold_2 = row['hold_2']
