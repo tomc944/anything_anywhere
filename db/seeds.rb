@@ -65,13 +65,15 @@ csv.each do |row|
     t.comment_1 = row['comment_1'].split(" ").first
   end
 
-  t.catalog = row['catalog']
+  if !!row['catalog']
+    t.catalog = row['catalog'].split(", ").first
+  end
 
   if !!row['comment_2']
     t.comment_2 = row['comment_2'].split(", ").first
   end
   if !!row['grade']
-    t.grade = row['grade'].split(", ").first
+    t.grade = row['grade'].split(" ").first
   end
 
   t.wholesale = row['wholesale']
