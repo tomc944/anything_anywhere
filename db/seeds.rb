@@ -24,7 +24,9 @@ csv.each do |row|
     t.region = row['region'].split(", ").first
   end
 
-  t.dynasty = row['dynasty']
+  if !!row['dynasty']
+    t.dynasty = row['dynasty'].split(", ").first
+  end
 
   if !!row['denomination']
     t.denomination = row['denomination'].split(", ").first
@@ -48,7 +50,7 @@ csv.each do |row|
   if !!row['edge']
     t.edge = row['edge'].split(", ").first
   end
-  
+
   if !!row['material']
     t.material = row['material'].split(", ").first
   end
