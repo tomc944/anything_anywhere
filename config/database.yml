@@ -13,8 +13,8 @@ test: &TEST
   database: anything_anywhere_test
   host: localhost
   pool: 5
-  username: anything_anywhere
-  password:
+  username: tclaiby_babes
+  password: weezer12
 
 production:
   adapter: postgresql
@@ -22,8 +22,8 @@ production:
   database: anything_anywhere_production
   host: localhost
   pool: 5
-  username: anything_anywhere
-  password:
+  username: tclaiby_babes
+  password: weezer12
 
 cucumber:
   <<: *TEST
