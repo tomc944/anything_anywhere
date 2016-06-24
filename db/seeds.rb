@@ -12,9 +12,18 @@ csv_text = File.read(Rails.root.join('lib', 'seeds', 'instafind-aanat-obj-6616.c
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   t = Item.new
-  t.list = row['list'].strip
-  t.weight = row['weight'].strip
-  t.number = row['number'].strip
+
+  if !!row['list']
+    t.list = row['list'].strip
+  end
+
+  if !!row['weight']
+    t.weight = row['weight'].strip
+  end
+
+  if !!row['number']
+    t.number = row['number'].strip
+  end
 
   if !!row['country']
     t.country = row['country'].split(",").first.strip
@@ -32,8 +41,13 @@ csv.each do |row|
     t.denomination = row['denomination'].split(", ").first.strip
   end
 
-  t.date = row['date'].strip
-  t.mintmark = row['mintmark'].strip
+  if !!row['date']
+    t.date = row['date'].strip
+  end
+
+  if !!row['mintmark']
+    t.mintmark = row['mintmark'].strip
+  end
 
   if !!row['mint']
     t.mint = row['mint'].split(" ").first.strip
@@ -59,7 +73,9 @@ csv.each do |row|
     t.diameter = row['diameter'].split(", ").first.strip
   end
 
-  t.actual_metal_weight = row['actual_metal_weight'].strip
+  if !!row['actual_metal_weight']
+    t.actual_metal_weight = row['actual_metal_weight'].strip
+  end
 
   if !!row['comment_1']
     t.comment_1 = row['comment_1'].split(" ").first.strip
@@ -72,17 +88,22 @@ csv.each do |row|
   if !!row['comment_2']
     t.comment_2 = row['comment_2'].split(", ").first.strip
   end
+
   if !!row['grade']
     t.grade = row['grade'].split(" ").first.strip
   end
 
-  t.wholesale = row['wholesale'].strip
+  if !!row['wholesale']
+    t.wholesale = row['wholesale'].strip
+  end
 
   if !!row['price']
     t.price = row['price'].split(" ").first.strip
   end
 
-  t.quantity = row['quantity'].strip
+  if !!row['quantity']
+    t.quantity = row['quantity'].strip
+  end
 
   if !!row['unit_cost']
     t.unit_cost = row['unit_cost'].split(" ").first.strip
@@ -92,18 +113,57 @@ csv.each do |row|
     t.total_cost = row['total_cost'].split(" ").first.strip
   end
 
-  t.quantity_sold = row['quantity_sold'].strip
-  t.hold_1 = row['hold_1'].strip
-  t.hold_2 = row['hold_2'].strip
-  t.source = row['source'].strip
-  t.date_purchased = row['date_purchased'].strip
-  t.picture = row['picture'].strip
-  t.date_sold = row['date_sold'].strip
-  t.comment_3 = row['comment_3'].strip
-  t.comment_4 = row['comment_4'].strip
-  t.category = row['category'].strip
-  t.subcategory = row['subcatgory'].strip
-  t.comment_5 = row['comment_5'].strip
-  t.consignment = row['consignment'].strip
+  if !!row['quantity_sold']
+    t.quantity_sold = row['quantity_sold'].strip
+  end
+
+  if !!row['hold_1']
+    t.hold_1 = row['hold_1'].strip
+  end
+
+  if !!row['hold_2']
+    t.hold_2 = row['hold_2'].strip
+  end
+
+  if !!row['source']
+    t.source = row['source'].strip
+  end
+
+  if !!row['date_purchased']
+    t.date_purchased = row['date_purchased'].strip
+  end
+
+  if !!row['picture']
+    t.picture = row['picture'].strip
+  end
+
+  if !!row['date_sold']
+    t.date_sold = row['date_sold'].strip
+  end
+
+  if !!row['comment_3']
+    t.comment_3 = row['comment_3'].strip
+  end
+
+  if !!row['comment_4']
+    t.comment_4 = row['comment_4'].strip
+  end
+
+  if !!row['category']
+    t.category = row['category'].strip
+  end
+
+  if !!row['subcategory']
+    t.subcategory = row['subcategory'].strip
+  end
+
+  if !!row['comment_5']
+    t.comment_5 = row['comment_5'].strip
+  end
+
+  if !!row['consignment']
+    t.consignment = row['consignment'].strip
+  end
+
   t.save
 end
