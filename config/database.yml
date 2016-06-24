@@ -2,25 +2,28 @@ development:
   adapter: postgresql
   encoding: utf8
   database: anything_anywhere_development
+  host: localhost
   pool: 5
-  username:
-  password:
+  username: tclaiby_babes
+  password: weezer12
 
 test: &TEST
   adapter: postgresql
   encoding: utf8
   database: anything_anywhere_test
+  host: localhost
   pool: 5
-  username:
-  password:
+  username: tclaiby_babes
+  password: weezer12
 
 production:
   adapter: postgresql
   encoding: utf8
   database: anything_anywhere_production
+  host: localhost
   pool: 5
-  username:
-  password:
+  username: tclaiby_babes
+  password: weezer12
 
 cucumber:
   <<: *TEST
