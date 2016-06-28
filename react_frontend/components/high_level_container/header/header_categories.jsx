@@ -2,6 +2,71 @@ var React = require('react'),
     HeaderCategoriesActions = require('../../../actions/header_categories_actions');
 
 var HeaderCategories = React.createClass({
+  buildCategoryDivs: function(subcategory) {
+    // categories that neeed to be built out still
+      // paper money
+      // tokens and medals
+
+    SUBCATEGORIES = {
+      "coins":              [ "Ancient Coins", "Islamic & Old Indian Coins",
+                              "Oriental Cast Coins & Related",
+                              "Modern World Coins (A-B)",
+                              "Modern World Coins (C-D)",
+                              "Modern World Coins (E-F)",
+                              "Modern World Coins (G)",
+                              "Modern World Coins (H-I)",
+                              "Modern World Coins (J-L)",
+                              "Modern World Coins (M-N)",
+                              "Modern World Coins (O-Q)",
+                              "Modern World Coins (R)",
+                              "Modern World Coins (S)",
+                              "Modern World Coins (T)",
+                              "Modern World Coins (U-Z)" ],
+      "paper money":        [ "BankNotes A-F",
+                              "BankNotes G-N",
+                              "BankNotes O-R",
+                              "BankNotes S-Z" ],
+      "tokens and medals":  [ "Token & medal inventory" ],
+      "other fiscal":       [ "Introduction to fiscalia collecting",
+                              "Introduction to bonds and shares",
+                              "Personal opinions regarding the collection of phonecards, etc",
+                              "Fiscalia inventory" ],
+      "military civic":     [ "Abbreviations found on British military medals, by R.A. Fikentscher",
+                              "My important personal opinion of militaria collecting",
+                              "Introduction to faleristics (badges)",
+                              "Inventory of couple of hundred badges, medals, etc., unillustrated moment, but better than nothing, eh?"],
+      "documents":          [ "Privacy Policy",
+                              "Document inventory" ],
+      "relics antiquities": [ "Relics inventory" ],
+      "advertising prop":   [ "Political imitation banknotes of the world",
+                              "GERMANY, Nazi propoganda books & magazines",
+                              "FRANCE, early 20th century adversiting material",
+                              "USA, 19th century adversiting material",
+                              "USA, 20th century adversiting material" ],
+      "wholesale":          [ 'placeholder' ],
+      "natural objects":    [ "natural objects inventory"],
+      "jewelry":            [ "French postwar souvenir bracelet",
+                              "Roman glass in sterling silver settings",
+                              "Thailand hill tribes silver",
+                              "USA, antique gold stickpins" ],
+      "misellaneous":       [ "Miscellaneous Inventory" ],
+      "books":              [ "Placeholder" ],
+      "what\'s this":       [ "Placeholder" ],
+      "buying":             [ "Placeholder" ],
+      "archive":            [ "Placeholder" ]
+    }
+
+    var divs = SUBCATEGORIES[subcategory].map(function(category) {
+      return (
+        <div class='category-filter' onClick={this.handleClick}>
+          {category}
+        </div>
+      )
+    }.bind(this))
+
+    return divs;
+  },
+
   handleClick: function(event) {
     //go to history with filter
     HeaderCategoriesActions.addCategory(event.target.innerHTML);
@@ -120,51 +185,51 @@ var HeaderCategories = React.createClass({
           </div>
 
           <div id="collapseCoins" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            (introductory offer: 100 different coins including one ancient, $25.00 postpaid in USA) <div className="category-filter" onClick={this.handleClick}>I am a link with this filter.</div>
+            {this.buildCategoryDivs('coins')}
           </div>
           <div id="collapsePaperMoney" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            (introductory offer: 25 different banknotes, $10.00 postpaid in USA)
+            {this.buildCategoryDivs('paper money')}
           </div>
           <div id="collapseOtherFiscal" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 4 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('other fiscal')}
           </div>
           <div id="collapseTokensMedals" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 3 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('tokens and medals')}
           </div>
 
 
           <div id="collapseMilitaryCivic" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 5 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('military civic')}
           </div>
           <div id="collapseDocuments" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            (introductory offer: 100 different coins including one ancient, $25.00 postpaid in USA) <div className="category-filter" onClick={this.handleClick}>I am a link with this filter.</div>
+            {this.buildCategoryDivs('documents')}
           </div>
           <div id="collapseAdvertisingPropaganda" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            (introductory offer: 25 different banknotes, $10.00 postpaid in USA)
+            {this.buildCategoryDivs('advertising prop')}
           </div>
           <div id="collapseWholesale" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 6 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('wholesale')}
           </div>
 
 
           <div id="collapseJewelry" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 4 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('jewelry')}
           </div>
           <div id="collapseBooks" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 6 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('books')}
           </div>
           <div id="collapseNaturalObjects" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 3 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('natural objects')}
           </div>
           <div id="collapseRelics" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 5 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('relics antiquities')}
           </div>
 
           <div id="collapseMiscellaneous" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 3 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('misellaneous')}
           </div>
           <div id="collapseWhatAreThese" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            I am the category 5 content. slkfsdlk;fj s;fkjs df;lkjds;lfk jsfl ;sldkfj ds;lfj sd;lfj sdl;kfj sa;ldfkj sdl;fk salfjs a;lkf sdl;kfj ;lsdfj ;slkfj sdl;kfj sl;kfjsl; fkfjkls;kfjs ;lafjls;k fkkds
+            {this.buildCategoryDivs('what\'s this')}
           </div>
 
 

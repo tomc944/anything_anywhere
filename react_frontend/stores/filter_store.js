@@ -3,7 +3,7 @@ var Store = require('flux/utils').Store,
     FilterConstants = require('../constants/item_constants');
     FilterStore = new Store(Dispatcher);
 
-var _filterParams = { category: "COLLECTIBLE BAZAAR"};
+var _filterParams = { category: "COLLECTIBLE BAZAAR" };
 
 FilterStore.getAllFilters = function() {
   return Object.assign({}, _filterParams);
