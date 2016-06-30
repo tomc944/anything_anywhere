@@ -17,7 +17,9 @@ var HeaderCategories = React.createClass({
       // archive: render json with jbuilder for sold items
 
     SUBCATEGORIES = {
-      "coins":              [ "Ancient Coins", "Islamic & Old Indian Coins",
+      "coins":              [ { text: "Ancient Coins", filter: "date",
+                                query: "c. 400-350 BC"},
+                              "Islamic & Old Indian Coins",
                               "Oriental Cast Coins & Related",
                               "Modern World Coins (A-B)",
                               "Modern World Coins (C-D)",
@@ -65,21 +67,28 @@ var HeaderCategories = React.createClass({
       "archive":            [ "Placeholder" ]
     }
 
-    var divs = SUBCATEGORIES[subcategory].map(function(category) {
-      return (
-        <div class='category-filter' onClick={this.handleClick}>
-          {category}
-        </div>
-      )
-    }.bind(this))
 
-    return divs;
+    var categoryInfo = SUBCATEGORIES[subcategory][0]
+
+    var div = <div className='category-filter'
+                    onClick={this.handleClick}
+                    filter={[categoryInfo.filter, categoryInfo.query]}>
+                {categoryInfo.text}
+              </div>
+
+
+    return div;
   },
 
   handleClick: function(event) {
     //go to history with filter
-    HeaderCategoriesActions.addCategory(event.target.innerHTML);
-    debugger
+    var filter = event.target.getAttribute('filter').split(",")[0];
+    var constraint = event.target.getAttribute('filter').split(",")[1];
+    var text = event.target.innerHTML;
+
+    HeaderCategoriesActions.addCategory({filter: filter, constraint: constraint,
+                                         text: text});
+
     this.props.history.pushState(null, "/products");
   },
 
@@ -197,48 +206,35 @@ var HeaderCategories = React.createClass({
             {this.buildCategoryDivs('coins')}
           </div>
           <div id="collapsePaperMoney" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('paper money')}
           </div>
           <div id="collapseOtherFiscal" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('other fiscal')}
           </div>
           <div id="collapseTokensMedals" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('tokens and medals')}
           </div>
 
 
           <div id="collapseMilitaryCivic" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('military civic')}
           </div>
           <div id="collapseDocuments" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('documents')}
           </div>
           <div id="collapseAdvertisingPropaganda" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('advertising prop')}
           </div>
           <div id="collapseWholesale" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('wholesale')}
           </div>
 
 
           <div id="collapseJewelry" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('jewelry')}
           </div>
           <div id="collapseBooks" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('books')}
           </div>
           <div id="collapseNaturalObjects" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('natural objects')}
           </div>
           <div id="collapseRelics" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('relics antiquities')}
           </div>
 
           <div id="collapseMiscellaneous" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('misellaneous')}
           </div>
           <div id="collapseWhatAreThese" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-            {this.buildCategoryDivs('what\'s this')}
           </div>
         </div>
       </div>

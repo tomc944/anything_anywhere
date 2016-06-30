@@ -1,7 +1,7 @@
 var React = require('react'),
     ItemStore = require('../../stores/item_store'),
     FilterStore = require('../../stores/filter_store'),
-    ItemIndexActions = require('../../actions/item_index_actions');
+    GrabItemIndexActions = require('../../actions/grab_item_index_actions');
 
 function _getAllItems () {
   ItemStore.getItems();
@@ -21,7 +21,7 @@ var ItemIndex = React.createClass({
 
   componentDidMount: function() {
     this.itemListener = ItemStore.addListener(this._handleChange);
-    ItemIndexActions.fetchItems(FilterStore.getAllFilters());
+    GrabItemIndexActions.fetchItems(FilterStore.getAllFilters());
   },
 
   componentWillUmount: function() {
@@ -29,10 +29,9 @@ var ItemIndex = React.createClass({
   },
 
   render: function() {
-
     return (
       <div>
-        {this.state.categoryTitle}
+        {this.state.categoryTitle.text}
       </div>
     );
   }

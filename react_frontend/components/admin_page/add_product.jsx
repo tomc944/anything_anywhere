@@ -88,7 +88,7 @@ var AddProduct = React.createClass({
 
     e.stopPropagation();
     e.preventDefault();
-    debugger
+
     $('#file-submit').css("display", "none");
   },
 
@@ -98,7 +98,7 @@ var AddProduct = React.createClass({
     alert("need to add image storage (cloudinary or aws?");
 
     //cloudinary widget
-    debugger
+    
   },
 
   handleCheckbox: function() {
