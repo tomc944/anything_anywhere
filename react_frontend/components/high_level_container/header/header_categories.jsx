@@ -6,6 +6,15 @@ var HeaderCategories = React.createClass({
     // categories that neeed to be built out still
       // paper money
       // tokens and medals
+      // other fiscalia
+      // military civic
+      // relics and antiquities
+      // documents
+      // natural objects
+      // Miscellaneous
+      // what is this? individual picture entries
+      // link to other react component
+      // archive: render json with jbuilder for sold items
 
     SUBCATEGORIES = {
       "coins":              [ "Ancient Coins", "Islamic & Old Indian Coins",
@@ -231,8 +240,6 @@ var HeaderCategories = React.createClass({
           <div id="collapseWhatAreThese" className="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
             {this.buildCategoryDivs('what\'s this')}
           </div>
-
-
         </div>
       </div>
     </div>
