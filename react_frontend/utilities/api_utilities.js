@@ -26,7 +26,7 @@ var ApiUtilities = {
               constraints: constraints },
       dataType: 'json',
       success: function(resp) {
-        ItemIndexActions.receiveFilteredItems();
+        ItemIndexActions.receiveFilteredItems(resp);
       }
     });
   },

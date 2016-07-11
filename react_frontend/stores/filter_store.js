@@ -1,16 +1,16 @@
 var Store = require('flux/utils').Store,
     Dispatcher = require('../dispatcher/dispatcher'),
-    FilterConstants = require('../constants/item_constants');
+    FilterConstants = require('../constants/filter_constants'),
     FilterStore = new Store(Dispatcher);
 
-var _filterParams = { category: "COLLECTIBLE BAZAAR"};
+var _filterParams = { category: "COLLECTIBLE BAZAAR" };
 
 FilterStore.getAllFilters = function() {
   return Object.assign({}, _filterParams);
 };
 
 FilterStore.getCategory = function() {
-  return _filterParams.category;
+  return _filterParams;
 }
 
 FilterStore.__onDispatch = function(payload) {
@@ -22,7 +22,7 @@ FilterStore.__onDispatch = function(payload) {
 };
 
 function addCategoryFilter (category) {
-  _filterParams.category = category;
+  _filterParams = category;
 
   FilterStore.__emitChange();
 };

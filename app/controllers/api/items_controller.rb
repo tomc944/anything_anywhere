@@ -6,8 +6,7 @@ class Api::ItemsController < ApplicationController
     when "productSearch"
       @items = Item.edit_search(params[:searchPhrase])
     when "categoryLink"
-      debugger
-      @items = Item.filter_search(params[:filter_hash])
+      @items = Item.filter_search(params[:categories], params[:constraints])
     when "auction"
       @items = Item.where("auction" => true)
     end

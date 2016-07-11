@@ -4,17 +4,13 @@ var AppDispatcher = require('../dispatcher/dispatcher'),
 
 
 var ItemIndexActions = {
-  fetchItems: function(filters) {
-    ApiUtilities.fetchProductsByCategory(filters);
-  },
-
-  receiveAllItems: function() {
+  receiveAllItems: function(items) {
     AppDispatcher.dispatch({
       actionType: ItemsConstants.RECEIVE_ALL_ITEMS,
       items: items
     });
   },
-  receiveFilteredItems: function() {
+  receiveFilteredItems: function(items) {
     AppDispatcher.dispatch({
       actionType: ItemConstants.RECEIVE_FILTERED_ITEMS,
       items: items
