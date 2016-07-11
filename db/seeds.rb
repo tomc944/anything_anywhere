@@ -42,7 +42,7 @@ csv.each do |row|
   end
 
   if !!row['date']
-    t.date = row['date'].strip
+    t.date = row['date'].split(", ").first.strip
   end
 
   if !!row['mintmark']

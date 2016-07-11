@@ -16,7 +16,10 @@ var ItemIndex = React.createClass({
   },
 
   _handleChange: function() {
-
+    this.setState({
+      items: _getAllItems(),
+      categoryTitle: FilterStore.getCategory()
+    });
   },
 
   componentDidMount: function() {
